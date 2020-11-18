@@ -1,3 +1,5 @@
+//This is search results from API on backend
+
 import React, { Component } from 'react';
 import BreweryCard from '../components/BreweryCard';
 
@@ -14,12 +16,13 @@ class BreweryList extends Component {
 
     fetchData = () => {
         BrewerySearchModel.all().then(data => {
-            this.setState({ breweries: data.breweries})
+            console.log(data)
+            this.setState({ breweries: data})
         })
     }
 
     render() {
-        let breweryList = this.state.breweries.map((brewery, index) => {
+        let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
                 <BreweryCard {...brewery} key={index}/>
             )
@@ -27,7 +30,7 @@ class BreweryList extends Component {
         return (
             <div>
                 <h3>Your Search Results</h3>
-                { this.state.breweries ? breweryList : 'Loading'}
+                { this.state.breweries ? breweryList : 'Loading..'}
             </div>
         )
     }
