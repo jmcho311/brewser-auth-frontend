@@ -3,7 +3,8 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to PERN Auth</h1>
+      <h1>Brewser</h1>
+      <h2>Welcome to Brewser, your new favorite beer browsing app!</h2>
     </div>
   );
 }

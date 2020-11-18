@@ -1,6 +1,9 @@
 header {
-  background-color: slategrey;
+  background-color: cadetblue;
+  font-family: garamond;
   text-align: left;
+  border: 3px solid slategray;
+  border-radius: 10px;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
@@ -12,6 +15,14 @@ header {
     &:hover {
       color: darken(#fff, 20%)
     }
+  }
+
+  .nav {
+    width: 150px;
+    padding: 3px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
   }
 
   ul {
