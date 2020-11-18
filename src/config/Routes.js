@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import Home from '../pages/Home'
+import SearchForm from '../pages/SearchForm'
 import About from '../pages/About'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
@@ -18,6 +19,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={ Home } />
+    <Route path='/search' component={ SearchForm } />
     <Route path='/about' component={ About } />
     <Route path='/register' component={ Register } />
     <Route path='/login' render={ (routeComponentProps) => {
