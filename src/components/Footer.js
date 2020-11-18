@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  return <p>Footer Here!</p>
+  return <p>Powered by: API(s) here</p>
 }
 
 export default Footer;
