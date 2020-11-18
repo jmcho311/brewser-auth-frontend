@@ -8,6 +8,7 @@ import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
 import BreweryShow from '../pages/BreweryShow'
+import BreweryList from '../pages/BreweryList'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -24,6 +25,7 @@ const Routes = (props) => (
     <Route path='/about' component={ About } />
     <Route path='/brewery/:id' component={ BreweryShow } />
     <Route path='/register' component={ Register } />
+    <Route path='/brewerylist' component={ BreweryList } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}
