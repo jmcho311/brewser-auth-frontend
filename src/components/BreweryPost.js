@@ -1,1 +1,1 @@
-// We need to input information from two different models - Brewery (user data) & Brewery Search (API)
+// Comment Card!

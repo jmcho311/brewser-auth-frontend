@@ -1,29 +1,41 @@
 import React, { Component } from 'react'
-import BrewerySearchModel from '../models/brewery'
+import BrewerySearchModel from '../models/brewerysearch'
+import Brewery from '../models/brewery'
 
 import BreweryCard from '../components/BreweryCard'
 
 class BreweryShow extends Component {
     state = {
-        brewery: {},
+        breweryInfo: {},
+        breweryComments: {},
         currentBrewery: this.props.match.params.id
     }
 
     componentDidMount() {
-        this.fetchData()
+        this.fetchApiData()
+        this.fetchCommentData()
     }
 
-    fetchData = () => {
+    fetchApiData = () => {
         BrewerySearchModel.show(this.state.currentBrewery).then(data => {
-            this.setState({ brewery: data.brewery })
+            console.log(data)
+            this.setState({ breweryInfo: data })
         })
     }
 
+    fetchCommentData = () => {
+        Brewery.show(this.state.currentBrewery).then(data => {
+            console.log(data)
+            this.setState({ breweryComments: data})
+    })
+}
+
     render() {
-        console.log(this.state.currentBrewery)
+        //console.log(this.state.currentBrewery)
         return (
             <div>
-                <BreweryCard {...this.state.brewery} />
+                <BreweryCard {...this.state.breweryInfo} />
+                
             </div>
         )
     }
