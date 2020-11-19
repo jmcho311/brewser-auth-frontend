@@ -12,7 +12,8 @@ import BreweryCard from '../components/BreweryCard';
 class SearchForm extends Component {
 
     state = {
-        breweries: []
+        breweries: [],
+        city: '',
     }
 
     componentDidMount() {
@@ -20,9 +21,23 @@ class SearchForm extends Component {
     }
 
     fetchData = () => {
-        BrewerySearchModel.all().then(data => {
-            console.log(data)
-            this.setState({ breweries: data})
+        // BrewerySearchModel.all().then(data => {
+        //     console.log(data)
+        //     this.setState({ breweries: data})
+        // })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+            this.props.history.push({ 
+                pathname: '/brewerylist',
+                state: this.state
+            });
+    };
+    
+    handleChange = (event) => {
+        this.setState({
+            city: event.target.value
         })
     }
 
@@ -35,14 +50,14 @@ class SearchForm extends Component {
         
         return (
             <div>
-                <form>
+                <form onSubmit={ this.handleSubmit }>
                     <input 
                     type="text"
-                    // value=""
                     placeholder="Where are you located?"
-                    // onChange={}
+                    onChange={ this.handleChange}
+                    value={ this.state.city }
                     />
-                    <button>Beer Me!</button>
+                    <button> Beer Me! </button>
                 </form>
             </div>
         )
