@@ -1,15 +1,21 @@
 header {
-  background-color: goldenrod;
+  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySHVX_8h2fDS5n2vNDRK6PA00BtS7ZNu4TA&usqp=CAU);
+  // background-repeat: none;
+  // background-position: stretch;
   font-family: garamond;
   text-align: left;
-  border: 3px solid darkslategray;
-  border-radius: 10px;
+  border: 3px solid goldenrod;
+  border-radius: 5px;
   padding: 20px 10px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
 
   a {
-    color: #fff;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
     transition: color 0.3s ease;
 
     &:hover {
