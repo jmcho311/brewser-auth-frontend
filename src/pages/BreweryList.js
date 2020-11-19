@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import BreweryCard from '../components/BreweryCard';
 
+import { Link } from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 
 class BreweryList extends Component {
@@ -24,7 +25,9 @@ class BreweryList extends Component {
     render() {
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
-                <BreweryCard {...brewery} key={index}/>
+                <Link to={`/brewery/${brewery.id}`} key={index}>
+                    <BreweryCard {...brewery} />
+                </Link>
             )
         })
         return (
