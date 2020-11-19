@@ -5,9 +5,9 @@ const BreweryCard = (props) => {
     return (
         <div className="BreweryCard">
             <h3>{ props.name }</h3>
-            <h5>{ props.city },{ props.state }</h5>
-            {/* <h5>{ props.rating }/5</h5> */}
-            {/* <p>{ props.comment }</p> */}
+            <h5>{ props.street }</h5>
+            <h5>{ props.city }, { props.state }</h5>
+            <p>{ props.comment }</p>
         </div>
     );
 }
