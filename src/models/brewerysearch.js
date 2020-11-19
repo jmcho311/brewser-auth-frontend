@@ -4,7 +4,7 @@ const url = `http://localhost:4000/api/v1/brewery/search`
 
 class BrewerySearchModel {
     static all = () => {
-        return fetch(`${url}?q=san_diego`).then(res => res.json())
+        return fetch(`${url}?q=seattle`).then(res => res.json())
         //colorado will be user input
         //TODO: figure out how to get user input interpolated here
     }
