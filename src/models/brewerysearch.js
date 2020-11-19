@@ -9,9 +9,9 @@ class BrewerySearchModel {
         //TODO: figure out how to get user input interpolated here
     }
 
-    //static show = (breweryId) => {
-    //    return fetch(`${url}/${breweryId}`).then(res => res.json())
-    //}
+    static show = (breweryId) => {
+        return fetch(`${url}/${breweryId}`).then(res => res.json())
+    }
 
 }
 
