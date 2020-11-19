@@ -16,7 +16,8 @@ class BreweryList extends Component {
     }
 
     fetchData = () => {
-        BrewerySearchModel.all().then(data => {
+        console.log(this.props.location.state.city)
+        BrewerySearchModel.all(this.props.location.state.city).then(data => {
             console.log(data)
             this.setState({ breweries: data})
         })
