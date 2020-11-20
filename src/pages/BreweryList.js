@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 import BreweryCard from '../components/BreweryCard';
 
-import { Link } from 'react-router-dom'
-import BrewerySearchModel from '../models/brewerysearch'
+import { Link } from 'react-router-dom';
+import BrewerySearchModel from '../models/brewerysearch';
 
 class BreweryList extends Component {
     state = {
@@ -32,13 +32,14 @@ class BreweryList extends Component {
             )
         })
         return (
-            <div>
-                <h3>Your Search Results</h3>
-                { this.state.breweries ? breweryList : 'Loading..'}
+            <div className="list">
+                <h1>Your Search Results</h1>
+                    <div className="breweryCard">
+                        { this.state.breweries ? breweryList : 'Loading..'}
+                    </div>
             </div>
         )
     }
-    
 }
 
 

@@ -1,30 +1,11 @@
 import React, { Component } from 'react';
-
-import BrewerySearchModel from '../models/brewerysearch';
-import BreweryCard from '../components/BreweryCard';
-
-// need to fetch from backend to use in search form
-//   pull breweries based on location (city)
-// import brewery list
-//   redirect to brewery list once search is performed
-
+import './App.scss';
 
 class SearchForm extends Component {
 
     state = {
         breweries: [],
         city: '',
-    }
-
-    componentDidMount() {
-        this.fetchData()
-    }
-
-    fetchData = () => {
-        // BrewerySearchModel.all().then(data => {
-        //     console.log(data)
-        //     this.setState({ breweries: data})
-        // })
     }
 
     handleSubmit = (event) => {
@@ -42,22 +23,21 @@ class SearchForm extends Component {
     }
 
     render() {
-        let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
-            return (
-                <BreweryCard {...brewery} key={index}/>
-            )
-        })
         
         return (
-            <div>
+            <div className="search">
+                <h1>Happy Brewsing!</h1>
+                <img src="https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="searchImg" alt="pic" />
+                <h4>Find breweries by name or location!</h4>
                 <form onSubmit={ this.handleSubmit }>
                     <input 
+                    id="searchbar"
                     type="text"
-                    placeholder="Where are you located?"
+                    placeholder="Find Beer"
                     onChange={ this.handleChange}
                     value={ this.state.city }
                     />
-                    <button> Beer Me! </button>
+                    <button id="searchBtn"> Beer Me! </button>
                 </form>
             </div>
         )
