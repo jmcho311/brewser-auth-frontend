@@ -8,25 +8,24 @@ const BreweryReviewForm = () => {
             <form onSubmit={ this.handleSubmit }>
                 <input
                 // userId - import from user model
-                    type="integer"
-                    placeholder=""
+                    type="hidden"
                     />
                 <input
                 // breweryId - import from brewerysearch model
-                    type="integer"
+                    type="hidden"
                 />
                 <input
                 // name - import from brewerysearch model
-                    type="text"
+                    type="hidden"
                     placeholder="Brewery Name"
                 />
                 <input
                 // city - import from brewerysearch model
-                    type="text"
+                    type="hidden"
                 />
                 <input
                 // state - import from brewerysearch model
-                    type="text"
+                    type="hidden"
                 />
                 <input
                 // rating - user input
