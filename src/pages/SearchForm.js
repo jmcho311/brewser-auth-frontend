@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.scss';
 
 import BrewerySearchModel from '../models/brewerysearch';
 import BreweryCard from '../components/BreweryCard';
@@ -50,6 +51,7 @@ class SearchForm extends Component {
         
         return (
             <div>
+                <h1>Happy Brewsing!</h1>
                 <form onSubmit={ this.handleSubmit }>
                     <input 
                     type="text"

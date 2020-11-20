@@ -1,5 +1,9 @@
 import React from 'react';
 
+// pull data from user model
+// import brewery post and beer post
+
+
 const Profile = props => {
   return (
     <div className="profile">
