@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+class BreweryReviewForm extends Component {
 
+    render () {
+        if(!this.props.show) {
+            return null
+        }
 
-const BreweryReviewForm = () => {
     return (
         <div>
-            <form onSubmit={ this.handleSubmit }>
+            <div>
+                <button onClick={this.props.onClose}>
+                    Close
+                </button>
+            </div>
+            <form >
                 <input
                 // userId - import from user model
                     type="hidden"
@@ -17,7 +26,6 @@ const BreweryReviewForm = () => {
                 <input
                 // name - import from brewerysearch model
                     type="hidden"
-                    placeholder="Brewery Name"
                 />
                 <input
                 // city - import from brewerysearch model
@@ -29,16 +37,19 @@ const BreweryReviewForm = () => {
                 />
                 <input
                 // rating - user input
+                    placeholder="rating"
                     type="integer"
                 />
                 <input
                 // comment - user input
+                    placeholder="comment"
                     type="text"
                 />
                 <button> Submit </button>
             </form>
         </div>
     );
+}
 }
 
 export default BreweryReviewForm;
