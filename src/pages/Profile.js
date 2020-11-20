@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import Brewery from '../models/brewery'
+import Brewery from '../models/brewery';
+import BreweryPost from '../components/BreweryPost';
+import './App.scss';
 
-import BreweryPost from '../components/BreweryPost'
 
 class Profile extends Component {
+
   state = {
     breweryComments: [],
     currentUser: localStorage.getItem('id')
@@ -14,7 +16,6 @@ class Profile extends Component {
   }
 
   fetchCommentData = () => {
-    
     Brewery.showPost(this.state.currentUser).then(data => {
         console.log(data)
         this.setState({ breweryComments: data.user })
@@ -28,6 +29,7 @@ class Profile extends Component {
             <BreweryPost {...comment} key={index}/>
         )
     })
+
     return (
       <div className="profile">
         <h1>Welcome to your Profile!</h1>
@@ -37,5 +39,4 @@ class Profile extends Component {
     );
   }
 }
-
 export default Profile;

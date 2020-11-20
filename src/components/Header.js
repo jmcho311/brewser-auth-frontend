@@ -12,9 +12,6 @@ const Header = (props) => {
         <div className="search">
           <Link to={'/search'}>Search</Link>
         </div>
-        <div className="profile">
-          <Link to={'/profile'}>Profile</Link>
-        </div>
         <div className="about">
           <Link to={'/about'}>About</Link>
         </div>

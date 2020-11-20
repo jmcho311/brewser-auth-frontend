@@ -39,10 +39,14 @@ class BreweryShow extends Component {
             )
         })
         return (
-            <div>
-                <BreweryCard {...this.state.breweryInfo} />
+            <div className="show">
+                <div className="breweryDeets">
+                    <BreweryCard {...this.state.breweryInfo} />
+                </div>
                 <h3>Posts left by others:</h3>
-                { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+                <div className="brewReviews">
+                    { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+                </div>
             </div>
         )
     }
