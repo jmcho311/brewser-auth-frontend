@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-// import BrewerySearchModel from '../models/brewerysearch';
-// import BreweryCard from '../components/BreweryCard';
-
-// need to fetch from backend to use in search form
-//   pull breweries based on location (city)
-// import brewery list
-//   redirect to brewery list once search is performed
-
-
 class SearchForm extends Component {
 
     state = {
