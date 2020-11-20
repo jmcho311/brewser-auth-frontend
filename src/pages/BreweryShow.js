@@ -53,7 +53,7 @@ class BreweryShow extends Component {
                 <div className="breweryDeets">
                     <BreweryCard {...this.state.breweryInfo} />
                 </div>
-                <BreweryReviewForm onClose={this.showModal} show={this.state.show}/>
+                <BreweryReviewForm onClose={this.showModal} show={this.state.show} brewery={this.state.breweryInfo}/>
                 <button onClick={e => {this.showModal()}}> Write a Review</button>
                 <h3>Posts left by others:</h3>
                 <div className="brewReviews">

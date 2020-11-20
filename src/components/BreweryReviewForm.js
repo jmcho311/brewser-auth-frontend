@@ -17,23 +17,33 @@ class BreweryReviewForm extends Component {
             <form >
                 <input
                 // userId - import from user model
-                    type="hidden"
+                    //type="hidden"
+                    placeholder={localStorage.getItem('id')}
+                    value={localStorage.getItem('id')}
                     />
                 <input
                 // breweryId - import from brewerysearch model
-                    type="hidden"
+                    // type="hidden"
+                    value={this.props.brewery.id}
+                    placeholder={this.props.brewery.id}
                 />
                 <input
                 // name - import from brewerysearch model
-                    type="hidden"
+                    //type="hidden"
+                    value={this.props.brewery.name}
+                    placeholder={this.props.brewery.name}
                 />
                 <input
                 // city - import from brewerysearch model
-                    type="hidden"
+                    // type="hidden"
+                    value={this.props.brewery.city}
+                    placeholder={this.props.brewery.city}
                 />
                 <input
                 // state - import from brewerysearch model
-                    type="hidden"
+                    // type="hidden"
+                    value={this.props.brewery.state}
+                    placeholder={this.props.brewery.state}
                 />
                 <input
                 // rating - user input
