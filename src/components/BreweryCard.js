@@ -12,7 +12,7 @@ const BreweryCard = (props) => {
             <h5>
                 <a className="site"
                     target="new"
-                    href={ `${props.website_url}` }> Website 
+                    href={ `${props.website_url}` }> { props.website_url} 
                 </a>
             </h5> 
             <p>{ props.comment }</p>
