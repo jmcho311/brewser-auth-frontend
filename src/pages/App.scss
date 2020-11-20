@@ -1,15 +1,85 @@
 // ============= Universal Styling ==================
 
 h1 {
-    margin: 15px;
+    margin: 100px 0px 35px 0px;
     padding: 10px;
+}
+
+h4 {
+    margin: 50px;
+}
+
+img {
+    width: 650px;
+    border: 5px solid goldenrod;
+    border-radius: 5px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
 }
 
 // ============= Home ==================
 
+
 // ============= Search ==================
 
+// #searchImg {
+//     width: 850px;
+//     border: 5px solid goldenrod;
+//     border-radius: 5px;
+// }
+
+#searchbar {
+    margin: 3px;
+}
+
+#searchBtn {
+    margin: 3px;
+}
+
+// ============= Brewery List ==================
+
+.list {
+    width: 33%;
+    margin: 0 auto;
+}
+
+a {
+    color: black;
+}
+
+.BreweryCard {
+    border: 2px solid black;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    margin: 5px;   
+}
+
+a:hover {
+    color: darken(#fff, 50%)
+}
+
+
+// ============= Brewery Show ==============
+
+.show {
+    margin: 150px 0px 0px 0px;
+}
+
+.breweryDeets {
+    width: 33%;
+    margin: 0 auto;
+}
+
+.brewReviews {
+    width: 33%;
+    border: 2px solid black;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+}
+
 // ============= About ==================
+
+#credits {
+    font-size: 15px;
+}
 
 // ============= Profile ==================
 
