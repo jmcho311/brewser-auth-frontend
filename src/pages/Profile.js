@@ -3,7 +3,6 @@ import Brewery from '../models/brewery';
 import BreweryPost from '../components/BreweryPost';
 import './App.scss';
 
-
 class Profile extends Component {
 
   state = {
