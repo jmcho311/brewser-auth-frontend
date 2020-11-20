@@ -13,3 +13,12 @@ const BreweryPost = (props) => {
 }
 
 export default BreweryPost;
+
+// BACKEND Brewery Model
+// userId: DataTypes.INTEGER,
+// breweryId: DataTypes.INTEGER,
+// name: DataTypes.STRING,
+// city: DataTypes.STRING,
+// state: DataTypes.STRING,
+// rating: DataTypes.INTEGER,
+// comment: DataTypes.TEXT

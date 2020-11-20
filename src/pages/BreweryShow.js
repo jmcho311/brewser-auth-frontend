@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import BreweryModel from '../models/brewery'
+import BrewerySearchModel from '../models/brewerysearch'
+import Brewery from '../models/brewery'
 
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
@@ -12,12 +13,14 @@ class BreweryShow extends Component {
     }
 
     componentDidMount() {
-        this.fetchData()
+        this.fetchApiData()
+        this.fetchCommentData()
     }
 
-    fetchData = () => {
-        BreweryModel.show(this.state.currentBrewery).then(data => {
-            this.setState({ brewery: data.brewery })
+    fetchApiData = () => {
+        BrewerySearchModel.show(this.state.currentBrewery).then(data => {
+            console.log(data)
+            this.setState({ breweryInfo: data })
         })
     }
 
@@ -25,8 +28,8 @@ class BreweryShow extends Component {
         Brewery.show(this.state.currentBrewery).then(data => {
             console.log(data)
             this.setState({ breweryComments: data.brewery})
-    })
-}
+        })
+    }
 
     render() {
         console.log(this.state.breweryComments)

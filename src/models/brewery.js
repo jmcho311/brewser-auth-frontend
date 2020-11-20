@@ -9,6 +9,10 @@ class BreweryModel {
         return fetch(`${url}/${breweryId}`).then(res => res.json())
     }
 
+    static showPost = (userId) => {
+        return fetch(`${url}/userPost/${userId}`).then(res => res.json())
+    }
+
     static create = (breweryData) => {
         return fetch(`${url}/`, {
             method: "POST",
