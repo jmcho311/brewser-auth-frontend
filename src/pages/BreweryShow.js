@@ -4,12 +4,14 @@ import Brewery from '../models/brewery'
 
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
+import BreweryReviewForm from '../components/BreweryReviewForm'
 
 class BreweryShow extends Component {
     state = {
         breweryInfo: {},
         breweryComments: [],
-        currentBrewery: this.props.match.params.id
+        currentBrewery: this.props.match.params.id,
+        show: false,
     }
 
     componentDidMount() {
@@ -30,9 +32,14 @@ class BreweryShow extends Component {
             this.setState({ breweryComments: data.brewery})
         })
     }
+    //functions for Brewery Review Post Modal
+    showModal = e => {
+        this.setState({
+            show: !this.state.show
+        })
+    }
 
     render() {
-        console.log(this.state.breweryComments)
         let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
             return (
                 <BreweryPost {...comment} key={index}/>
@@ -42,6 +49,10 @@ class BreweryShow extends Component {
             <div className="show">
                 <div className="breweryDeets">
                     <BreweryCard {...this.state.breweryInfo} />
+                </div>
+                <div>
+                <BreweryReviewForm onClose={this.showModal} show={this.state.show} brewery={this.state.breweryInfo}/>
+                <button onClick={e => {this.showModal()}}> Write a Review</button>
                 </div>
                 <h3>Posts left by others:</h3>
                 <div className="brewReviews">
