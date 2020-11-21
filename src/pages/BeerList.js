@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import BeerSearchModel from '../models/beer'
-import BrewerySearchModel from '../models/brewerysearch';
+import BrewerySearchModel from '../models/brewerysearch'
 import {Link} from 'react-router-dom'
 
 import BeerPost from '../components/BeerPost'
@@ -15,7 +15,7 @@ class BeerList extends Component {
 
     componentDidMount() {
         this.fetchData()
-        // this.fetchBreweryData()
+        this.fetchBreweryData()
     }
 
     fetchData = () => {
@@ -28,19 +28,19 @@ class BeerList extends Component {
         })
     }
 
-    // fetchBreweryData = () => {
-    //     BrewerySearchModel.all(this.props.id).then(data => {
-    //         console.log(this.props.id)
-    //         this.setState({ brewery: data })
-    //     })
-    // }
+    fetchBreweryData = () => {
+        BrewerySearchModel.all().then(data => {
+            this.setState({ brewery: data })
+        })
+    }
 
     render() {
         let beerList = this.state.beers && this.state.beers.map((beer, index) => {
+            console.log(this.state.beers[0].breweryId) 
             return (
-                // <Link to={`/brewery/${breweryId}`} key={index}>
+                <Link to={`/brewery/${this.state.beers[0].breweryId}`} key={index}>
                     <BeerPost {...beer} key={index}/>
-                // </Link>
+                </Link>
             )
         })
         return (
