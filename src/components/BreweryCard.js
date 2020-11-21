@@ -12,11 +12,7 @@ const BreweryCard = (props) => {
             <h5>
                 <a className="site"
                     target="new"
-<<<<<<< HEAD
-                    href={ `${props.website_url}` }> { props.website_url} 
-=======
                     href={ `${props.website_url}` }> {props.website_url} 
->>>>>>> submain
                 </a>
             </h5> 
             <p>{ props.comment }</p>

@@ -1,12 +1,14 @@
+// This is the beer search results page, searched by category.
+
 import React, { Component } from 'react'
-import BeerModel from '../models/beer'
+import BeerSearchModel from '../models/beer'
 import {Link} from 'react-router-dom'
 
 import BeerPost from '../components/BeerPost'
 
 class BeerList extends Component {
     state = {
-        beer: []
+        beers: []
         // currentBeer: this.props.match.params.category
     }
 
@@ -15,15 +17,15 @@ class BeerList extends Component {
     }
 
     fetchData = () => {
-        BeerModel.all().then(data => {
+        BeerSearchModel.all().then(data => {
             console.log(data)
-            console.log(this.state.beer)
-            this.setState({ beer: data })
+            // console.log(this.state.beer)
+            this.setState({ beers: data })
         })
     }
 
     render() {
-        let beerList = this.state.beer && this.state.beer.map((beer, index) => {
+        let beerList = this.state.beers && this.state.beers.map((beer, index) => {
             return (
                 <Link to={`/beer/${beer.id}`} key={index}>
                     <BeerPost {...beer} />

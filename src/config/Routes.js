@@ -27,7 +27,7 @@ const Routes = (props) => (
     <Route path='/brewery/:id' component={ BreweryShow } />
     <Route path='/register' component={ Register } />
     <Route path='/brewerylist' component={ BreweryList } />
-    <Route path='/beer' component={ BeerList } />
+    <Route path='/beerlist' component={ BeerList } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}

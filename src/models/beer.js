@@ -5,9 +5,13 @@ class BeerModel {
         return fetch(`${url}/`).then(res => res.json())
     }
 
-    // static show = (category) => {
-    //     return fetch(`${url}/${category}`).then(res => res.json())
-    // }
+    static show = (category) => {
+        return fetch(`${url}/category/${category}`).then(res => res.json())
+    }
+
+    static showPost = (userId) => {
+        return fetch(`${url}/${userId}`).then(res => res.json())
+    }
 
     // static create = (beerData) => {
     //     return fetch(`${url}/`, {
