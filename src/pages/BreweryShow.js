@@ -36,7 +36,6 @@ class BreweryShow extends Component {
 
     //functions for Brewery Review Post Modal
     showModal = e => {
-        console.log('im doing something')
         this.setState({
             show: !this.state.show
         })

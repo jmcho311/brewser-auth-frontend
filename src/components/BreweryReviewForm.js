@@ -4,7 +4,6 @@ class BreweryReviewForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log('this works')
         console.log(e.target.breweryId.value)
         console.log(e.target.name.value)
         console.log(e.target.city.value)
@@ -28,31 +27,31 @@ class BreweryReviewForm extends Component {
             <form onSubmit={ this.handleSubmit }>
                 <input
                 // userId - import from user model
-                    //type="hidden"
+                    type="hidden"
                     name='userId'
                     value={localStorage.getItem('id')}
                     />
                 <input
                 // breweryId - import from brewerysearch model
-                    // type="hidden"
+                    type="hidden"
                     name = "breweryId"
                     value={this.props.brewery.id}
                 />
                 <input
                 // name - import from brewerysearch model
-                    //type="hidden"
+                    type="hidden"
                     name = "name"
                     value={this.props.brewery.name}
                 />
                 <input
                 // city - import from brewerysearch model
-                    // type="hidden"
+                    type="hidden"
                     name = "city"
                     value={this.props.brewery.city}
                 />
                 <input
                 // state - import from brewerysearch model
-                    // type="hidden"
+                    type="hidden"
                     name = "state"
                     value={this.props.brewery.state}
                 />
