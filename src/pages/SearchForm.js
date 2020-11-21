@@ -60,7 +60,7 @@ class SearchForm extends Component {
 
                 <HomeModal 
                     show={ this.state.show } 
-                    onClose={this.showModal}
+                    onClose={ this.showModal }
                 />
 
                 <div className="search">
@@ -73,7 +73,7 @@ class SearchForm extends Component {
                         id="searchbar"
                         type="text"
                         placeholder="Find Brewery"
-                        onChange={ this.handleChange}
+                        onChange={ this.handleChange }
                         value={ this.state.city }
                         />
                         <button id="searchBtn"> I need a drink! </button>
@@ -83,7 +83,7 @@ class SearchForm extends Component {
                         id="searchbar"
                         type="text"
                         placeholder="Find Beer"
-                        onChange={ this.handleBeerChange}
+                        onChange={ this.handleBeerChange }
                         value={ this.state.category }
                         />
                         <button id="searchBtn"> Pour Me a Pint! </button>
