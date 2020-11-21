@@ -9,9 +9,9 @@ const Header = (props) => {
         <div className="home">
           <Link to={'/'}>Home</Link>
         </div>
-        <div className="search">
+        {/* <div className="search">
           <Link to={'/search'}>Search</Link>
-        </div>
+        </div> */}
         <div className="about">
           <Link to={'/about'}>About</Link>
         </div>
