@@ -1,5 +1,5 @@
 .homeModal {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     background-color: white;
     width: 65%;
@@ -8,6 +8,7 @@
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
     text-align: center;
     position: relative;
+    top: 80px;
 }
 
 .modalBtn {
@@ -21,4 +22,8 @@
 #modalBtn {
     color: white;
     padding: 3px;
+}
+
+.imgContainer {
+    padding: 50px;
 }
