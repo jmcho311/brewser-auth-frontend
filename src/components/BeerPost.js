@@ -3,10 +3,10 @@ import React from 'react'
 const BeerPost = (props) => {
     return (
         <div className="BeerPost">
-            <h3>Beer Name: { props.name }</h3>
-            <h5>Beer Rating: { props.rating }/5</h5>
-            <h5>Beer Category: { props.category }</h5>
-            <h5>Beer Style: { props.style }</h5>
+            <h2>Beer Name: { props.name }</h2>
+            <h4>Beer Rating: { props.rating }/5</h4>
+            <h4>Beer Category: { props.category }</h4>
+            <h4>Beer Style: { props.style }</h4>
             <p>Comment: { props.comment }</p>
         </div>
     )
