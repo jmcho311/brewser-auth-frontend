@@ -7,7 +7,13 @@ class SearchForm extends Component {
     state = {
         breweries: [],
         city: '',
-        show: false,
+        show: true,
+    }
+
+    componentDidMount() {
+        this.setState({
+            show: true
+        })
     }
 
     handleSubmit = (event) => {
@@ -35,7 +41,7 @@ class SearchForm extends Component {
     };
 
     render() {
-        
+
         return (
             <div>
 
@@ -55,19 +61,18 @@ class SearchForm extends Component {
                     <h4>Find breweries by name or location!</h4>
                     <form onSubmit={ this.handleSubmit }>
                         <input 
-                        id="searchbar"
-                        type="text"
-                        placeholder="Find Beer"
-                        onChange={ this.handleChange}
-                        value={ this.state.city }
+                            id="searchbar"
+                            type="text"
+                            placeholder="Find Beer"
+                            onChange={ this.handleChange}
+                            value={ this.state.city }
                         />
                         <button id="searchBtn"> Beer Me! </button>
-                        
+
                     </form>
                 </div>
             </div>
         )
     }
 }
-
 export default SearchForm;
