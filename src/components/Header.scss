@@ -1,7 +1,5 @@
 header {
   background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySHVX_8h2fDS5n2vNDRK6PA00BtS7ZNu4TA&usqp=CAU);
-  // background-repeat: none;
-  // background-position: stretch;
   font-family: garamond;
   text-align: left;
   border: 3px solid goldenrod;
@@ -12,8 +10,7 @@ header {
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
   width: 100%;
   position: fixed;
-  top: 0px;
-  
+  top: 0px; 
 
   a {
     color: white;
@@ -40,11 +37,11 @@ header {
   ul {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0px 15px 0px 0px;
 
     li {
       list-style-type: none;
-      padding: 0px 10px;
+      padding: 0px 7px;
     }
   }
 }

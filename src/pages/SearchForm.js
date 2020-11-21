@@ -6,7 +6,13 @@ class SearchForm extends Component {
     state = {
         breweries: [],
         city: '',
-        show: false,
+        show: true,
+    }
+
+    componentDidMount() {
+        this.setState({
+            show: true
+        })
     }
 
     handleSubmit = (event) => {
@@ -48,7 +54,7 @@ class SearchForm extends Component {
     };
 
     render() {
-        
+
         return (
             <div>
 
@@ -92,5 +98,4 @@ class SearchForm extends Component {
         )
     }
 }
-
 export default SearchForm;
