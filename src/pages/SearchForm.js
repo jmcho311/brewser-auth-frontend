@@ -66,10 +66,6 @@ class SearchForm extends Component {
                 <div className="search">
                     <h1>Happy Brewsing!</h1>
 
-                    <p><button  onClick={e => {
-                        this.showModal(); }}> show Modal 
-                    </button></p>
-
                     <img src="https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="searchImg" alt="pic" />
                     <h4>Find breweries by name or location!</h4>
                     <form onSubmit={ this.handleSubmit }>
