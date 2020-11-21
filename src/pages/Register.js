@@ -83,6 +83,9 @@ const Register = props => {
         </div>
         <button type="submit">Register</button>
       </form>
+      <div>
+        <h5>Already have an account? Click <a href='/login' style={ { textDecorationLine: 'underline'} } >here</a> to log in!</h5>
+      </div>
     </div>
   )
 }
