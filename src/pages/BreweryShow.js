@@ -32,8 +32,6 @@ class BreweryShow extends Component {
             this.setState({ breweryComments: data.brewery})
         })
     }
-
-
     //functions for Brewery Review Post Modal
     showModal = e => {
         this.setState({
