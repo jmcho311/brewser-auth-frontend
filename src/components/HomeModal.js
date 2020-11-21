@@ -18,7 +18,7 @@ export default class HomeModal extends Component {
                 <div className="modalContents">
                     {/* <h2>Welcome to Brewser!</h2> */}
 
-                    <h5> Are you least 21 years of age?</h5>
+                    <h5 id="ageVerify"> Are you least 21 years of age?</h5>
                     
                     <button className="modalBtn"
                         onClick={ this.props.onClose } >
