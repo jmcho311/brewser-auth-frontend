@@ -10,7 +10,7 @@ export default class HomeModal extends Component {
         }
 
         return (
-            <div class="homeModal">
+            <div className="homeModal">
 
                 <h1>Brewser</h1>
 
@@ -20,13 +20,13 @@ export default class HomeModal extends Component {
 
                 <h5> Are you least 21 years of age?</h5>
                 
-                <button class="modalBtn"
+                <button className="modalBtn"
                     onClick={ this.props.onClose } >
                         Yes, I am!
                 </button>
 
-                <button class="modalBtn">
-                    <a href="https://en.teletubbies.com/about-teletubbies/" id="modalBtn"> 
+                <button className="modalBtn">
+                    <a href="https://us.teletubbies.com/" id="modalBtn"> 
                         I wish!
                     </a>
                 </button>
