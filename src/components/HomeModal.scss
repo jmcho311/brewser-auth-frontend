@@ -1,15 +1,13 @@
-* {
-    z-index: 500;
-}
-
 .homeModal {
     border: 1px solid black;
     border-radius: 10px;
+    background-color: white;
     width: 65%;
     margin: 0 auto;
     padding: 30px 45px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
     text-align: center;
+    position: relative;
 }
 
 .modalBtn {
