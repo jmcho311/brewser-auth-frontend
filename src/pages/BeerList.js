@@ -11,7 +11,6 @@ class BeerList extends Component {
     state = {
         beers: [],
         // breweries: []
-        // currentBeer: this.props.match.params.category
     }
 
     componentDidMount() {
@@ -22,7 +21,7 @@ class BeerList extends Component {
     fetchData = () => {
         // console.log(this.setState)
         console.log(this.props.location.state.category)
-        BeerSearchModel.all(this.props.location.state.category).then(data => {
+        BeerSearchModel.show(this.props.location.state.category).then(data => {
             console.log(data)
             // console.log(this.state.beer)
             this.setState({ beers: data.beers })
