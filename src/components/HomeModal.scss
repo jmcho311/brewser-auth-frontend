@@ -3,6 +3,8 @@
     border-radius: 10px;
     background: url(https://i.imgur.com/5y6Jp8c.png?2);
     background-position: center;
+    background-repeat: none;
+    background-size: cover;
     // background-color: white;
     width: 65%;
     margin: 0 auto;
@@ -14,9 +16,9 @@
     min-height: 75vh;
 }
 
-.modalContents {
-    bottom: 0px;
-}
+// .modalContents {
+//     bottom: 0px;
+// }
 
 #ageVerify {
     padding: 525px 0px 0px 0px;
