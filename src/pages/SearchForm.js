@@ -10,17 +10,17 @@ class SearchForm extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            show: true
-        })
+        // We want modal pop up if user has NOT set their age or is not 21.
+        let show = !JSON.parse(localStorage.getItem('legal'))
+        this.setState({ show })
     }
 
-    handleSubmit = (event) => {
+    searchBreweries = (event) => {
         event.preventDefault();
-            this.props.history.push({ 
-                pathname: '/brewerylist',
-                state: this.state
-            });
+        this.props.history.push({ 
+            pathname: '/brewerylist',
+            state: this.state
+        });
     };
     
     handleChange = (event) => {
@@ -29,7 +29,7 @@ class SearchForm extends Component {
         })
     }
 
-    handleBeerSubmit = (event) => {
+    searchBeers = (event) => {
         event.preventDefault()
             this.props.history.push({
                 pathname: '/beerList',
@@ -44,8 +44,9 @@ class SearchForm extends Component {
     }
 
     showModal = e => {
+        console.log('close modal')
         this.setState({
-            show: !this.state.show
+            show: false
         });
     };
 
@@ -68,7 +69,7 @@ class SearchForm extends Component {
 
                     <img src="https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="searchImg" alt="pic" />
                     <h4>Find breweries by name or location!</h4>
-                    <form onSubmit={ this.handleSubmit }>
+                    <form onSubmit={ this.searchBreweries }>
                         <input 
                         id="searchbar"
                         type="text"
@@ -78,7 +79,7 @@ class SearchForm extends Component {
                         />
                         <button id="searchBtn"> I need a drink! </button>
                     </form>
-                    <form onSubmit={ this.handleBeerSubmit }>
+                    <form onSubmit={ this.searchBeers }>
                         <input 
                         id="searchbar"
                         type="text"

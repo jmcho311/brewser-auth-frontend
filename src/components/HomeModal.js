@@ -3,6 +3,16 @@ import './HomeModal.scss';
 
 export default class HomeModal extends Component {
 
+    setLegal = () => {
+        localStorage.setItem('legal', true)
+        this.props.onClose()
+    } 
+
+    setNotLegal = () => {
+        localStorage.setItem('legal', false)
+        window.location.assign("https://us.teletubbies.com/")
+    } 
+
     render() {
 
         if(!this.props.show){
@@ -10,26 +20,21 @@ export default class HomeModal extends Component {
         }
 
         return (
-            <div className="homeModal">
-
-                {/* <div className="imgContainer">
-                    <img src="https://i.imgur.com/5y6Jp8c.png?1" alt="beer" id="modalImg" />
-                </div> */}
-                <div className="modalContents">
-                    {/* <h2>Welcome to Brewser!</h2> */}
-
-                    <h5 id="ageVerify"> Are you least 21 years of age?</h5>
-                    
-                    <button className="modalBtn"
-                        onClick={ this.props.onClose } >
-                            Yes, I am!
-                    </button>
-
-                    <button className="modalBtn">
-                        <a href="https://us.teletubbies.com/" id="modalBtn"> 
+            <div className="masterModal">
+                <div className="homeModal">
+                    <div className="modalContents">
+                        <h5 id="ageVerify"> Are you least 21 years of age?</h5>
+                        <button className="modalBtn"
+                            onClick={ this.setLegal } >
+                                Beer me!
+                        </button>
+                        <button 
+                            className="modalBtn"
+                            onClick={ this.setNotLegal}
+                        >
                             I wish!
-                        </a>
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </div>
         )
