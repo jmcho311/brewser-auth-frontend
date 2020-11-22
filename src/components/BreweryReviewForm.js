@@ -2,14 +2,25 @@ import React, {Component} from 'react';
 
 class BreweryReviewForm extends Component {
 
+    state = {
+        breweryId: 0,
+        name: '',
+        city: '',
+        state: '',
+        rating: 0,
+        comment: '',
+    }
+
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(e.target.breweryId.value)
-        console.log(e.target.name.value)
-        console.log(e.target.city.value)
-        console.log(e.target.state.value)
-        console.log(e.target.rating.value)
-        console.log(e.target.comment.value)
+        this.setState({
+            breweryId: e.target.breweryId.value,
+            name: e.target.name.value,
+            city: e.target.city.value,
+            state: e.target.state.value,
+            rating: e.target.rating.value,
+            comment: e.target.comment.value,
+        })
     }
 
     render () {
@@ -67,7 +78,7 @@ class BreweryReviewForm extends Component {
                     placeholder="comment"
                     type="text"
                 />
-                <button> Submit </button>
+                <button onClick={this.props.onClose}> Submit </button>
             </form>
         </div>
     );
