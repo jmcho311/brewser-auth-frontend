@@ -15,12 +15,12 @@ function App() {
 
   const logout = (event) => {
     event.preventDefault()
-
     localStorage.removeItem('id')
 
     UserModel.logout()
       .then(res => {
         setCurrentUser(null)
+        window.location.assign('/logout')
       })
   }
 
