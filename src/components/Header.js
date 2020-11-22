@@ -9,9 +9,6 @@ const Header = (props) => {
         <div className="home">
           <Link to={'/'}>Home</Link>
         </div>
-        {/* <div className="search">
-          <Link to={'/search'}>Search</Link>
-        </div> */}
         <div className="about">
           <Link to={'/about'}>About</Link>
         </div>
@@ -21,7 +18,11 @@ const Header = (props) => {
           { props.currentUser ? 
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
-              <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
+              <li>
+                  <a href="/logout" onClick={ props.logout }>
+                    Log Out
+                  </a>
+                </li>
             </>
           :
             <>
