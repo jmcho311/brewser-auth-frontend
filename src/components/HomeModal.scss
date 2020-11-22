@@ -1,25 +1,36 @@
+.masterModal {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
 .homeModal {
     border: 2px solid goldenrod;
     border-radius: 10px;
     background: url(https://i.imgur.com/5y6Jp8c.png?2);
     background-position: center;
-    // background-color: white;
+    background-size: cover;
     width: 65%;
     margin: 0 auto;
     padding: 30px 45px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
-    text-align: center;
-    position: relative;
-    top: 80px;
-    min-height: 75vh;
+    position: absolute;
+    top: 35px;
+    left: 16%;
+    min-height: 80vh;
+    display: grid;
+    z-index: 1;
 }
 
 .modalContents {
-    bottom: 0px;
+    justify-self: center;
+    align-self: flex-end;
 }
 
 #ageVerify {
-    padding: 525px 0px 0px 0px;
     color: white;
     font-size: 18px;
     letter-spacing: 2px;
@@ -31,15 +42,15 @@
     font-size: 18px;
     background: goldenrod;
     padding: 5px;
+    cursor: pointer;
 }
 
 #modalBtn {
     color: white;
     padding: 3px;
-    // margin: 0 auto;
 }
 
-.imgContainer {
-    padding: 50px;
-}
+// .imgContainer {
+//     padding: 50px;
+// }
 
