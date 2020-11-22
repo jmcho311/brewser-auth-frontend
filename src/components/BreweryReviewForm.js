@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 class BreweryReviewForm extends Component {
 
     state = {
-        breweryId: 0,
-        name: '',
-        city: '',
-        state: '',
+        breweryId: this.props.brewery.id,
+        name: this.props.brewery.name,
+        city: this.props.brewery.city,
+        state: this.props.brewery.state,
         rating: 0,
         comment: '',
     }
@@ -14,13 +14,22 @@ class BreweryReviewForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.setState({
-            breweryId: e.target.breweryId.value,
-            name: e.target.name.value,
-            city: e.target.city.value,
-            state: e.target.state.value,
+            // breweryId: e.target.breweryId.value,
+            // name: e.target.name.value,
+            // city: e.target.city.value,
+            // state: e.target.state.value,
             rating: e.target.rating.value,
             comment: e.target.comment.value,
         })
+        console.log(this.state.rating)
+        this.props.createPost(
+            this.state.breweryId, 
+            this.state.name,
+            this.state.city,
+            this.state.state,
+            this.state.rating, 
+            this.state.comment,
+            )
     }
 
     render () {
@@ -78,7 +87,11 @@ class BreweryReviewForm extends Component {
                     placeholder="comment"
                     type="text"
                 />
-                <button onClick={this.props.onClose}> Submit </button>
+                <button 
+                    //onClick={this.props.onClose}
+                > 
+                Submit 
+                </button>
             </form>
         </div>
     );
