@@ -6,6 +6,7 @@ import BrewerySearchModel from '../models/brewerysearch'
 import {Link} from 'react-router-dom'
 
 import BeerPost from '../components/BeerPost'
+import BeerCard from '../components/BeerCard'
 
 class BeerList extends Component {
     state = {
@@ -40,7 +41,8 @@ class BeerList extends Component {
             console.log(beer) 
             return (
                 <Link to={`/brewery/${beer.breweryId}`} key={index}>
-                    <BeerPost {...beer} key={index}/>
+                    <BeerCard {...beer} />
+                    <BeerPost {...beer} />
                 </Link>
             )
         })

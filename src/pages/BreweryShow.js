@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
+import BeerSearchModel from '../models/beer'
 
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
+import BeerPost from '../components/BeerPost'
 
 class BreweryShow extends Component {
     state = {
         breweryInfo: {},
         breweryComments: [],
         currentBrewery: this.props.match.params.id,
+        beers: [],
         show: false,
     }
 
