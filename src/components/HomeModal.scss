@@ -38,19 +38,27 @@
 
 .modalBtn {
     margin: 3px;
+    height: 2em;
+    width: 6em;
     color: white;
     font-size: 18px;
+    font-family: garamond;
+    text-shadow: 0 1px 3px black;
+    letter-spacing: 1px;
     background: goldenrod;
+    border: 1px solid black;
+    border-radius: 8px;
     padding: 5px;
     cursor: pointer;
-}
+    transition: all .2s ease-in-out;
 
-#modalBtn {
-    color: white;
-    padding: 3px;
+    &:hover {
+        background-color: goldenrod;
+        box-shadow: 0 5px 20px goldenrod;
+        // text-shadow: 0 1px 3px black;
+        opacity: 75%;
+        color: black;
+        transform: scale(1.05);
+    }
 }
-
-// .imgContainer {
-//     padding: 50px;
-// }
 
