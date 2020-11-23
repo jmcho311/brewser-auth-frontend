@@ -8,6 +8,7 @@ const BeerPost = (props) => {
             <h4>Beer Category: { props.category }</h4>
             <h4>Beer Style: { props.style }</h4>
             <p>Comment: { props.comment }</p>
+            {/* <p>{ props.createdAt }</p> */}
         </div>
     )
 }
