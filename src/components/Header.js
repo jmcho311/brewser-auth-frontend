@@ -13,6 +13,9 @@ const Header = (props) => {
           <Link to={'/about'}>About</Link>
         </div>
       </div>
+      {/* <div class="brewserLogo">
+        <h3>Brewser</h3>
+      </div> */}
       <div className="userLinks">
         <ul>
           { props.currentUser ? 
