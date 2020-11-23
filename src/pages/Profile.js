@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 
 import Brewery from '../models/brewery';
 import BeerModel from '../models/beer';
-
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost';
 import BeerCard from '../components/BeerCard'
 import BeerPost from '../components/BeerPost'
 import ProfileCard from '../components/ProfileCard'
-
 import './App.scss';
 
 class Profile extends Component {
@@ -53,14 +51,13 @@ class Profile extends Component {
         </div>
       )
     })
-      
-      let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
-        // console.log(comment)
-        return (
-          <BeerPost {...comment} key={index} />
-        )
-    })
     
+    let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
+      // console.log(comment)
+      return (
+        <BeerPost {...comment} key={index} />
+      )
+    })
 
     return (
       <div className="profile">
