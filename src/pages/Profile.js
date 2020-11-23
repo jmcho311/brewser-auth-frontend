@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import Brewery from '../models/brewery';
 import BeerModel from '../models/beer';
 
-import BreweryCard from '../components/BreweryCard'
-import BreweryPost from '../components/BreweryPost';
-import BeerCard from '../components/BeerCard'
 import BeerPost from '../components/BeerPost'
 import ProfileCard from '../components/ProfileCard'
 
