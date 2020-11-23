@@ -19,10 +19,10 @@ const Header = (props) => {
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
               <li>
-                  <a href="/logout" onClick={ props.logout }>
+                  <div onClick={ props.logout } class="logoutNav">
                     Log Out
-                  </a>
-                </li>
+                  </div>
+              </li>
             </>
           :
             <>
