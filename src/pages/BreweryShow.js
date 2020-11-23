@@ -48,6 +48,7 @@ class BreweryShow extends Component {
             state: state,
             rating: rating,
             comment: comment,
+            userId: localStorage.getItem('id')
         };
         console.log(newPost)
         Brewery.create(newPost).then((res) => {
