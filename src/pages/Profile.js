@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+
 import Brewery from '../models/brewery';
-import BreweryPost from '../components/BreweryPost';
-import BeerPost from '../components/BeerPost'
-import './App.scss';
 import BeerModel from '../models/beer';
+
+import BreweryCard from '../components/BreweryCard'
+import BreweryPost from '../components/BreweryPost';
+import BeerCard from '../components/BeerCard'
+import BeerPost from '../components/BeerPost'
+import ProfileCard from '../components/ProfileCard'
+
+import './App.scss';
 
 class Profile extends Component {
   state = {
@@ -26,7 +32,7 @@ class Profile extends Component {
 
   fetchBeerData = () => {
     BeerModel.showPost(this.state.currentUser).then(data => {
-      console.log(data)
+      // console.log(data)
       // debugger
       // console.log(data.user)
       this.setState({ beerComments: data.beer })
@@ -34,18 +40,27 @@ class Profile extends Component {
   }
 
   render() {
-    console.log(this.state.beerComments)
+    // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
-        return (
-          <BreweryPost {...comment} key={index}/>
-        )
-    })
-
-    let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
+      // console.log(this.state.breweryComments[0].state)
+      // console.log(comment)
+      // console.log(comment.state)
       return (
-        <BeerPost {...comment} key={index} />
+        <div>
+          <ProfileCard {...comment} key={index}/>
+          {/* <BreweryCard {...comment} key={index}/> */}
+          {/* <BreweryPost {...comment} key={index}/> */}
+        </div>
       )
     })
+      
+      let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
+        // console.log(comment)
+        return (
+          <BeerPost {...comment} key={index} />
+        )
+    })
+    
 
     return (
       <div className="profile">
