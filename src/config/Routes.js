@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
-import Home from '../pages/Home'
+// import Home from '../pages/Home'
 import SearchForm from '../pages/SearchForm'
 import About from '../pages/About'
 import Register from '../pages/Register'
@@ -10,6 +10,9 @@ import Profile from '../pages/Profile'
 import BreweryShow from '../pages/BreweryShow'
 import BreweryList from '../pages/BreweryList'
 import BeerList from '../pages/BeerList'
+import Logout from '../pages/Logout'
+import Reset from '../pages/Reset'
+
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -28,6 +31,8 @@ const Routes = (props) => (
     <Route path='/register' component={ Register } />
     <Route path='/brewerylist' component={ BreweryList } />
     <Route path='/beerlist' component={ BeerList } />
+    <Route path='/logout' component={ Logout } />
+    <Route path='/reset' component={ Reset } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
                 {...routeComponentProps}

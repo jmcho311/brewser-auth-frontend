@@ -45,3 +45,17 @@ header {
     }
   }
 }
+
+.logoutNav {
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: darken(#fff, 20%)
+  }
+}

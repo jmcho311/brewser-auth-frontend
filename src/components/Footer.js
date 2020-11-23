@@ -7,7 +7,8 @@ const Footer = () => {
   <footer>
     <p>
       Powered by: <a target="new" 
-                      href="https://www.openbrewerydb.org/">
+                      href="https://www.openbrewerydb.org/"
+                      class="footerAnchor">
                       Open Brewery DB
                   </a>
     </p>

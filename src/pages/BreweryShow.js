@@ -43,6 +43,25 @@ class BreweryShow extends Component {
         })
     }
 
+    createPost = (breweryId, name, city, state, rating, comment) => {
+        console.log('trying to create a post')
+        let newPost = {
+            breweryId: breweryId,
+            name: name,
+            city: city,
+            state: state,
+            rating: rating,
+            comment: comment,
+            userId: localStorage.getItem('id')
+        };
+        console.log(newPost)
+        Brewery.create(newPost).then((res) => {
+            let breweryComments = this.state.breweryComments;
+            breweryComments.push(res.data);
+            this.setState({ breweryComments:breweryComments });
+        });
+    };
+
     render() {
         let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
             return (
@@ -55,7 +74,7 @@ class BreweryShow extends Component {
                     <BreweryCard {...this.state.breweryInfo} />
                 </div>
                 <div>
-                <BreweryReviewForm onClose={this.showModal} show={this.state.show} brewery={this.state.breweryInfo}/>
+                <BreweryReviewForm onClose={this.showModal} show={this.state.show} brewery={this.state.breweryInfo} createPost={this.createPost}/>
                 <button onClick={e => {this.showModal()}}> Write a Review</button>
                 </div>
                 <h3>Posts left by others:</h3>
