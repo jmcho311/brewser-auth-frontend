@@ -49,10 +49,20 @@ class Profile extends Component {
 
     return (
       <div className="profile">
-        <h1>Welcome to your Profile!</h1>
-        <h2>Profile of user with ID { this.state.currentUser }</h2>
+        <h1 className="profileHead">Welcome to your Profile!</h1>
+        <h2 className="profileSubhead"> User { this.state.currentUser } (Change to user name)</h2>
         { this.state.breweryComments ? breweryCommentList : 'Loading..'}
         { this.state.beerComments ? beerCommentList : 'Loading...'}
+        <div className="yourPosts">
+          <div className="breweryContainer">
+            <h3 id="breweryPosts">Your Brewery Check-ins</h3>
+            <BreweryPost />
+          </div>
+          <div className="beerContainer">
+            <h3 id="beerPosts">Your beer reviews</h3>
+            <BeerPost />
+          </div>
+        </div>
       </div>
     );
   }
