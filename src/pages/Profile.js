@@ -5,7 +5,6 @@ import BeerModel from '../models/beer';
 
 import BeerPost from '../components/BeerPost'
 import ProfileCard from '../components/ProfileCard'
-
 import './App.scss';
 
 class Profile extends Component {
@@ -50,21 +49,32 @@ class Profile extends Component {
         </div>
       )
     })
-      
-      let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
-        // console.log(comment)
-        return (
-          <BeerPost {...comment} key={index} />
-        )
-    })
     
+    let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
+      // console.log(comment)
+      return (
+        <BeerPost {...comment} key={index} />
+      )
+    })
 
     return (
       <div className="profile">
-        <h1>Welcome to your Profile!</h1>
-        <h2>Profile of user with ID { this.state.currentUser }</h2>
-        { this.state.breweryComments ? breweryCommentList : 'Loading..'}
-        { this.state.beerComments ? beerCommentList : 'Loading...'}
+        <h1 className="profileHead">Welcome to your Profile!</h1>
+        <h2 className="profileSubhead"> User { this.state.currentUser } (Change to user name)</h2>
+        {/* { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+        { this.state.beerComments ? beerCommentList : 'Loading...'} */}
+        <div className="yourPosts">
+          <div className="breweryContainer">
+            <h3 id="breweryPosts">Your Brewery Check-ins</h3>
+            { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+            <BreweryPost />
+          </div>
+          <div className="beerContainer">
+            <h3 id="beerPosts">Your beer reviews</h3>
+            { this.state.beerComments ? beerCommentList : 'Loading...'}
+            <BeerPost />
+          </div>
+        </div>
       </div>
     );
   }

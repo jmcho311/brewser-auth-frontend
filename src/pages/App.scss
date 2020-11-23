@@ -83,6 +83,36 @@ a:hover {
 
 // ============= Profile ==================
 
+.profileSubhead {
+    margin: 20px 0px 50px 0px;
+}
+
+.yourPosts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.breweryContainer {
+    border: 1px solid black;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    width: 20vw;
+}
+
+.beerContainer {
+    border: 1px solid black;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    width: 20vw;
+}
+
+#breweryPosts {
+    text-decoration: underline;
+}
+
+#beerPosts {
+    text-decoration: underline;
+}
+
 // ============= Log In ==================
 
 // ============= Register ==================
