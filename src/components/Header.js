@@ -13,7 +13,7 @@ const Header = (props) => {
           <Link to={'/about'}>About</Link>
         </div>
       </div>
-      {/* <div class="brewserLogo">
+      {/* <div className="brewserLogo">
         <h3>Brewser</h3>
       </div> */}
       <div className="userLinks">
@@ -22,7 +22,7 @@ const Header = (props) => {
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
               <li>
-                  <div onClick={ props.logout } class="logoutNav">
+                  <div onClick={ props.logout } className="logoutNav">
                     Log Out
                   </div>
               </li>
