@@ -37,6 +37,15 @@ class Profile extends Component {
     })
   }
 
+  deletePost = (comment) => {
+    console.log('this is working')
+    // Brewery.destroy(comment).then((res) => {
+      // console.log(res)
+    // }).then(
+      // this.fetchCommentData()
+    // )
+  }
+
   render() {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
@@ -44,8 +53,8 @@ class Profile extends Component {
       // console.log(comment)
       // console.log(comment.state)
       return (
-        <div>
-          <ProfileCard {...comment} key={index}/>
+        <div key={index}>
+          <ProfileCard deletePost={this.deletePost} {...comment} />
           {/* <BreweryCard {...comment} key={index}/> */}
           {/* <BreweryPost {...comment} key={index}/> */}
         </div>
