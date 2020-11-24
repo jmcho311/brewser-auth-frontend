@@ -32,6 +32,8 @@ class BreweryShow extends Component {
 
     fetchCommentData = () => {
         Brewery.show(this.state.currentBrewery).then(data => {
+        // Brewery.showPost(this.state.currentBrewery).then(data => {
+            console.log('-----------')
             console.log(data)
             this.setState({ breweryComments: data.brewery})
         })
@@ -43,15 +45,16 @@ class BreweryShow extends Component {
         })
     }
 
-    createPost = (breweryId, name, city, state, rating, comment) => {
+    // createPost = (breweryId, name, city, state, rating, comment) => {
+    createPost = () => {
         console.log('trying to create a post')
         let newPost = {
-            breweryId: breweryId,
-            name: name,
-            city: city,
-            state: state,
-            rating: rating,
-            comment: comment,
+            breweryId: this.state.breweryId,
+            name: this.state.name,
+            city: this.state.city,
+            state: this.state.state,
+            rating: this.state.rating,
+            comment: this.state.comment,
             userId: localStorage.getItem('id')
         };
         console.log(newPost)
