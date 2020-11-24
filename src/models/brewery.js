@@ -22,6 +22,11 @@ class BreweryModel {
             body: JSON.stringify(breweryData)
         }).then(res => res.json())
     }
+    static destroy = (breweryId) => {
+        return fetch(`${url}/${breweryId}`).then(res => res.json())
+    }
 }
+
+
 
 export default BreweryModel

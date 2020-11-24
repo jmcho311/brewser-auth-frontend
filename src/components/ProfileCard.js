@@ -1,6 +1,10 @@
 import React from 'react';
 
 const ProfileCard = (props) => {
+    
+    const removePost = () => {
+        props.deletePost(props.comment)
+    }
         return (
             <div className="ProfileCard">
                 <h3> { props.state } </h3>
@@ -14,26 +18,10 @@ const ProfileCard = (props) => {
                 </h5>
                 <h5>{ props.rating }/5</h5>
                 <p>{ props.comment }</p>
-                <form onSubmit={ this.handleSubmit} >
-                    <input 
-                        name = "rating"
-                        placeholder="rating"
-                        type="integer"
-                        onChange={ (e) => {
-                            this.setState({ rating:e.target.value})
-                        }}
-                        value={this.state.rating}
-                    />
-                    <input 
-                        name = "comment"
-                        placeholder="comment"
-                        type="text"
-                        onChange={ (e) => {
-                            this.setState({ rating:e.target.value})
-                        }}
-                        value={this.state.comment}
-                    />
-                </form>
+                <span className="remove" 
+                onClick={ removePost }>
+                    Remove
+                </span>
             </div>
         )
     }
