@@ -63,18 +63,18 @@ class Profile extends Component {
       <div className="profile">
         <h1 className="profileHead">Welcome to your Profile!</h1>
         <h2 className="profileSubhead"> User { this.state.currentUser } (Change to user name)</h2>
-        {/* { this.state.breweryComments ? breweryCommentList : 'Loading..'}
-        { this.state.beerComments ? beerCommentList : 'Loading...'} */}
         <div className="yourPosts">
           <div className="breweryContainer">
-            <h3 id="breweryPosts">Your Brewery Check-ins</h3>
-            { this.state.breweryComments ? breweryCommentList : 'Loading..'}
-            {/* <BreweryPost /> */}
+              <h3 id="postsTitle">Your Brewery Check-ins</h3>
+              <div className="contents">
+                { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+              </div>
           </div>
           <div className="beerContainer">
-            <h3 id="beerPosts">Your beer reviews</h3>
-            { this.state.beerComments ? beerCommentList : 'Loading...'}
-            {/* <BeerPost /> */}
+              <h3 id="postsTitle">Your beer reviews</h3>
+              <div className="contents">
+                { this.state.beerComments ? beerCommentList : 'Loading...'}
+              </div>
           </div>
         </div>
       </div>

@@ -97,20 +97,26 @@ a:hover {
     border: 1px solid black;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
     width: 20vw;
+    height: 50vh;
+    overflow-y: scroll;
 }
 
 .beerContainer {
     border: 1px solid black;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
     width: 20vw;
+    height: 50vh;
+    overflow-y: scroll;
 }
 
-#breweryPosts {
+#postsTitle {
     text-decoration: underline;
 }
 
-#beerPosts {
-    text-decoration: underline;
+.contents {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 3px;
 }
 
 // ============= Log In ==================
