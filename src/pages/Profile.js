@@ -42,8 +42,8 @@ class Profile extends Component {
       // console.log(comment)
       // console.log(comment.state)
       return (
-        <div>
-          <ProfileCard {...comment} key={index}/>
+        <div key={index}>
+          <ProfileCard {...comment} />
           {/* <BreweryCard {...comment} key={index}/> */}
           {/* <BreweryPost {...comment} key={index}/> */}
         </div>
