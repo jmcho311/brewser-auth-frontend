@@ -22,7 +22,7 @@ const Header = (props) => {
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
               <li>
-                  <div onClick={ props.logout } class="logoutNav">
+                  <div onClick={ props.logout } className="logoutNav">
                     Log Out
                   </div>
               </li>

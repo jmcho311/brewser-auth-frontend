@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
-import BeerSearchModel from '../models/beer'
+// import BeerSearchModel from '../models/beer'
 
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
-import BeerPost from '../components/BeerPost'
+// import BeerPost from '../components/BeerPost'
 
 class BreweryShow extends Component {
     state = {
@@ -46,12 +46,12 @@ class BreweryShow extends Component {
     createPost = (breweryId, name, city, state, rating, comment) => {
         console.log('trying to create a post')
         let newPost = {
-            breweryId: breweryId,
-            name: name,
-            city: city,
-            state: state,
-            rating: rating,
-            comment: comment,
+            breweryId: this.state.breweryId,
+            name: this.state.name,
+            city: this.state.city,
+            state: this.state.state,
+            rating: this.state.rating,
+            comment: this.state.comment,
             userId: localStorage.getItem('id')
         };
         console.log(newPost)

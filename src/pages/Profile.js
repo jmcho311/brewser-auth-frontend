@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import Brewery from '../models/brewery';
 import BeerModel from '../models/beer';
-import BreweryCard from '../components/BreweryCard'
-import BreweryPost from '../components/BreweryPost';
-import BeerCard from '../components/BeerCard'
+// import BreweryCard from '../components/BreweryCard'
+// import BreweryPost from '../components/BreweryPost';
+// import BeerCard from '../components/BeerCard'
 import BeerPost from '../components/BeerPost'
 import ProfileCard from '../components/ProfileCard'
 import './App.scss';
@@ -69,12 +69,12 @@ class Profile extends Component {
           <div className="breweryContainer">
             <h3 id="breweryPosts">Your Brewery Check-ins</h3>
             { this.state.breweryComments ? breweryCommentList : 'Loading..'}
-            <BreweryPost />
+            {/* <BreweryPost /> */}
           </div>
           <div className="beerContainer">
             <h3 id="beerPosts">Your beer reviews</h3>
             { this.state.beerComments ? beerCommentList : 'Loading...'}
-            <BeerPost />
+            {/* <BeerPost /> */}
           </div>
         </div>
       </div>
