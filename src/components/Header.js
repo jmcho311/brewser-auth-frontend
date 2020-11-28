@@ -13,7 +13,7 @@ const Header = (props) => {
           <Link to={'/about'}>About</Link>
         </div>
       </div>
-      {/* <div class="brewserLogo">
+      {/* <div className="brewserLogo">
         <h3>Brewser</h3>
       </div> */}
       <div className="userLinks">
