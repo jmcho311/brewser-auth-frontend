@@ -1,5 +1,4 @@
 import React from 'react';
-import './BreweryCard.scss'
 
 const BreweryCard = (props) => {
     return (
