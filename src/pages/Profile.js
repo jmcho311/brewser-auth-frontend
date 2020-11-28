@@ -2,21 +2,24 @@ import React, { Component } from 'react';
 
 import Brewery from '../models/brewery';
 import BeerModel from '../models/beer';
+import UserModel from '../models/user'
 
 import BeerPost from '../components/BeerPost'
-import ProfileCard from '../components/ProfileCard'
+import ProfileBreweryCard from '../components/ProfileBreweryCard'
 import './App.scss';
 
 class Profile extends Component {
   state = {
     breweryComments: [],
     beerComments: [],
-    currentUser: localStorage.getItem('id')
+    currentUser: localStorage.getItem('id'),
+    user: []
   }
 
   componentDidMount() {
     this.fetchCommentData()
     this.fetchBeerData()
+    this.fetchUserData()
   }
 
   fetchCommentData = () => {
@@ -35,26 +38,33 @@ class Profile extends Component {
     })
   }
 
+  fetchUserData = () => {
+    UserModel.index().then(data => {
+      // console.log(data)
+      // console.log('====='+data.users[0].name)
+      this.setState({ user: data.users[0].name })
+    })
+  }
+
   deletePost = (comment) => {
     console.log('this is working')
+    console.log(comment)
+    // console.log(res)
     // Brewery.destroy(comment).then((res) => {
-      // console.log(res)
     // }).then(
-      // this.fetchCommentData()
+    //   this.fetchCommentData()
     // )
+    // Brewery.destroy(comment).then(this.fetchCommentData)
+    Brewery.destroy(comment)
   }
+
 
   render() {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
-      // console.log(this.state.breweryComments[0].state)
-      // console.log(comment)
-      // console.log(comment.state)
       return (
         <div key={index}>
-          <ProfileCard deletePost={this.deletePost} {...comment} />
-          {/* <BreweryCard {...comment} key={index}/> */}
-          {/* <BreweryPost {...comment} key={index}/> */}
+          <ProfileBreweryCard deletePost={this.deletePost} {...comment} />
         </div>
       )
     })
@@ -68,8 +78,7 @@ class Profile extends Component {
 
     return (
       <div className="profile">
-        <h1 className="profileHead">Welcome to your Profile!</h1>
-        <h2 className="profileSubhead"> User { this.state.currentUser } (Change to user name)</h2>
+        <h1 className="profileHead">Welcome to your profile page, { this.state.user }!</h1>
         <div className="yourPosts">
           <div className="breweryContainer">
             <h3 id="breweryPosts">Your Brewery Check-ins</h3>
