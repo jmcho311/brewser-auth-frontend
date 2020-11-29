@@ -5,6 +5,7 @@ import BeerModel from '../models/beer'
 import BrewerySearchModel from '../models/brewerysearch'
 
 import BeerPost from '../components/BeerPost'
+import './App.scss';
 
 
 class BeerShow extends Component {
