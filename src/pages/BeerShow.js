@@ -5,6 +5,7 @@ import BeerModel from '../models/beer'
 import BrewerySearchModel from '../models/brewerysearch'
 
 import BeerPost from '../components/BeerPost'
+import './App.scss';
 
 
 class BeerShow extends Component {
@@ -45,7 +46,7 @@ class BeerShow extends Component {
         })
 
         return (
-            <div>
+            <div className="Page">
                 <h1>Beer Show Page for selected Beer</h1>
                 { this.state.beerComments ? beerCommentsList : 'Loading...'}
                 <Link to={`/brewery/${this.state.brew.id}`}>

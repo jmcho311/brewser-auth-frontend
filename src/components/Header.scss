@@ -1,23 +1,25 @@
 header {
-  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySHVX_8h2fDS5n2vNDRK6PA00BtS7ZNu4TA&usqp=CAU);
+  background: gray;
   font-family: garamond;
   text-align: left;
   border: 3px solid goldenrod;
   border-radius: 5px;
   padding: 20px 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
-  width: 100%;
+  width: 15vw;
+  height: 100vh;
   position: fixed;
-  top: 0px; 
+  top: 0px;
+  left: 0px; 
 
   a {
     color: white;
     font-size: 17px;
     letter-spacing: 1px;
     font-weight: bold;
-    text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+    // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
     transition: color 0.3s ease;
     margin: 15px;
 
@@ -25,13 +27,19 @@ header {
       color: darken(#fff, 20%)
     }
   }
+}
+
+#headerTitle {
+  text-align: center;
+  color: white;
+}
 
   .nav {
     width: 200px;
-    padding: 1px 10px;
+    padding: 1px 0px;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   // .brewserLogo {
@@ -51,14 +59,13 @@ header {
       padding: 0px 7px;
     }
   }
-}
 
 .logoutNav {
   color: white;
   font-size: 17px;
   letter-spacing: 1px;
   font-weight: bold;
-  text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
   transition: color 0.3s ease;
   cursor: pointer;
 

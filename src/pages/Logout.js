@@ -3,7 +3,7 @@ import './App.scss'
 
 const Logout = () => {
     return (
-        <div>
+        <div className="Page">
             <h1>You have successfully logged out!</h1>
             <p>Would you like to log back in? </p>
             <p>

@@ -1,10 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import './Header.scss'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.scss';
 
 const Header = (props) => {
+
   return (
     <header>
+
+      <h1 id="headerTitle"> Brewser </h1>
+
       <div className="nav">
         <div className="home">
           <Link to={'/'}>Home</Link>
@@ -16,6 +20,7 @@ const Header = (props) => {
       {/* <div className="brewserLogo">
         <h3>Brewser</h3>
       </div> */}
+
       <div className="userLinks">
         <ul>
           { props.currentUser ? 

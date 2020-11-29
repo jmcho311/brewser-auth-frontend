@@ -30,7 +30,8 @@ class BreweryReviewForm extends Component {
                 </button>
             </div>
             <form onSubmit={ this.handleSubmit }>
-                <input
+                <label>Rating: </label>
+                <select
                 // rating - user input
                     name = "rating"
                     placeholder="rating"
@@ -39,7 +40,13 @@ class BreweryReviewForm extends Component {
                         this.setState({ rating: e.target.value })
                     }}
                     value= {this.state.rating}
-                />
+                >
+                    <option value="1">1/5</option>
+                    <option value="2">2/5</option>
+                    <option value="3">3/5</option>
+                    <option value="4">4/5</option>
+                    <option value="5">5/5</option>
+                </select>
                 <input
                 // comment - user input
                     name = "comment"
