@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ReviewForm.scss';
 
 class BeerReviewForm extends Component {
     state = {
@@ -26,9 +27,9 @@ class BeerReviewForm extends Component {
         }
 
         return (
-            <div>
+            <div className="reviewModal">
                 <div>
-                    <button onClick={this.props.onClose}>
+                    <button className="closeButton" onClick={this.props.onClose}>
                         Close
                     </button>
                 </div>
@@ -78,7 +79,7 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.comment}
                     />
-                    <button>Submit</button>
+                    <button onClick={this.props.onClose}>Submit</button>
                 </form>
             </div>
         );
