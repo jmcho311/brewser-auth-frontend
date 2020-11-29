@@ -10,11 +10,11 @@ class BreweryReviewForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log('⭐️', this.state)
         this.props.createPost(
             this.state.rating, 
             this.state.comment,
             )
+        this.props.onClose()
     }
 
     render () {
