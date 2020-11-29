@@ -79,15 +79,31 @@ class SearchForm extends Component {
                         />
                         <button id="searchBtn"> I need a drink! </button>
                     </form>
-                    <form onSubmit={ this.searchBeers }>
+
+                    {/* <form onSubmit={ this.searchBeers }>
                         <input 
                         id="searchbar"
                         type="text"
                         placeholder="Find Beer"
                         onChange={ this.handleBeerChange }
                         value={ this.state.category }
-                        />
-                        <button id="searchBtn"> Pour Me a Pint! </button>
+                        /> */}
+
+                    <form onSubmit={ this.searchBeers }>
+                        <select 
+                            value={ this.state.category } 
+                            onChange={ this.handleBeerChange }>
+                            <option value="Ale">Ale</option>
+                            <option value="Belgian">Belgian</option>
+                            <option value="Cider">Cider</option>
+                            <option value="IPA">IPA</option>
+                            <option value="Lager">Lager</option>
+                            <option value="Pilsner">Pilsner</option>
+                            <option value="Porter">Porter</option>
+                            <option value="Stout">Stout</option>
+                            <option value="Wheat">Wheat</option>
+                        </select>
+                        <button id="searchBtn"> Pour me a pint! </button>
                     </form>
                     
                 </div>
