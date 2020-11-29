@@ -1,12 +1,19 @@
 // ============= Universal Styling ==================
 
+.Page {
+    position: absolute;
+    top: 10vh;
+    left: 15vw;
+    width: 85vw;
+}
+
 h1 {
-    margin: 100px 0px 35px 0px;
-    padding: 10px;
+    margin-bottom: 30px;
 }
 
 h4 {
-    margin: 50px;
+    margin: 50px 0px 30px 0px;
+    
 }
 
 img {
@@ -16,29 +23,57 @@ img {
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
 }
 
-// ============= Home ==================
+// ============= Home.js ==================
 
 
-// ============= Search ==================
+// ============= SearchForm.js ==================
 
-// #searchImg {
-//     width: 850px;
-//     border: 5px solid goldenrod;
-//     border-radius: 5px;
-// }
+.formBlock {
+    text-align: center;
+}
 
 #searchbar {
     margin: 3px;
+    width: 167px;
+    padding: 2px;
+    color: black;
+}
+
+#selectBar {
+    width: 175px;
+    margin: 3px;
+    padding: 2px;
 }
 
 #searchBtn {
     margin: 3px;
+    width: 110px;
+    padding: 2px;
 }
 
-// ============= Brewery List ==================
+// ============= BreweryList.js ==================
 
-.list {
-    width: 33%;
+.breweryCardContainer {
+    height: 78vh;
+    overflow-y: scroll;
+    bottom: 0px;
+    width: 35vw;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+}
+
+.BreweryCard {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 29vw;
+    margin: 0 auto;
+    margin-top: 7px;
+}
+
+#info {
+    width: 29vw;
     margin: 0 auto;
 }
 
@@ -46,26 +81,30 @@ a {
     color: black;
 }
 
-.BreweryCard {
-    border: 2px solid black;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
-    margin: 5px;   
-}
-
 a:hover {
     color: darken(#fff, 50%)
 }
 
 
-// ============= Brewery Show ==============
+// ============= BeerList.js ==============
+
+.BeerCard {
+    border: 1px solid black;
+    width: 29vw;
+    margin: 0 auto;
+}
+
+// ============= BreweryShow.js ==============
 
 .show {
     margin: 150px 0px 0px 0px;
 }
 
 .breweryDeets {
-    width: 33%;
+    width: 34.5%;
     margin: 0 auto;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
 }
 
 .brewReviews {
@@ -75,13 +114,43 @@ a:hover {
     margin: 0 auto;
 }
 
-// ============= About ==================
+.reviewButtons {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 2px;
+    min-width: 100px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttonContainer {
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ============= BeerShow.js =================
+
+// ============= About.js ==================
+
+// .About {
+//     position: absolute;
+//     top: 10vh;
+//     left: 15vw;
+//     width: 85vw;
+// }
+
+.aboutBlurb {
+    padding-top: 45px;
+    width: 70vw;
+    margin: 0 auto;
+}
 
 #credits {
     font-size: 15px;
 }
 
-// ============= Profile ==================
+// ============= Profile.js ==================
 
 .profileSubhead {
     margin: 20px 0px 50px 0px;
@@ -119,11 +188,8 @@ a:hover {
     padding: 3px;
 }
 
-// .deets {
-//     border: 1px solid black;
-// }
-// ============= Log In ==================
+// ============= Login.js ==================
 
-// ============= Register ==================
+// ============= Register.js ==================
 
-// ============= Log Out ==================
+// ============= Logout.js ==================
