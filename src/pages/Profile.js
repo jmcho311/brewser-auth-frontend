@@ -7,6 +7,7 @@ import UserModel from '../models/user';
 import BeerPost from '../components/BeerPost';
 import ProfileBreweryCard from '../components/ProfileBreweryCard';
 import './App.scss';
+import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   state = {
@@ -61,15 +62,36 @@ class Profile extends Component {
     })
   }
 
+  // editPost = (breweryId) => {
+  //   let editedPost = {
+  //     // breweryId: this.state.breweryInfo.id,
+  //     // name: this.state.breweryInfo.name,
+  //     // city: this.state.breweryInfo.city,
+  //     // state: this.state.breweryInfo.state,
+  //     rating: this.state.rating,
+  //     comment: this.state.comment,
+  //     // id: id
+  //     // userId: localStorage.getItem('id')
+  //   }
+  //   console.log(rating)
+  //   console.log(comment)
+  //   Brewery.edit(breweryId).then((res) => {
+  //     this.fetchCommentData()
+  //     // let breweryComment = this.state.breweryComments
+  //     // console.log(breweryComment)
+  //     // breweryComment.find(editedPost).body = update.body
+  //     // this.setState({breweryComments: breweryComment})
+  //   })
+  // }
 
   render() {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
-        <div key={ index }>
-          <ProfileBreweryCard 
-            deleteBreweryPost={ this.deleteBreweryPost } { ...comment } 
-          />
+        <div key={index}>
+          <Link to={`/brewery/${comment.breweryId}`}>
+            <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
+          </Link>
         </div>
       )
     })
@@ -77,10 +99,11 @@ class Profile extends Component {
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
       // console.log(comment)
       return (
-        <BeerPost 
-          deleteBeerPost={ this.deleteBeerPost } { ...comment } 
-          key={ index } 
-        />
+        <div key={index}>
+        <Link to={`/beer/${comment.name}`}>
+          <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment}/>
+        </Link>
+        </div>
       )
     })
 
