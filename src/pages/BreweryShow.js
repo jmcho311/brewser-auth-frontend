@@ -54,6 +54,11 @@ class BreweryShow extends Component {
     showModal = e => {
         this.setState({
             show: !this.state.show,
+        })
+    }
+
+    showBeerModal = e => {
+        this.setState({
             beerShow: !this.state.beerShow
         })
     }
@@ -119,8 +124,8 @@ class BreweryShow extends Component {
                 </div>
 
                 <div>
-                    <BeerReviewForm onClose={this.showModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
-                    <button onClick={(e) => {this.showModal()}}>Write a Beer Review
+                    <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
+                    <button onClick={(e) => {this.showBeerModal()}}>Write a Beer Review
                     </button>
                 </div>
 
