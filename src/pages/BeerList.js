@@ -21,8 +21,6 @@ class BeerList extends Component {
     }
 
     fetchData = () => {
-        // console.log(this.setState)
-        // console.log(this.props.location.state.category)
         BeerModel.show(this.props.location.state.category).then(data => {
             // console.log(data)
             // console.log(this.state.beers)
@@ -50,7 +48,7 @@ class BeerList extends Component {
                         <BeerCard {...beer} />
                         <h3>{ beer.breweryId }</h3>
                     </Link>
-                    <Link to={`/brewery/${beer.breweryId}`}>
+                    <Link to={ `/brewery/${beer.breweryId}` }>
                         <h3>{ this.state.breweries.name }</h3>
                         <h3>{ this.state.breweries.website_url }</h3>
                     </Link> */}
@@ -60,10 +58,12 @@ class BeerList extends Component {
         })
 
         return (
-            <div>
+            <div className="Page">
                 <h3>Your Beer Search Results for:</h3>
                 <h2>{ this.props.location.state.category }</h2>
-                { this.state.beers ? beerList : 'Loading..'}
+                <div className="BeerCard">
+                    { this.state.beers ? beerList : 'Loading..' }
+                </div>
             </div>
         )
     }

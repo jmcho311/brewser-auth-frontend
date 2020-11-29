@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
 import BeerModel from '../models/beer' 
-import './BreweryShow.scss'
+import './App.scss'
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
@@ -36,16 +36,12 @@ class BreweryShow extends Component {
 
     fetchCommentData = () => {
         Brewery.show(this.state.currentBrewery).then(data => {
-        // Brewery.showPost(this.state.currentBrewery).then(data => {
-            // console.log(data)
-            this.setState({ breweryComments: data.brewery})
+            this.setState({ breweryComments: data.brewery })
         })
     }
     
     fetchBeerData = () => {
         BeerModel.showBrewery(this.state.currentBrewery).then(data => {
-            console.log('-----------')
-            console.log(data.brewery)
             this.setState({ beerPosts: data.brewery})
         })
     }
@@ -64,7 +60,6 @@ class BreweryShow extends Component {
     }
 
     createPost = (rating, comment) => {
-        console.log('trying to create a post')
         let newPost = {
             breweryId: this.state.breweryInfo.id,
             name: this.state.breweryInfo.name,
@@ -74,7 +69,6 @@ class BreweryShow extends Component {
             comment: comment,
             userId: localStorage.getItem('id')
         };
-        console.log(newPost)
         Brewery.create(newPost).then((res) => {
             this.fetchCommentData();
         });
@@ -98,47 +92,61 @@ class BreweryShow extends Component {
     render() {
         let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
             return (
-                <BreweryPost {...comment} key={index}/>
+                <BreweryPost { ...comment } key={ index }/>
             )
         })
 
         let beerCommentList = this.state.beerPosts && this.state.beerPosts.map((comment, index) => {
             return (
-                <div key={index}>
-                    <Link to={`/beer/${comment.name}`}>
-                        <BeerCard {...comment}/>
+                <div key={ index }>
+                    <Link to={ `/beer/${comment.name}` }>
+                        <BeerCard { ...comment }/>
                     </Link>
                 </div>
             )
         })
         return (
-            <div className="show">
+            <div className="Page">
                 <div className="breweryDeets">
-                    <BreweryCard {...this.state.breweryInfo} />
+                    <BreweryCard { ...this.state.breweryInfo } />
                 </div>
 
                 <div className="buttonContainer">
-                <div>
-                    <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
-                    <button className="reviewButtons"onClick={e => {this.showModal()}}>Write a Review
-                    </button>
-                </div>
+                    <div>
+                        <BreweryReviewForm 
+                            onClose={ this.showModal } 
+                            show={ this.state.show } 
+                            createPost={ this.createPost }
+                        />
+                        <button 
+                            className="reviewButtons" 
+                            onClick={ e => { this.showModal() } }
+                        > Write a Review
+                        </button>
+                    </div>
 
-                <div>
-                    <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
-                    <button className= "reviewButtons" onClick={(e) => {this.showBeerModal()}}>Write a Beer Review
-                    </button>
-                </div>
+                    <div>
+                        <BeerReviewForm 
+                            onClose={ this.showBeerModal } 
+                            beerShow={ this.state.beerShow } 
+                            createBeerPost={ this.createBeerPost }
+                        />
+                        <button 
+                            className= "reviewButtons" 
+                            onClick={ (e) => {this.showBeerModal() } }
+                        >Write a Beer Review
+                        </button>
+                    </div>
                 </div>
 
                 <h3>Posts left by others:</h3>
                 
                 <div className="brewReviews">
-                    { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+                    { this.state.breweryComments ? breweryCommentList : 'Loading..' }
                 </div>
 
                 <div className="beerReviews">
-                    { this.state.beerPosts ? beerCommentList : 'Loading...'}
+                    { this.state.beerPosts ? beerCommentList : 'Loading...' }
                 </div>
             </div>
         )

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 import BeerModel from '../models/beer' 
 
-import BeerPost from '../components/BeerPost'
 import BeerShowCard from '../components/BeerShowCard'
+import './App.scss';
 
 
 class BeerShow extends Component {
@@ -37,7 +37,7 @@ class BeerShow extends Component {
         // console.log(this.state.beerComments[0].category)
 
         return (
-            <div>
+            <div className="Page">
                 <h1>Beer Show Page for selected Beer</h1>
                 <h3>Beer Name: { this.state.currentBeer }</h3>
                 {/* <h3>Beer Category: { this.state.beerComments[0].category }</h3> */}
