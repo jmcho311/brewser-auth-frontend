@@ -27,7 +27,7 @@ class BeerReviewForm extends Component {
         }
 
         return (
-            <div className="reviewModal">
+            <div className="beerModal">
                 <div>
                     <button className="closeButton" onClick={this.props.onClose}>
                         Close

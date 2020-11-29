@@ -1,17 +1,36 @@
 .reviewModal {
-// background-color: gray;
+background-color: white;
 color: black;
-width: 400px;
-height: 400px;
+width: 40vw;
+height: 33vh;
 box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-position: relative;
+position: absolute;
+z-index: 1;
 border-radius: 2px;
-margin: 0 auto;
+left: 30vw;
 }
+
+.beerModal {
+background-color: white;
+color: black;
+width: 40vw;
+height: 33vh;
+box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: absolute;
+z-index: 1;
+border-radius: 2px;
+left: 30vw;
+top: 48vh;
+}
+
 
 .closeButton {
     cursor: pointer;

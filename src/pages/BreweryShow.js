@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
 import BeerModel from '../models/beer' 
-import './BreweryShow.scss'
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
@@ -125,11 +124,13 @@ class BreweryShow extends Component {
                     <>
                 <div className="buttonContainer">
                 <div>
+                    <h5> Have you visited this brewery? </h5>
                     <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
                     <button className="reviewButtons"onClick={e => {this.showModal()}}>Write a Review
                     </button>
                 </div>
                 <div>
+                    <h5> Did you have a beer at this brewery? </h5>
                     <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
                     <button className= "reviewButtons" onClick= {(e) => {this.showBeerModal()}}>Write a Beer Review
                     </button>
