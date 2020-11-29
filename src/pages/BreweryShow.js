@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
 import BeerModel from '../models/beer' 

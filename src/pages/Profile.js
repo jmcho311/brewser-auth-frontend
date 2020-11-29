@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import Brewery from '../models/brewery';
 import BeerModel from '../models/beer';
-import UserModel from '../models/user'
+import UserModel from '../models/user';
 
-import BeerPost from '../components/BeerPost'
-import ProfileBreweryCard from '../components/ProfileBreweryCard'
+import BeerPost from '../components/BeerPost';
+import ProfileBreweryCard from '../components/ProfileBreweryCard';
 import './App.scss';
 
 class Profile extends Component {
@@ -38,24 +38,21 @@ class Profile extends Component {
     })
   }
 
+  deletePost = (breweryId) => {
+    console.log('this is working')
+    console.log(breweryId)
+    Brewery.delete(breweryId).then((res) => {
+      this.fetchCommentData()
+    })
+  }
+
+
   fetchUserData = () => {
     UserModel.index().then(data => {
       // console.log(data)
       // console.log('====='+data.users[0].name)
       this.setState({ user: data.users[0].name })
     })
-  }
-
-  deletePost = (comment) => {
-    console.log('this is working')
-    console.log(comment)
-    // console.log(res)
-    // Brewery.destroy(comment).then((res) => {
-    // }).then(
-    //   this.fetchCommentData()
-    // )
-    // Brewery.destroy(comment).then(this.fetchCommentData)
-    Brewery.destroy(comment)
   }
 
 
@@ -93,4 +90,5 @@ class Profile extends Component {
     )
   }
 }
+
 export default Profile;
