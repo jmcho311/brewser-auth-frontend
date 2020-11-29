@@ -24,6 +24,10 @@ export default class UserModel {
     }).then(res => res.json())
   }
 
+  static index() {
+      return fetch(`${REACT_APP_API_URL}/auth/user/${localStorage.getItem('id')}`).then(res => res.json()) 
+  }
+
   static logout() {
     return fetch(`${REACT_APP_API_URL}/auth/logout`, {
       method: "DELETE",

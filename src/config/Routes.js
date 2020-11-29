@@ -10,6 +10,7 @@ import Profile from '../pages/Profile'
 import BreweryShow from '../pages/BreweryShow'
 import BreweryList from '../pages/BreweryList'
 import BeerList from '../pages/BeerList'
+import BeerShow from '../pages/BeerShow'
 import Logout from '../pages/Logout'
 import Reset from '../pages/Reset'
 
@@ -31,6 +32,7 @@ const Routes = (props) => (
     <Route path='/register' component={ Register } />
     <Route path='/brewerylist' component={ BreweryList } />
     <Route path='/beerlist' component={ BeerList } />
+    <Route path='/beer/:name' component={ BeerShow } />
     <Route path='/logout' component={ Logout } />
     <Route path='/reset' component={ Reset } />
     <Route path='/login' render={ (routeComponentProps) => {

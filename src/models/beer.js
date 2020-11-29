@@ -13,15 +13,23 @@ class BeerModel {
         return fetch(`${url}/${userId}`).then(res => res.json())
     }
 
-    // static create = (beerData) => {
-    //     return fetch(`${url}/`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(beerData)
-    //     }).then(res => res.json())
-    // }
+    static showBrewery = (breweryName) => {
+        return fetch(`${url}/breweryPost/${breweryName}`).then(res => res.json())
+    }
+
+    static showBeer = (name) => {
+        return fetch(`${url}/name/${name}`).then(res => res.json())
+    }
+
+    static create = (beerData) => {
+        return fetch(`${url}/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(beerData)
+        }).then(res => res.json())
+    }
 }
 
 export default BeerModel;
