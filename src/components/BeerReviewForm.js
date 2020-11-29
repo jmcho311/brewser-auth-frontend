@@ -71,7 +71,7 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.rating}
                     />
-                    <input
+                    <textarea
                         name="comment"
                         placeholder="Beer Comment"
                         type="text"
