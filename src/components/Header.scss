@@ -34,31 +34,13 @@ header {
   color: white;
 }
 
-  .nav {
-    width: 200px;
-    padding: 1px 0px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  // .brewserLogo {
-  //   color: white;
-  //   font-family: garamond;
-  //   font-weight: bold;
-  //   text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-  // }
-
-  ul {
-    display: flex;
-    margin: 0;
-    padding: 0px 15px 0px 0px;
-
-    li {
-      list-style-type: none;
-      padding: 0px 7px;
-    }
-  }
+.nav {
+  width: 200px;
+  padding: 1px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
 .logoutNav {
   color: white;
