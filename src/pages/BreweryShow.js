@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 import Brewery from '../models/brewery'
 import BeerModel from '../models/beer' 
-import './BreweryShow.scss'
+import './App.scss'
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
@@ -118,17 +118,17 @@ class BreweryShow extends Component {
                 </div>
 
                 <div className="buttonContainer">
-                <div>
-                    <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
-                    <button className="reviewButtons"onClick={e => {this.showModal()}}>Write a Review
-                    </button>
-                </div>
+                    <div>
+                        <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
+                        <button className="reviewButtons"onClick={e => {this.showModal()}}>Write a Review
+                        </button>
+                    </div>
 
-                <div>
-                    <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
-                    <button className= "reviewButtons" onClick={(e) => {this.showBeerModal()}}>Write a Beer Review
-                    </button>
-                </div>
+                    <div>
+                        <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
+                        <button className= "reviewButtons" onClick={(e) => {this.showBeerModal()}}>Write a Beer Review
+                        </button>
+                    </div>
                 </div>
 
                 <h3>Posts left by others:</h3>
