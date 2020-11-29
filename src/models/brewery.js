@@ -25,11 +25,12 @@ class BreweryModel {
 
     static edit = (breweryId) => {
         return fetch(`${url}/${breweryId}`, {
-            method: "PUT"
+            method: "PUT",
+            body: JSON.stringify(breweryData)
         }).then(res => res.json())
     }
 
-    static destroy = (breweryId) => {
+    static delete = (breweryId) => {
         // return fetch(`${url}/${breweryId}`).then(res => res.json())
         return fetch(`${url}/${breweryId}`, {
             method: "DELETE"

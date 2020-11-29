@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 class ProfileBreweryCard extends Component {
     state = {
         rating: '',
-        comment: ''
+        comment: '',
+        id: this.props.id
     }
     
     removePost = () => {
@@ -13,7 +14,12 @@ class ProfileBreweryCard extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.state)
+        // console.log(this.state)
+        this.props.editPost(
+            this.state.rating,
+            this.state.comment,
+            this.state.id
+        )
     }
 
     render() {
@@ -30,6 +36,7 @@ class ProfileBreweryCard extends Component {
                 </h5>
                 <h5>{ this.props.rating }/5</h5>
                 <p>{ this.props.comment }</p>
+                
                 <form onSubmit={ this.handleSubmit }>
                     <input 
                         name="rating"
@@ -51,6 +58,7 @@ class ProfileBreweryCard extends Component {
                     />
                     <button>EDIT</button>
                 </form>
+
                 <span className="remove" 
                 onClick={ this.removePost }>
                     Remove

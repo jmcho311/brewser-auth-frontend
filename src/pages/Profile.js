@@ -58,6 +58,21 @@ class Profile extends Component {
     Brewery.destroy(comment)
   }
 
+  editPost = (rating, comment, id) => {
+    let editedPost = {
+      breweryId: this.state.breweryInfo.id,
+      // name: this.state.breweryInfo.name,
+      // city: this.state.breweryInfo.city,
+      // state: this.state.breweryInfo.state,
+      rating: rating,
+      comment: comment,
+      id: id
+      // userId: localStorage.getItem('id')
+    }
+    Brewery.edit(editedPost).then((res) => {
+      this.fetchCommentData()
+    })
+  }
 
   render() {
     // console.log(this.state.beerComments)
