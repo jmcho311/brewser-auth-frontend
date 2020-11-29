@@ -38,24 +38,20 @@ class Profile extends Component {
     })
   }
 
+  deletePost = (breweryId) => {
+    console.log('this is working')
+    console.log(breweryId)
+    Brewery.delete(breweryId).then((res) => {
+      this.fetchCommentData()
+    })
+
+
   fetchUserData = () => {
     UserModel.index().then(data => {
       // console.log(data)
       // console.log('====='+data.users[0].name)
       this.setState({ user: data.users[0].name })
     })
-  }
-
-  deletePost = (comment) => {
-    console.log('this is working')
-    console.log(comment)
-    // console.log(res)
-    // Brewery.destroy(comment).then((res) => {
-    // }).then(
-    //   this.fetchCommentData()
-    // )
-    // Brewery.destroy(comment).then(this.fetchCommentData)
-    Brewery.destroy(comment)
   }
 
 
@@ -92,5 +88,6 @@ class Profile extends Component {
       </div>
     )
   }
+}
 }
 export default Profile;

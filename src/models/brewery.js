@@ -22,18 +22,13 @@ class BreweryModel {
             body: JSON.stringify(breweryData)
         }).then(res => res.json())
     }
-
-    static edit = (breweryId) => {
-        return fetch(`${url}/${breweryId}`, {
-            method: "PUT"
-        }).then(res => res.json())
-    }
-
-    static destroy = (breweryId) => {
-        // return fetch(`${url}/${breweryId}`).then(res => res.json())
-        return fetch(`${url}/${breweryId}`, {
-            method: "DELETE"
-        }).then(res => res.json())
+    static delete = (id) => {
+        return fetch(`${url}/posts/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
     }
 }
 
