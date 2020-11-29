@@ -1,6 +1,6 @@
 .reviewModal {
 // background-color: gray;
-color: white;
+color: black;
 width: 400px;
 height: 400px;
 box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
@@ -10,7 +10,6 @@ justify-content: center;
 align-items: center;
 position: relative;
 border-radius: 2px;
-font-family: 'Menlo', monospace;
 margin: 0 auto;
 }
 
@@ -24,4 +23,9 @@ margin: 0 auto;
     width: 24px;
     height: 24px;
     padding: 0;
+}
+
+.commentInput {
+    width: 300px;
+    height: 100px;
 }

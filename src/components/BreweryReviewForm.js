@@ -29,6 +29,9 @@ class BreweryReviewForm extends Component {
                     Close
                 </button>
             </div>
+
+            <h4>Tell us about your experience</h4>
+
             <form onSubmit={ this.handleSubmit }>
                 <input
                 // rating - user input
@@ -40,7 +43,7 @@ class BreweryReviewForm extends Component {
                     }}
                     value= {this.state.rating}
                 />
-                <input
+                <input className="commentInput"
                 // comment - user input
                     name = "comment"
                     placeholder="comment"
