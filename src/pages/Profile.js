@@ -7,6 +7,7 @@ import UserModel from '../models/user'
 import BeerPost from '../components/BeerPost'
 import ProfileBreweryCard from '../components/ProfileBreweryCard'
 import './App.scss';
+import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   state = {
@@ -38,11 +39,18 @@ class Profile extends Component {
     })
   }
 
-  deletePost = (breweryId) => {
-    // console.log('this is working')
-    // console.log(breweryId)
+  deleteBreweryPost = (breweryId) => {
+    console.log('this is working')
+    console.log(breweryId)
     Brewery.delete(breweryId).then((res) => {
       this.fetchCommentData()
+    })
+  }
+
+  deleteBeerPost = (beerId) => {
+    console.log (beerId)
+    BeerModel.delete(beerId).then((res) => {
+      this.fetchBeerData()
     })
   }
 
@@ -81,7 +89,9 @@ class Profile extends Component {
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
         <div key={index}>
-          <ProfileBreweryCard deletePost={this.deletePost} {...comment} />
+          <Link to={`/brewery/${comment.breweryId}`}>
+            <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
+          </Link>
         </div>
       )
     })
@@ -89,7 +99,11 @@ class Profile extends Component {
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
       // console.log(comment)
       return (
-        <BeerPost {...comment} key={index} />
+        <div key={index}>
+        <Link to={`/beer/${comment.name}`}>
+          <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment}/>
+        </Link>
+        </div>
       )
     })
 
@@ -111,4 +125,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile
+export default Profile;

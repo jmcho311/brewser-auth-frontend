@@ -1,48 +1,39 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BrewerySearchModel from '../models/brewerysearch'
-// import BeerCard from './BeerCard'
 
-function BeerListCard({beer}) {
-    const [brewery, setBrewery] = useState({})
+class BeerListCard extends Component {
+    state = {
+        breweries: []
+    }
 
-    useEffect(() => {
-        if(beer) {
-            fetchBreweryData()
-        }
-    }, [beer])
+    componentDidMount() {
+        this.fetchBreweryData()
+    }
 
-    const fetchBreweryData = () => {
-        // console.log(this.state.beers)
+    fetchBreweryData = (props) => {
         // console.log(this.props)
-        // console.log(beer)
-        // console.log(brewery)
-        BrewerySearchModel.show(beer.breweryId).then(data => {   //need to plug in breweryId in show() for each BeerCard
+        BrewerySearchModel.show(this.props.breweryId).then(data => {   //need to plug in breweryId in show() for each BeerCard
             // console.log("hard coded, need to change", data)
-            setBrewery(data)
+            // console.log(data)
+            this.setState({ breweries: data })
         })
     }
 
-    if(!beer) {
-        return null
-    }
-
-    return (
+    render() {
+        return (
             <div>
-                <h1>TESTING!</h1>
-                <Link to={`/beer/${beer.name}`}>
-                    {/* <BeerCard {...beer} /> */}
-                    <h2>Beer Name: { beer.name }</h2>
-                    <h4>Beer Category: { beer.category }</h4>
-                    {/* <h3>{ beer.breweryId }</h3> */}
+                <Link to={`/beer/${this.props.name}`}>
+                    <h2>Beer Name: { this.props.name }</h2>
+                    <h4>Beer Category: { this.props.category }</h4>
                 </Link>
-                <Link to={`/brewery/${beer.breweryId}`}>
-                    <h3>{ brewery.name }</h3>
-                    <h3>{ brewery.website_url }</h3>
+                <Link to={`/brewery/${this.props.breweryId}`}>
+                    <h3>{ this.state.breweries.name }</h3>
+                    <h3>{ this.state.breweries.website_url }</h3>
                 </Link>
             </div>
-    )
+        );
+    }
 }
 
-export default BeerListCard
+export default BeerListCard;

@@ -9,7 +9,7 @@ class ProfileBreweryCard extends Component {
     }
     
     removePost = () => {
-        this.props.deletePost(this.props.comment)
+        this.props.deleteBreweryPost(this.props.id)
     }
 
     handleSubmit = (e) => {
