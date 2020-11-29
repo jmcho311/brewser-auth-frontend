@@ -38,6 +38,14 @@ class Profile extends Component {
     })
   }
 
+  deletePost = (breweryId) => {
+    // console.log('this is working')
+    // console.log(breweryId)
+    Brewery.delete(breweryId).then((res) => {
+      this.fetchCommentData()
+    })
+  }
+
   fetchUserData = () => {
     UserModel.index().then(data => {
       // console.log(data)
@@ -46,33 +54,27 @@ class Profile extends Component {
     })
   }
 
-  deletePost = (comment) => {
-    console.log('this is working')
-    console.log(comment)
-    // console.log(res)
-    // Brewery.destroy(comment).then((res) => {
-    // }).then(
-    //   this.fetchCommentData()
-    // )
-    // Brewery.destroy(comment).then(this.fetchCommentData)
-    Brewery.destroy(comment)
-  }
-
-  editPost = (rating, comment, id) => {
-    let editedPost = {
-      breweryId: this.state.breweryInfo.id,
-      // name: this.state.breweryInfo.name,
-      // city: this.state.breweryInfo.city,
-      // state: this.state.breweryInfo.state,
-      rating: rating,
-      comment: comment,
-      id: id
-      // userId: localStorage.getItem('id')
-    }
-    Brewery.edit(editedPost).then((res) => {
-      this.fetchCommentData()
-    })
-  }
+  // editPost = (breweryId) => {
+  //   let editedPost = {
+  //     // breweryId: this.state.breweryInfo.id,
+  //     // name: this.state.breweryInfo.name,
+  //     // city: this.state.breweryInfo.city,
+  //     // state: this.state.breweryInfo.state,
+  //     rating: this.state.rating,
+  //     comment: this.state.comment,
+  //     // id: id
+  //     // userId: localStorage.getItem('id')
+  //   }
+  //   console.log(rating)
+  //   console.log(comment)
+  //   Brewery.edit(breweryId).then((res) => {
+  //     this.fetchCommentData()
+  //     // let breweryComment = this.state.breweryComments
+  //     // console.log(breweryComment)
+  //     // breweryComment.find(editedPost).body = update.body
+  //     // this.setState({breweryComments: breweryComment})
+  //   })
+  // }
 
   render() {
     // console.log(this.state.beerComments)
@@ -108,4 +110,5 @@ class Profile extends Component {
     )
   }
 }
-export default Profile;
+
+export default Profile

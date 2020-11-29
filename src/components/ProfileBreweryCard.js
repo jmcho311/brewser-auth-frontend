@@ -18,7 +18,7 @@ class ProfileBreweryCard extends Component {
         this.props.editPost(
             this.state.rating,
             this.state.comment,
-            this.state.id
+            // this.state.id
         )
     }
 

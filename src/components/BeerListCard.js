@@ -16,6 +16,8 @@ function BeerListCard({beer}) {
     const fetchBreweryData = () => {
         // console.log(this.state.beers)
         // console.log(this.props)
+        // console.log(beer)
+        // console.log(brewery)
         BrewerySearchModel.show(beer.breweryId).then(data => {   //need to plug in breweryId in show() for each BeerCard
             // console.log("hard coded, need to change", data)
             setBrewery(data)
