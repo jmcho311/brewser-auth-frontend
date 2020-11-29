@@ -37,21 +37,17 @@ class Profile extends Component {
     })
   }
 
-  deletePost = (comment) => {
+  deletePost = (breweryId) => {
     console.log('this is working')
-    // Brewery.destroy(comment).then((res) => {
-      // console.log(res)
-    // }).then(
-      // this.fetchCommentData()
-    // )
+    console.log(breweryId)
+    Brewery.delete(breweryId).then((res) => {
+      this.fetchCommentData()
+    })
   }
 
   render() {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
-      // console.log(this.state.breweryComments[0].state)
-      // console.log(comment)
-      // console.log(comment.state)
       return (
         <div key={index}>
           <ProfileCard deletePost={this.deletePost} {...comment} />

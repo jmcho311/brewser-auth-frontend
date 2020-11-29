@@ -22,8 +22,13 @@ class BreweryModel {
             body: JSON.stringify(breweryData)
         }).then(res => res.json())
     }
-    static destroy = (breweryId) => {
-        return fetch(`${url}/${breweryId}`).then(res => res.json())
+    static delete = (id) => {
+        return fetch(`${url}/posts/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
     }
 }
 

@@ -1,31 +1,36 @@
 import React from 'react';
+import { Component } from 'react';
 
-const ProfileCard = (props) => {
-    
-    const removePost = () => {
-        props.deletePost(props.comment)
+
+class ProfileCard extends Component {
+
+    removePost = () => {
+        console.log(this.props.id)
+        this.props.deletePost(this.props.id)
     }
+
+    render() {
         return (
             <div className="ProfileCard">
-                <h3> { props.state } </h3>
-                <h3 className="breweryName"> { props.name } </h3>
-                <h5> { props.city } </h5>
+                <h3> { this.props.state } </h3>
+                <h3 className="breweryName"> { this.props.name } </h3>
+                <h5> { this.props.city } </h5>
                 <h5>
                     <a className="site"
                         target="new"
-                        href={ `${props.website_url}` }> {props.website_url} 
+                        href={ `${this.props.website_url}` }> {this.props.website_url} 
                     </a>
                 </h5>
-                <h5>{ props.rating }/5</h5>
-                <p>{ props.comment }</p>
+                <h5>{ this.props.rating }/5</h5>
+                <p>{ this.props.comment }</p>
                 <span className="remove" 
-                onClick={ removePost }>
+                onClick={ this.removePost }>
                     Remove
                 </span>
             </div>
         )
     }
-
+}
 
 export default ProfileCard;
 
