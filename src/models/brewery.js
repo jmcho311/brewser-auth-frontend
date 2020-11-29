@@ -22,6 +22,14 @@ class BreweryModel {
             body: JSON.stringify(breweryData)
         }).then(res => res.json())
     }
+
+    static edit = (breweryId) => {
+        return fetch(`${url}/${breweryId}`, {
+            method: "PUT",
+            body: JSON.stringify(breweryId)
+        }).then(res => res.json())
+    }
+
     static delete = (id) => {
         return fetch(`${url}/posts/${id}`, {
             method: "DELETE",
