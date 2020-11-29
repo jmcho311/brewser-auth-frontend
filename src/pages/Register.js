@@ -34,7 +34,7 @@ const Register = props => {
   }
 
   return (
-    <div>
+    <div className="Page">
       <h4>Register</h4>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">

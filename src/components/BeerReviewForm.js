@@ -44,7 +44,8 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.name}
                     />
-                    <input
+                    <label>Category:</label>
+                    <select
                         name="category"
                         placeholder="category"
                         type="text"
@@ -52,7 +53,17 @@ class BeerReviewForm extends Component {
                             this.setState({ category: e.target.value })
                         }}
                         value={this.state.category}
-                    />
+                    >
+                        <option value="Ale">Ale</option>
+                        <option value="Belgian">Belgian</option>
+                        <option value="Cider">Cider</option>
+                        <option value="IPA">IPA</option>
+                        <option value="Lager">Lager</option>
+                        <option value="Pilsner">Pilsner</option>
+                        <option value="Porter">Porter</option>
+                        <option value="Stout">Stout</option>
+                        <option value="Wheat">Wheat</option>
+                    </select>
                     <input
                         name="style"
                         placeholder="style"
@@ -62,7 +73,8 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.style}
                     />
-                    <input
+                    <label>Rating</label>
+                    <select
                         name="rating"
                         placeholder="Beer Rating"
                         type="integer"
@@ -71,9 +83,18 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.rating}
                     />
+                    <select
+                    >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
                     <textarea
                         name="comment"
-                        placeholder="Beer Comment"
+                        placeholder="Comment"
                         type="text"
                         onChange={ (e) => {
                             this.setState({ comment: e.target.value})

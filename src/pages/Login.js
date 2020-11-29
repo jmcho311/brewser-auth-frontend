@@ -35,7 +35,7 @@ const Login = props => {
   if (props.currentUser) return <Redirect to='/profile' />
 
   return (
-    <div>
+    <div className="Page">
       <h4>Login</h4>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
@@ -65,8 +65,7 @@ const Login = props => {
         <button type="submit">Login</button>
       </form>
       <div>
-        <h5> Don't have an account? Click 
-          <a href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!
+        <h5> Don't have an account? Click <a href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!
         </h5>
       </div>
     </div>

@@ -31,7 +31,8 @@ class BreweryReviewForm extends Component {
             </div>
 
             <form onSubmit={ this.handleSubmit }>
-                <input
+                <label>Rating: </label>
+                <select
                 // rating - user input
                     name = "rating"
                     placeholder="rating"
@@ -41,6 +42,14 @@ class BreweryReviewForm extends Component {
                     }}
                     value= {this.state.rating}
                 />
+                <select
+                >
+                    <option value="1">1/5</option>
+                    <option value="2">2/5</option>
+                    <option value="3">3/5</option>
+                    <option value="4">4/5</option>
+                    <option value="5">5/5</option>
+                </select>
                 <textarea className="commentInput"
                 // comment - user input
                     name = "comment"
