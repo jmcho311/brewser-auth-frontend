@@ -66,8 +66,10 @@ class Profile extends Component {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
-        <div key={index}>
-          <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
+        <div key={ index }>
+          <ProfileBreweryCard 
+            deleteBreweryPost={ this.deleteBreweryPost } { ...comment } 
+          />
         </div>
       )
     })
@@ -75,21 +77,27 @@ class Profile extends Component {
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
       // console.log(comment)
       return (
-        <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment} key={index} />
+        <BeerPost 
+          deleteBeerPost={ this.deleteBeerPost } { ...comment } 
+          key={ index } 
+        />
       )
     })
 
     return (
       <div className="Page">
-        <h1 className="profileHead">Welcome to your profile page, { this.state.user }!</h1>
+        <h1 
+          className="profileHead"
+        >Welcome to your profile page, { this.state.user }!
+        </h1>
         <div className="yourPosts">
           <div className="breweryContainer">
             <h3 id="breweryPosts">Your Brewery Check-ins</h3>
-            { this.state.breweryComments ? breweryCommentList : 'Loading..'}
+            { this.state.breweryComments ? breweryCommentList : 'Loading..' }
           </div>
           <div className="beerContainer">
             <h3 id="beerPosts">Your beer reviews</h3>
-            { this.state.beerComments ? beerCommentList : 'Loading...'}
+            { this.state.beerComments ? beerCommentList : 'Loading...' }
           </div>
         </div>
       </div>

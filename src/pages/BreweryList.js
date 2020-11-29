@@ -26,8 +26,8 @@ class BreweryList extends Component {
     render() {
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
-                <Link to={`/brewery/${brewery.id}`} key={index}>
-                    <BreweryCard {...brewery} />
+                <Link to={ `/brewery/${brewery.id}` } key={ index }>
+                    <BreweryCard { ...brewery } />
                 </Link>
             )
         })
@@ -37,7 +37,7 @@ class BreweryList extends Component {
                 <div className="breweryCardContainer">
                     <div className="breweryCard">
                         <div id="info">
-                            { this.state.breweries ? breweryList : 'Loading..'}
+                            { this.state.breweries ? breweryList : 'Loading..' }
                         </div>
                     </div>
                 </div>

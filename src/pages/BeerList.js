@@ -39,12 +39,12 @@ class BeerList extends Component {
         let beerList = this.state.beers && this.state.beers.map((beer, index) => {
             console.log(beer.name)
             return (
-                <div key={index}>
-                    <Link to={`/beer/${beer.name}`}>
-                        <BeerCard {...beer} />
+                <div key={ index }>
+                    <Link to={ `/beer/${beer.name}` }>
+                        <BeerCard { ...beer } />
                         <h3>{ beer.breweryId }</h3>
                     </Link>
-                    <Link to={`/brewery/${beer.breweryId}`}>
+                    <Link to={ `/brewery/${beer.breweryId}` }>
                         <h3>{ this.state.breweries.name }</h3>
                         <h3>{ this.state.breweries.website_url }</h3>
                     </Link>
@@ -57,7 +57,7 @@ class BeerList extends Component {
                 <h3>Your Beer Search Results for:</h3>
                 <h2>{ this.props.location.state.category }</h2>
                 <div className="BeerCard">
-                    { this.state.beers ? beerList : 'Loading..'}
+                    { this.state.beers ? beerList : 'Loading..' }
                 </div>
             </div>
         )
