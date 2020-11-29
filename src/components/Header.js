@@ -16,27 +16,23 @@ const Header = (props) => {
         <div className="about">
           <Link to={'/about'}>About</Link>
         </div>
-      </div>
-      <div className="nav">
-        <div>
-          { props.currentUser ? 
-            <>
-              <div>
-                <Link to={'/profile'}>Profile</Link>
-              </div>
-              <div>
-                  <div onClick={ props.logout } className="logoutNav">
-                    Log Out
-                  </div>
-              </div>
-            </>
-          :
-            <>
-              <div><Link to={'/register'}>Register</Link></div>
-              <div><Link to={'/login'}>Login</Link></div>
-            </>
-          }
-        </div>
+        { props.currentUser ? 
+          <>
+            <div>
+              <Link to={'/profile'}>Profile</Link>
+            </div>
+            <div>
+                <div onClick={ props.logout } className="logoutNav">
+                  Log Out
+                </div>
+            </div>
+          </>
+        :
+          <>
+            <div><Link to={'/register'}>Register</Link></div>
+            <div><Link to={'/login'}>Login</Link></div>
+          </>
+        }
       </div>
     </header>
   );

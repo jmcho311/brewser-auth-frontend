@@ -5,14 +5,15 @@ header {
   border: 3px solid goldenrod;
   border-radius: 5px;
   padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
   width: 15vw;
   height: 100vh;
   position: fixed;
   top: 0px;
   left: 0px; 
+  margin: 0 auto;
 
   a {
     color: white;
@@ -35,11 +36,12 @@ header {
 }
 
 .nav {
-  width: 200px;
-  padding: 1px 0px;
+  padding: 5px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .logoutNav {
