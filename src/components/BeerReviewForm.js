@@ -19,6 +19,7 @@ class BeerReviewForm extends Component {
             this.state.rating,
             this.state.comment
         )
+        this.props.onClose()
     }
 
     render() {
@@ -79,7 +80,7 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.comment}
                     />
-                    <button onClick={this.props.onClose}>Submit</button>
+                    <button>Submit</button>
                 </form>
             </div>
         );
