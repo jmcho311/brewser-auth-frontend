@@ -30,6 +30,15 @@ class BeerModel {
             body: JSON.stringify(beerData)
         }).then(res => res.json())
     }
+
+    static delete = (beerId) => {
+        return fetch(`${url}/${beerId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+    }
 }
 
 export default BeerModel;

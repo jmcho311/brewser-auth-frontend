@@ -38,13 +38,20 @@ class Profile extends Component {
     })
   }
 
-  deletePost = (breweryId) => {
+  deleteBreweryPost = (breweryId) => {
     console.log('this is working')
     console.log(breweryId)
     Brewery.delete(breweryId).then((res) => {
       this.fetchCommentData()
     })
+  }
 
+  deleteBeerPost = (beerId) => {
+    console.log (beerId)
+    BeerModel.delete(beerId).then((res) => {
+      this.fetchBeerData()
+    })
+  }
 
   fetchUserData = () => {
     UserModel.index().then(data => {
@@ -60,7 +67,7 @@ class Profile extends Component {
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
         <div key={index}>
-          <ProfileBreweryCard deletePost={this.deletePost} {...comment} />
+          <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
         </div>
       )
     })
@@ -68,7 +75,7 @@ class Profile extends Component {
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
       // console.log(comment)
       return (
-        <BeerPost {...comment} key={index} />
+        <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment} key={index} />
       )
     })
 
@@ -89,5 +96,5 @@ class Profile extends Component {
     )
   }
 }
-}
+
 export default Profile;
