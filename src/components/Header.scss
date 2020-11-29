@@ -1,138 +1,75 @@
 header {
-  height: 100vh;
+  background: gray;
+  font-family: garamond;
+  text-align: left;
+  border: 3px solid goldenrod;
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
   width: 15vw;
+  height: 100vh;
   position: fixed;
   top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid goldenrod;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.9);
+  left: 0px; 
 
+  a {
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+    transition: color 0.3s ease;
+    margin: 15px;
 
-  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySHVX_8h2fDS5n2vNDRK6PA00BtS7ZNu4TA&usqp=CAU);
+    &:hover {
+      color: darken(#fff, 20%)
+    }
+  }
 }
-
-//   font-family: garamond;
-//   text-align: left;
-//   border: 3px solid goldenrod;
-//   border-radius: 5px;
-//   padding: 20px 10px;
-//   display: flex;
-//   justify-content: space-between;
-//   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
-//   width: 100vw;
-//   position: fixed;
-//   top: 0px; 
-
-//   a {
-//     color: white;
-//     font-size: 17px;
-//     letter-spacing: 1px;
-//     font-weight: bold;
-//     text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-//     transition: color 0.3s ease;
-//     margin: 15px;
-
-//     &:hover {
-//       color: darken(#fff, 20%)
-//     }
-//   }
-//}
-
-
-// ========= first try below =============
 
 #headerTitle {
+  text-align: center;
   color: white;
-  text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-  margin-top: 5vh;
 }
 
-.menuBtn {
-  width: 5vw;
-  // position: absolute;
-  // left: 5vw;
-  // top: 20vh;
-  // z-index: 1;
-  overflow: hidden;
+  .nav {
+    width: 200px;
+    padding: 1px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  // .brewserLogo {
+  //   color: white;
+  //   font-family: garamond;
+  //   font-weight: bold;
+  //   text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  // }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0px 15px 0px 0px;
+
+    li {
+      list-style-type: none;
+      padding: 0px 7px;
+    }
+  }
+
+.logoutNav {
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: darken(#fff, 20%)
+  }
 }
-
-// .menu {
-//   position: absolute;
-//   left: 5vw;
-//   top: -100px;
-//   transform: translateY(100%)
-// }
-
-.dropdownItem {
-  display: flex;
-  align-items: flex-start;
-  width: 5vw;
-  background: white;
-  justify-content: center;
-  width: 5vw;
-}
-
-.userLinks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profileLink {
-  display: flex;
-  align-items: flex-start;
-  width: 5vw;
-  background: blanchedalmond;
-}
-
-.logoutLink {
-  display: flex;
-  align-items: flex-start;
-  width: 5vw;
-  background: blanchedalmond;
-}
-
-// ========= original below ===========
-
-//   .nav {
-//     width: 200px;
-//     padding: 1px 0px;
-//     text-align: center;
-//     display: flex;
-//     justify-content: space-evenly;
-//   }
-
-//   // .brewserLogo {
-//   //   color: white;
-//   //   font-family: garamond;
-//   //   font-weight: bold;
-//   //   text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-//   // }
-
-//   ul {
-//     display: flex;
-//     margin: 0;
-//     padding: 0px 15px 0px 0px;
-
-//     li {
-//       list-style-type: none;
-//       padding: 0px 7px;
-//     }
-//   }
-// }
-
-// .logoutNav {
-//   color: white;
-//   font-size: 17px;
-//   letter-spacing: 1px;
-//   font-weight: bold;
-//   text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-//   transition: color 0.3s ease;
-//   cursor: pointer;
-
-//   &:hover {
-//     color: darken(#fff, 20%)
-//   }
-// }
