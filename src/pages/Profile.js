@@ -88,17 +88,10 @@ class Profile extends Component {
     // console.log(this.state.beerComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
-<<<<<<< HEAD
         <div key={index}>
           <Link to={`/brewery/${comment.breweryId}`}>
             <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
           </Link>
-=======
-        <div key={ index }>
-          <ProfileBreweryCard 
-            deleteBreweryPost={ this.deleteBreweryPost } { ...comment } 
-          />
->>>>>>> submain
         </div>
       )
     })
@@ -106,18 +99,11 @@ class Profile extends Component {
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
       // console.log(comment)
       return (
-<<<<<<< HEAD
         <div key={index}>
         <Link to={`/beer/${comment.name}`}>
           <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment}/>
         </Link>
         </div>
-=======
-        <BeerPost 
-          deleteBeerPost={ this.deleteBeerPost } { ...comment } 
-          key={ index } 
-        />
->>>>>>> submain
       )
     })
 
