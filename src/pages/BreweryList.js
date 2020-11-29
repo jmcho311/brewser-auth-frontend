@@ -32,11 +32,15 @@ class BreweryList extends Component {
             )
         })
         return (
-            <div className="list">
+            <div className="Page">
                 <h1>Your Search Results</h1>
+                <div className="breweryCardContainer">
                     <div className="breweryCard">
-                        { this.state.breweries ? breweryList : 'Loading..'}
+                        <div id="info">
+                            { this.state.breweries ? breweryList : 'Loading..'}
+                        </div>
                     </div>
+                </div>
             </div>
         )
     }

@@ -1,9 +1,10 @@
 // This is the beer search results page, searched by category.
 
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import BeerModel from '../models/beer'
-import BrewerySearchModel from '../models/brewerysearch'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import BeerModel from '../models/beer';
+import BrewerySearchModel from '../models/brewerysearch';
+import './App.scss';
 
 // import BeerPost from '../components/BeerPost'
 import BeerCard from '../components/BeerCard'
@@ -20,18 +21,13 @@ class BeerList extends Component {
     }
 
     fetchData = () => {
-        // console.log(this.setState)
-        // console.log(this.props.location.state.category)
         BeerModel.show(this.props.location.state.category).then(data => {
-            // console.log(data)
-            // console.log(this.state.beer)
             this.setState({ beers: data.beers })
         })
     }
 
     fetchBreweryData = () => {
-        // console.log(this.state.beers)
-        BrewerySearchModel.show(299).then(data => {   //need to plug in breweryId in show() for each BeerCard
+        BrewerySearchModel.show(299).then(data => {
             console.log("hard coded, need to change", data)
             this.setState({ breweries: data })
         })
@@ -57,10 +53,12 @@ class BeerList extends Component {
         })
 
         return (
-            <div>
+            <div className="Page">
                 <h3>Your Beer Search Results for:</h3>
                 <h2>{ this.props.location.state.category }</h2>
-                { this.state.beers ? beerList : 'Loading..'}
+                <div className="BeerCard">
+                    { this.state.beers ? beerList : 'Loading..'}
+                </div>
             </div>
         )
     }

@@ -80,7 +80,7 @@ class Profile extends Component {
     })
 
     return (
-      <div className="profile">
+      <div className="Page">
         <h1 className="profileHead">Welcome to your profile page, { this.state.user }!</h1>
         <div className="yourPosts">
           <div className="breweryContainer">

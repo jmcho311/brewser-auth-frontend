@@ -112,7 +112,7 @@ class BreweryShow extends Component {
             )
         })
         return (
-            <div className="show">
+            <div className="Page">
                 <div className="breweryDeets">
                     <BreweryCard {...this.state.breweryInfo} />
                 </div>

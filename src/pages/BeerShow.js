@@ -46,7 +46,7 @@ class BeerShow extends Component {
         })
 
         return (
-            <div>
+            <div className="Page">
                 <h1>Beer Show Page for selected Beer</h1>
                 { this.state.beerComments ? beerCommentsList : 'Loading...'}
                 <Link to={`/brewery/${this.state.brew.id}`}>
