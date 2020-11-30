@@ -16,24 +16,27 @@ class BreweryList extends Component {
     }
 
     fetchData = () => {
-        console.log(this.props.location.state.city)
+        // console.log(this.props.location.state.city)
         BrewerySearchModel.all(this.props.location.state.city).then(data => {
-            console.log(data)
+            // console.log(data)
             this.setState({ breweries: data})
         })
     }
 
     render() {
+        // console.log(this.props)
+        console.log(this.props.location.state.city)
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
-                <Link to={ `/brewery/${brewery.id}` } key={ index }>
+                <div key={index}>
                     <BreweryCard { ...brewery } />
-                </Link>
+                    <Link to={ `/brewery/${brewery.id}` }>Read More</Link>
+                </div>
             )
         })
         return (
             <div className="Page">
-                <h1>Your Search Results</h1>
+                <h1>Search Results for '{this.props.location.state.city}'</h1>
                 <div className="breweryCardContainer">
                     <div className="breweryCard">
                         <div id="info">

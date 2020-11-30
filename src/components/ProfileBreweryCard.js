@@ -13,40 +13,39 @@ class ProfileBreweryCard extends Component {
         this.props.deleteBreweryPost(this.props.id)
     }
 
-    onRatingChange = (e) => {
-        this.setState({
-            rating: e.target.value
-        })
-    }
+    // onRatingChange = (e) => {
+    //     this.setState({
+    //         rating: e.target.value
+    //     })
+    // }
 
-    onCommentChange = (e) => {
-        this.setState({
-            comment: e.target.value
-        })
-    }
+    // onCommentChange = (e) => {
+    //     this.setState({
+    //         comment: e.target.value
+    //     })
+    // }
 
-    onSubmit = (e) => {
-        e.preventDefault()
-        // let rating = this.props.rating
-        // rating.body = this.state.rating     //cannot create property 'body'
-        this.props.editBreweryPost(this.state.rating)
-        // this.props.editBreweryPost(rating)
-        this.setState({ rating: ''})
+    // onSubmit = (e) => {
+    //     e.preventDefault()
+    //     // let rating = this.props.rating
+    //     // rating.body = this.state.rating     //cannot create property 'body'
+    //     this.props.editBreweryPost(this.state.rating)
+    //     // this.props.editBreweryPost(rating)
+    //     this.setState({ rating: ''})
 
-        // let comment = this.props.comment
-        // comment.body = this.state.comment  //cannot create property 'body'
-        this.props.editBreweryPost(this.state.comment)
-        // this.props.editBreweryPost(comment)
-        this.setState({ comment: ''})
-    }
+    //     // let comment = this.props.comment
+    //     // comment.body = this.state.comment  //cannot create property 'body'
+    //     this.props.editBreweryPost(this.state.comment)
+    //     // this.props.editBreweryPost(comment)
+    //     this.setState({ comment: ''})
+    // }
 
     render() {
         return (
             <div className="ProfileCard">
                 <h3> { this.props.state } </h3>
-                <Link to={`/brewery/${this.props.breweryId}`}>
-                    <h3 className="breweryName"> { this.props.name } </h3>
-                </Link>
+                <h3 className="breweryName"> { this.props.name } </h3>
+                <Link to={`/brewery/${this.props.breweryId}`}>(See Brewery Details)</Link>
                 <h5> { this.props.city } </h5>
                 <h5>
                     <a className="site"
@@ -57,7 +56,7 @@ class ProfileBreweryCard extends Component {
                 <h5>{ this.props.rating }/5</h5>
                 <p>{ this.props.comment }</p>
                 
-                <form onSubmit={ this.onSubmit }>
+                {/* <form onSubmit={ this.onSubmit }>
                     <input 
                         name="rating"
                         placeholder="Rating"
@@ -73,7 +72,7 @@ class ProfileBreweryCard extends Component {
                         value={this.state.comment}
                     />
                     <button>EDIT</button>
-                </form>
+                </form> */}
 
                 <span className="remove" 
                 onClick={ this.removePost }>

@@ -4,7 +4,7 @@ const BreweryCard = (props) => {
     return (
         <div className="BreweryCard">
             <h3 className="breweryName"> { props.name } </h3>
-            <h5 className="type"> { props.brewery_type } </h5>
+            <h5 className="type">Brewery Type: { props.brewery_type } </h5>
             <h5> { props.street } </h5>
             <h5> { props.city }, { props.state } </h5>
             <h5>Phone: { props.phone } </h5>
