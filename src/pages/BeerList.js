@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import BeerModel from '../models/beer'
 
 import BeerListCard from '../components/BeerListCard'
+import './App.scss'
 
 class BeerList extends Component {
     state = {
