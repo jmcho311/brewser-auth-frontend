@@ -34,7 +34,10 @@ class BeerReviewForm extends Component {
                         Close
                     </button>
                 </div>
+                <div className="reviewInputs">
                 <form onSubmit={this.handleSubmit}>
+                    <label>Beer Name: </label>
+                    <br />
                     <input
                         name="name"
                         placeholder="Beer Name"
@@ -44,7 +47,9 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.name}
                     />
-                    <label>Category:</label>
+                    <br />
+                    <label>Category: </label>
+                    <br />
                     <select
                         name="category"
                         placeholder="category"
@@ -64,6 +69,9 @@ class BeerReviewForm extends Component {
                         <option value="Stout">Stout</option>
                         <option value="Wheat">Wheat</option>
                     </select>
+                    <br />
+                    <label>Style: </label>
+                    <br />
                     <input
                         name="style"
                         placeholder="style"
@@ -73,8 +81,9 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.style}
                     />
-                    <label>Rating</label>
-                    <select
+                    <br />
+                    <label>Rating: </label>
+                    <select                         
                         name="rating"
                         placeholder="Beer Rating"
                         type="integer"
@@ -82,8 +91,6 @@ class BeerReviewForm extends Component {
                             this.setState({ rating: e.target.value})
                         }}
                         value={this.state.rating}
-                    />
-                    <select
                     >
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -91,18 +98,23 @@ class BeerReviewForm extends Component {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-
-                    <textarea
+                    <span>/5</span>
+                    <br />
+                    <label>Comment: </label>
+                    <br />
+                    <textarea className="commentInput"
                         name="comment"
-                        placeholder="Comment"
+                        placeholder="leave a comment"
                         type="text"
                         onChange={ (e) => {
                             this.setState({ comment: e.target.value})
                         }}
                         value={this.state.comment}
                     />
+                    <br />
                     <button>Submit</button>
                 </form>
+                </div>
             </div>
         );
     }

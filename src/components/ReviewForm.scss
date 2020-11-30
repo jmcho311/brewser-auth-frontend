@@ -11,14 +11,14 @@ align-items: center;
 position: absolute;
 z-index: 1;
 border-radius: 2px;
-left: 30vw;
+left: 23vw;
 }
 
 .beerModal {
 background-color: white;
 color: black;
 width: 40vw;
-height: 33vh;
+height: 50vh;
 box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
 display: flex;
 flex-direction: column;
@@ -27,10 +27,34 @@ align-items: center;
 position: absolute;
 z-index: 1;
 border-radius: 2px;
-left: 30vw;
-top: 48vh;
+left: 22vw;
+top: 25vh;
 }
 
+
+.commentInput {
+    width: 33vw;
+    height: 10vh;
+}
+
+.reviewInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 90vw;
+}
+
+.rating {
+    margin: 5px;
+}
+
+button {
+    background-color: #e2b23a;
+    color: white;
+    border: none ;
+}
 
 .closeButton {
     cursor: pointer;
@@ -42,9 +66,6 @@ top: 48vh;
     width: 24px;
     height: 24px;
     padding: 0;
+    color: black
 }
 
-.commentInput {
-    width: 300px;
-    height: 100px;
-}
