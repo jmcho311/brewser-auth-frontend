@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
-import UserModel from '../models/user';
-import './App.scss';
+import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
+import UserModel from '../models/user'
+import './App.scss'
 
 const Login = props => {
   let [email, setEmail] = useState('')
@@ -64,18 +64,16 @@ const Login = props => {
                 name="password" 
                 required
               />
-            
             </div>
             <button type="submit">Login</button>
           </form>
         </div>
       </div>
       <div>
-        <h5 id="goToRegister"> Don't have an account? Click <a className="redirect" href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!
-        </h5>
+        <h5 id="goToRegister"> Don't have an account? Click <a className="redirect" href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!</h5>
       </div>
     </div>
   )
 }
 
-export default Login;
+export default Login

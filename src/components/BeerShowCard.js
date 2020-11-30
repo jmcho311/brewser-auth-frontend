@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import BrewerySearchModel from '../models/brewerysearch'
 
 class BeerShowCard extends Component {
@@ -12,7 +12,6 @@ class BeerShowCard extends Component {
     }
 
     fetchBreweriesData = () => {
-        // console.log(this.props)
         BrewerySearchModel.show(this.props.breweryId).then(data => {
             this.setState({ brew: data })
         })
@@ -22,19 +21,16 @@ class BeerShowCard extends Component {
         return (
             <div>
                 <div className="beerComments">
-                    {/* <h4>Beer Style: { this.props.style }</h4> */}
                     <h4>{ this.props.rating }/5</h4>
                     <p>{ this.props.comment }</p>
                 </div>
-
-
                 
                 <h5>Located at:</h5>
                 <h3>{ this.state.brew.name }</h3>
-                <Link to={`/brewery/${this.state.brew.id}`}>See Details</Link>
+                <Link to={ `/brewery/${ this.state.brew.id }` }>See Details</Link>
             </div>
-        );
+        )
     }
 }
 
-export default BeerShowCard;
+export default BeerShowCard

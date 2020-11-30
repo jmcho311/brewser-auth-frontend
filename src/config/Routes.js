@@ -37,8 +37,7 @@ const Routes = (props) => (
     <Route path='/reset' component={ Reset } />
     <Route path='/login' render={ (routeComponentProps) => {
       return  <Login 
-                {...routeComponentProps}
-                // more props to come here
+                { ...routeComponentProps }
                 currentUser={ props.currentUser }
                 storeUser={ props.storeUser }
               />
@@ -47,4 +46,4 @@ const Routes = (props) => (
   </Switch>
 )
 
-export default Routes;
+export default Routes

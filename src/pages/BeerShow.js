@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-
 import BeerModel from '../models/beer' 
 
 import BeerShowCard from '../components/BeerShowCard'
-import './App.scss';
-
+import './App.scss'
 
 class BeerShow extends Component {
     state = {
@@ -24,10 +22,9 @@ class BeerShow extends Component {
 
     render() {
         let beerCommentsList = this.state.beerComments && this.state.beerComments.map((beercomments, index) => {
-            // console.log(beercomments)
             return (
-                <div key={index}>
-                    <BeerShowCard {...beercomments}/>
+                <div key={ index }>
+                    <BeerShowCard { ...beercomments }/>
                 </div>
             )
         })

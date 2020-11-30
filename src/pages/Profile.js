@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Brewery from '../models/brewery';
-import BeerModel from '../models/beer';
-import UserModel from '../models/user';
+import Brewery from '../models/brewery'
+import BeerModel from '../models/beer'
+import UserModel from '../models/user'
 
-import BeerPost from '../components/BeerPost';
-import ProfileBreweryCard from '../components/ProfileBreweryCard';
-import './App.scss';
+import BeerPost from '../components/BeerPost'
+import ProfileBreweryCard from '../components/ProfileBreweryCard'
+import './App.scss'
 
 class Profile extends Component {
   state = {
@@ -52,46 +52,23 @@ class Profile extends Component {
     })
   }
 
-  editBreweryPost = (brewPost) => {
-    const isUpdatedBreweryPost = b => {
-      return b._id === brewPost._id
-    }
-
-    Brewery.edit(brewPost).then((res) => {
-      let breweryPost = this.state.breweryComments
-      breweryPost.find(isUpdatedBreweryPost).body = brewPost.body
-      this.setState({breweryPost})
-    })
-  }
-
-  // editPost = (breweryId) => {
-  //   let editedPost = {
-  //     // breweryId: this.state.breweryInfo.id,
-  //     // name: this.state.breweryInfo.name,
-  //     // city: this.state.breweryInfo.city,
-  //     // state: this.state.breweryInfo.state,
-  //     rating: this.state.rating,
-  //     comment: this.state.comment,
-  //     // id: id
-  //     // userId: localStorage.getItem('id')
+  // editBreweryPost = (brewPost) => {
+  //   const isUpdatedBreweryPost = b => {
+  //     return b._id === brewPost._id
   //   }
-  //   console.log(rating)
-  //   console.log(comment)
-  //   Brewery.edit(breweryId).then((res) => {
-  //     this.fetchCommentData()
-  //     // let breweryComment = this.state.breweryComments
-  //     // console.log(breweryComment)
-  //     // breweryComment.find(editedPost).body = update.body
-  //     // this.setState({breweryComments: breweryComment})
+
+  //   Brewery.edit(brewPost).then((res) => {
+  //     let breweryPost = this.state.breweryComments
+  //     breweryPost.find(isUpdatedBreweryPost).body = brewPost.body
+  //     this.setState({breweryPost})
   //   })
   // }
 
   render() {
-    console.log(this.state.breweryComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
         <div key={ index }>
-            <ProfileBreweryCard deleteBreweryPost={ this.deleteBreweryPost } editBreweryPost={ this.editBreweryPost } { ...comment } />
+            <ProfileBreweryCard deleteBreweryPost={ this.deleteBreweryPost } { ...comment } />
         </div>
       )
     })
@@ -127,4 +104,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+export default Profile

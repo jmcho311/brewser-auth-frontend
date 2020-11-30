@@ -1,5 +1,5 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
+import React from 'react'
+import { Redirect } from 'react-router-dom'
 
 const Reset = () => {
     window.localStorage.clear()
@@ -8,4 +8,4 @@ const Reset = () => {
     )
 }
 
-export default Reset;
+export default Reset

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import BrewerySearchModel from '../models/brewerysearch'
-import Brewery from '../models/brewery'
 import BeerModel from '../models/beer' 
-import './App.scss'
+import Brewery from '../models/brewery'
+import BrewerySearchModel from '../models/brewerysearch'
+
+import BeerCard from '../components/BeerCard'
+import BeerReviewForm from '../components/BeerReviewForm'
 import BreweryCard from '../components/BreweryCard'
 import BreweryPost from '../components/BreweryPost'
 import BreweryReviewForm from '../components/BreweryReviewForm'
-import BeerCard from '../components/BeerCard'
-import BeerReviewForm from '../components/BeerReviewForm'
+import './App.scss'
 
 class BreweryShow extends Component {
     state = {
@@ -30,7 +31,6 @@ class BreweryShow extends Component {
 
     fetchApiData = () => {
         BrewerySearchModel.show(this.state.currentBrewery).then(data => {
-            // console.log(data)
             this.setState({ breweryInfo: data })
         })
     }
@@ -43,14 +43,14 @@ class BreweryShow extends Component {
     
     fetchBeerData = () => {
         BeerModel.showBrewery(this.state.currentBrewery).then(data => {
-            this.setState({ beerPosts: data.brewery})
+            this.setState({ beerPosts: data.brewery })
         })
     }
 
     //functions for Brewery Review Post Modal
     showModal = e => {
         this.setState({
-            show: !this.state.show,
+            show: !this.state.show
         })
     }
 
@@ -69,11 +69,11 @@ class BreweryShow extends Component {
             rating: rating,
             comment: comment,
             userId: localStorage.getItem('id')
-        };
+        }
         Brewery.create(newPost).then((res) => {
-            this.fetchCommentData();
-        });
-    };
+            this.fetchCommentData()
+        })
+    }
 
     createBeerPost = (name, category, style, rating, comment) => {
         let newBeerPost = {
@@ -101,14 +101,13 @@ class BreweryShow extends Component {
             return (
                 <div className="BeerCard" key={ index }>
                         <BeerCard { ...comment }/>
-                        <Link to={ `/beer/${comment.name}` } className="seeMoreButton"> See More </Link>
+                        <Link to={ `/beer/${ comment.name }` } className="seeMoreButton">See More</Link>
                 </div>
             )
         })
         return (
             <div className="Page BreweryShow">
-                <div className="showImgBlock">
-                </div>
+                <div className="showImgBlock"></div>
                 <div className="breweryDeets">
                     <BreweryCard { ...this.state.breweryInfo } />
                 </div>
@@ -116,44 +115,41 @@ class BreweryShow extends Component {
                 <div>
                     { this.state.currentUser ?
                     <>
-                <div className="buttonContainer">
-                <div className="reviewButtonContainer">
-                    <h5> Have you visited this brewery? </h5>
-                    <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
-                    <button className="reviewButtons" onClick={e => {this.showModal()}}>Write a Review
-                    </button>
-                </div>
-                <div className="reviewButtonContainer">
-                    <h5> Did you have a beer at this brewery? </h5>
-                    <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
-                    <button className= "reviewButtons" onClick= {(e) => {this.showBeerModal()}}>Log a Beer
-                    </button>
-                </div>
-                </div>
-                </>
-                :
-                <>
-                <p>Log in to write a review!</p>
-                </>
+                        <div className="buttonContainer">
+                            <div className="reviewButtonContainer">
+                                <h5>Have you visited this brewery?</h5>
+                                <BreweryReviewForm onClose={ this.showModal } show={ this.state.show } createPost={ this.createPost }/>
+                                <button className="reviewButtons" onClick={ e => { this.showModal() } }>Write a Review</button>
+                            </div>
+                            <div className="reviewButtonContainer">
+                                <h5>Did you have a beer at this brewery?</h5>
+                                <BeerReviewForm onClose={ this.showBeerModal } beerShow={ this.state.beerShow } createBeerPost={ this.createBeerPost }/>
+                                <button className= "reviewButtons" onClick= { (e) => { this.showBeerModal() } }>Log a Beer</button>
+                            </div>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <p>Log in to write a review!</p>
+                    </>
                     }
                 </div>
-                    
-                <div className="postSection">
-                <h3>See What People Are Saying</h3>
-                
-                <div className="userPosts">
-                    <div className="brewReviews">
-                    <h3> Reviews of this Brewery</h3>
-                        { this.state.breweryComments ? breweryCommentList : 'Loading..' }
-                    </div>
 
-                    
-                    <div className="beerReviews">
-                        <h3>Beers Logged By Users</h3>
-                        { this.state.beerPosts ? beerCommentList : 'Loading...' }
+                <div className="postSection">
+                    <h3>See What People Are Saying</h3>
+
+                    <div className="userPosts">
+                        <div className="brewReviews">
+                            <h3> Reviews of this Brewery</h3>
+                            { this.state.breweryComments ? breweryCommentList : 'Loading..' }
+                        </div>
+
+                        <div className="beerReviews">
+                            <h3>Beers Logged By Users</h3>
+                            { this.state.beerPosts ? beerCommentList : 'Loading...' }
+                        </div>
                     </div>
-                    </div>
-                    </div>
+                </div>
             </div>
         )
     }
