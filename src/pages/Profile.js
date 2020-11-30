@@ -7,7 +7,7 @@ import UserModel from '../models/user';
 import BeerPost from '../components/BeerPost';
 import ProfileBreweryCard from '../components/ProfileBreweryCard';
 import './App.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   state = {
@@ -40,15 +40,15 @@ class Profile extends Component {
   }
 
   deleteBreweryPost = (breweryId) => {
-    console.log('this is working')
-    console.log(breweryId)
+    // console.log('this is working')
+    // console.log(breweryId)
     Brewery.delete(breweryId).then((res) => {
       this.fetchCommentData()
     })
   }
 
   deleteBeerPost = (beerId) => {
-    console.log (beerId)
+    // console.log (beerId)
     BeerModel.delete(beerId).then((res) => {
       this.fetchBeerData()
     })
@@ -59,6 +59,18 @@ class Profile extends Component {
       // console.log(data)
       // console.log('====='+data.users[0].name)
       this.setState({ user: data.users[0].name })
+    })
+  }
+
+  editBreweryPost = (brewPost) => {
+    const isUpdatedBreweryPost = b => {
+      return b._id === brewPost._id
+    }
+
+    Brewery.edit(brewPost).then((res) => {
+      let breweryPost = this.state.breweryComments
+      breweryPost.find(isUpdatedBreweryPost).body = brewPost.body
+      this.setState({breweryPost})
     })
   }
 
@@ -85,13 +97,11 @@ class Profile extends Component {
   // }
 
   render() {
-    // console.log(this.state.beerComments)
+    console.log(this.state.breweryComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
         <div key={index}>
-          <Link to={`/brewery/${comment.breweryId}`}>
-            <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} {...comment} />
-          </Link>
+            <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} editBreweryPost={this.editBreweryPost} {...comment} />
         </div>
       )
     })
@@ -100,9 +110,7 @@ class Profile extends Component {
       // console.log(comment)
       return (
         <div key={index}>
-        <Link to={`/beer/${comment.name}`}>
           <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment}/>
-        </Link>
         </div>
       )
     })

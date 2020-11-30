@@ -27,20 +27,16 @@ class BeerShow extends Component {
             // console.log(beercomments)
             return (
                 <div key={index}>
-                    <h3>Beer Category: {beercomments.category}</h3>
                     <BeerShowCard {...beercomments}/>
                 </div>
             )
         })
-        // console.log(this.state.beerComments)
-        // console.log(this.state.beerComments[0])
-        // console.log(this.state.beerComments[0].category)
 
         return (
             <div className="Page">
                 <h1>Beer Show Page for selected Beer</h1>
                 <h3>Beer Name: { this.state.currentBeer }</h3>
-                {/* <h3>Beer Category: { this.state.beerComments[0].category }</h3> */}
+                <h3>Beer Category: { this.state.beerComments[0] ? this.state.beerComments[0].category : null }</h3>
                 { this.state.beerComments ? beerCommentsList : 'Loading...'}
             </div>
         )

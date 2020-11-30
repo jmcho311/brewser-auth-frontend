@@ -23,10 +23,10 @@ class BreweryModel {
         }).then(res => res.json())
     }
 
-    static edit = (breweryId) => {
-        return fetch(`${url}/${breweryId}`, {
+    static edit = (brewPost) => {
+        return fetch(`${url}/${brewPost._id}`, {
             method: "PUT",
-            body: JSON.stringify(breweryId)
+            body: JSON.stringify(brewPost)
         }).then(res => res.json())
     }
 
