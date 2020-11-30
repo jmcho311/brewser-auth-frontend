@@ -121,7 +121,7 @@ class BreweryShow extends Component {
                 <div>
                     <h5> Have you visited this brewery? </h5>
                     <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
-                    <button className="reviewButtons"onClick={e => {this.showModal()}}>Write a Review
+                    <button className="reviewButtons" onClick={e => {this.showModal()}}>Write a Review
                     </button>
                 </div>
                 <div>
