@@ -23,14 +23,18 @@ class BeerListCard extends Component {
     render() {
         return (
             <div>
-                <Link to={`/beer/${this.props.name}`}>
-                    <h2>Beer Name: { this.props.name }</h2>
-                    <h4>Beer Category: { this.props.category }</h4>
-                </Link>
-                <Link to={`/brewery/${this.props.breweryId}`}>
-                    <h3>{ this.state.breweries.name }</h3>
-                    <h3>{ this.state.breweries.website_url }</h3>
-                </Link>
+                <h2>{ this.props.name }</h2>
+                <Link to={`/beer/${this.props.name}`}>Read Beer Reviews</Link>
+
+                <h4>Locations to Find Me?</h4>
+                <h3>{ this.state.breweries.name }</h3>
+                <Link to={`/brewery/${this.props.breweryId}`}>(See Brewery Details)</Link>
+                <h3>
+                    <a className="site"
+                        target="new"
+                        href={ `${this.state.breweries.website_url}`}>{this.state.breweries.website_url}
+                    </a>
+                </h3>
             </div>
         );
     }
