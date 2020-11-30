@@ -29,6 +29,7 @@ class BreweryReviewForm extends Component {
                     Close
                 </button>
             </div>
+            <h3>Write a Review</h3>
             <div className="reviewInputs">
             <form className="breweryReviewForm" onSubmit={ this.handleSubmit }>
                 <div className= "rating">
@@ -51,9 +52,9 @@ class BreweryReviewForm extends Component {
                 </select>
                 <span>/5</span>
                 </div>
-                <br></br>
+                <br/>
                 <label>Comment:</label>
-                <br></br>
+                <br/>
                 <textarea className="commentInput"
                 // comment - user input
                     name = "comment"
