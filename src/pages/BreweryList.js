@@ -25,7 +25,7 @@ class BreweryList extends Component {
 
     render() {
         // console.log(this.props)
-        console.log(this.props.location.state.city)
+        // console.log(this.props.location.state.city)
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
                     <div key={index} className="BreweryCard">
@@ -37,6 +37,7 @@ class BreweryList extends Component {
         return (
             <div className="Page BreweryList">
                 <h1>Search Results for '{this.props.location.state.city}'</h1>
+                
                 <div className="breweryCardContainer">
                     <div className="breweryCard">
                         <div id="info">
