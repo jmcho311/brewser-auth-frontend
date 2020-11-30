@@ -106,17 +106,19 @@ class Profile extends Component {
 
     return (
       <div className="Page Profile">
-        <h1 className="profileHead">Welcome to your profile page, { this.state.user }!
-        </h1>
-        <h2>Total Brewery Reviews: { this.state.breweryComments.length }</h2>
-        <h2>Total Beer Reviews: { this.state.beerComments.length }</h2>
+        <h1 className="profileHead">Welcome, { this.state.user }! </h1>
+        
+        <h3>Your Posts:</h3>
+
         <div className="yourPosts">
           <div className="breweryContainer">
-            <h3 id="breweryPosts">Your Brewery Check-ins</h3>
+            <h3 id="breweryPosts">Your Brewery Reviews</h3>
+            <h5>Total: { this.state.breweryComments.length } </h5>
             { this.state.breweryComments ? breweryCommentList : 'Loading..' }
           </div>
           <div className="beerContainer">
-            <h3 id="beerPosts">Your beer reviews</h3>
+            <h3 id="beerPosts">Your Logged Beers</h3>
+            <h5> Total: { this.state.beerComments.length }</h5>
             { this.state.beerComments ? beerCommentList : 'Loading...' }
           </div>
         </div>
