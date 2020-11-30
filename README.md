@@ -20,18 +20,18 @@ ___
 
 ### Screenshots
 
-![HomeModal] (./public/screenshots/Modal.png)
-![SearchPage] (./public/screenshots/Search.png)
-![BreweryList] (./public/screenshots/BrewList.png)
-![BreweryShow] (./public/screenshots/BrewShow.png)
-![BreweryReview] (./public/screenshots/ReviewSection.png)
-![BeerList] (./public/screenshots/BeerList.png)
-![BeerShow] (./public/screenshots/BeerShow.png)
-![AboutPage] (./public/screenshots/About.png)
-![ProfilePage] (./public/screenshots/Profile.png)
-![LoginScreen] (./public/screenshots/Login.png)
-![SignupPage] (./public/screenshots/SignUp.png)
-![LogoutScreen] (./public/screenshots/Logout.png)
+![Home Modal] (./public/screenshots/Modal.png)
+![Search Page] (./public/screenshots/Search.png)
+![Brewery List] (./public/screenshots/BrewList.png)
+![Brewery Show] (./public/screenshots/BrewShow.png)
+![Brewery Review] (./public/screenshots/ReviewSection.png)
+![Beer List] (./public/screenshots/BeerList.png)
+![Beer Show] (./public/screenshots/BeerShow.png)
+![About Page] (./public/screenshots/About.png)
+![Profile Page] (./public/screenshots/Profile.png)
+![Login Screen] (./public/screenshots/Login.png)
+![Signup Page] (./public/screenshots/SignUp.png)
+![Logout Screen] (./public/screenshots/Logout.png)
 
 
 
