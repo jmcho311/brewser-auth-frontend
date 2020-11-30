@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class BeerPost extends Component {
     removePost = () => {
@@ -9,7 +10,9 @@ class BeerPost extends Component {
     render () {
     return (
         <div className="BeerPost">
-            <h2>Beer Name: { this.props.name }</h2>
+            <Link to={`/beer/${this.props.name}`}>
+                <h2>Beer Name: { this.props.name }</h2>
+            </Link>
             <h4>Beer Category: { this.props.category }</h4>
             <h4>Beer Rating: { this.props.rating }/5</h4>
             <h4>Beer Style: { this.props.style }</h4>
