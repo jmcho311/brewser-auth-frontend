@@ -256,6 +256,35 @@ a:hover {
     height: 100%;
 }
 
+.beerShowImgBlock {
+    background: url(https://i.imgur.com/MZYH7dC.jpg?2);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.beerInfo {
+    background: #eccc7d;
+    padding: 10px;
+}
+
+.beerInfo h1{
+    margin: 0 auto;
+}
+
+.beerComments {
+    background: #eccc7d;
+    align-items: center;
+    width: 50vw;
+    margin-left: 18vw;
+}
+
+.beerComments h4 {
+    margin: 0 auto;
+}
+
+
 // ============= About.js ==================
 
 .About {
