@@ -97,14 +97,11 @@ class BreweryShow extends Component {
             )
         })
 
-        console.log(this.props.currentUser)
-
         let beerCommentList = this.state.beerPosts && this.state.beerPosts.map((comment, index) => {
             return (
                 <div key={ index }>
-                    <Link to={ `/beer/${comment.name}` }>
-                        <BeerCard { ...comment }/>
-                    </Link>
+                    <BeerCard { ...comment }/>
+                    <Link to={ `/beer/${comment.name}` }>Read Beer Review</Link>
                 </div>
             )
         })
