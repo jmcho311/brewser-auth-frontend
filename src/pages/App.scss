@@ -4,7 +4,6 @@
 .Page {
     position: absolute;
     z-index: -1;
-    height: 100vh;
     left: 15vw;
     width: 85vw;
     font-family: 'Poppins', sans-serif;
@@ -27,7 +26,6 @@ h5 {
 
 img {
     width: 50vw;
-    border: 5px solid goldenrod;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
 }
@@ -36,6 +34,11 @@ img {
 
 
 // ============= SearchForm.js ==================
+
+.Home {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .imgBlock {
     background: url(https://i.imgur.com/KdZGXGJ.jpg?1);
@@ -79,6 +82,11 @@ img {
 }
 
 // ============= BreweryList.js ==================
+
+.BreweryList {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .breweryCardContainer {
     bottom: 0px;
@@ -125,6 +133,11 @@ a:hover {
 
 // ============= BeerList.js ==============
 
+.BeerList {
+    background: #E2B23A;
+    height: 100%;
+}
+
 .BeerCard {
     width: 29vw;
     margin: 0 auto;
@@ -146,6 +159,11 @@ a:hover {
 
 
 // ============= BreweryShow.js ==============
+
+.BreweryShow {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .show {
     margin: 150px 0px 0px 0px;
@@ -216,7 +234,17 @@ a:hover {
 
 // ============= BeerShow.js =================
 
+.BeerShow {
+    background: #E2B23A;
+    height: 100%;
+}
+
 // ============= About.js ==================
+
+.About {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .aboutBlurb {
     padding-top: 45px;
@@ -229,6 +257,11 @@ a:hover {
 }
 
 // ============= Profile.js ==================
+
+.Profile {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .profileSubhead {
     margin: 20px 0px 50px 0px;
@@ -274,6 +307,122 @@ a:hover {
 
 // ============= Login.js ==================
 
+.Login {
+    background: #E2B23A;
+    height: 100%;
+}
+
+#login {
+    color: white;
+}
+
+.loginImgBlock {
+    background: url(https://i.imgur.com/6T0u5OP.jpg?1);
+    height: 65vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginFormBlock {
+    color: black;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 5px;
+    width: 30vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    padding: 5px 10px;
+}
+
+#email {
+    padding-right: 10px;
+}
+
+#password {
+    padding-right: 10px;
+}
+
+#goToRegister {
+    color: #292929;
+    margin-top: 15px;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
+
 // ============= Register.js ==================
 
+.Register {
+    background: #E2B23A;
+    height: 100%;
+}
+
+#regTag {
+    color: white;
+}
+
+.regImgBlock {
+    background: url(https://i.imgur.com/a6nnt7C.jpg?1);
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regFormBlock {
+    background: rgba(255, 255, 255, .6);
+    width: 35vw;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+}
+
+.regLabel {
+    padding-right: 10px;
+}
+
+#goToLogin {
+    color: #292929;
+    padding-top: 15px;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
+
 // ============= Logout.js ==================
+
+.Logout {
+    background: #E2B23A;
+    height: 100%;
+}
+
+#logout {
+    color: #292929;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}

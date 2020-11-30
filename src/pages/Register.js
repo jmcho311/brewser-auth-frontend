@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import UserModel from '../models/user'
+import React, { useState } from 'react';
+import UserModel from '../models/user';
+import './App.scss';
 
 const Register = props => {
   const [name, setName] = useState('');
@@ -34,57 +35,60 @@ const Register = props => {
   }
 
   return (
-    <div className="Page">
-      <h4>Register</h4>
-      <form onSubmit={ handleSubmit }>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input 
-            onChange={ handleName } 
-            value={ name }
-            type="text" 
-            id="name" 
-            name="name" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Email</label>
-          <input 
-            onChange={ handleEmail } 
-            value={ email } 
-            type="email" 
-            id="email" 
-            name="email" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Password</label>
-          <input 
-            onChange={ handlePassword } 
-            value={ password } 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <input 
-            onChange={ handleConfirmPassword } 
-            value={ confirmPassword } 
-            type="password" 
-            id="confirm-password" 
-            name="confirm-password" 
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
+    <div className="Page Register">
+      <h1>Create An Account</h1>
+      <h3 id="regTag">Joining Brewser will probably be the best thing to happen to you. Like, ever.</h3>
+      <div className="regImgBlock">
+        <form className="regFormBlock" onSubmit={ handleSubmit }>
+          <div className="form-group">
+            <label className="regLabel" htmlFor="name">Name</label>
+            <input 
+              onChange={ handleName } 
+              value={ name }
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="regLabel" htmlFor="name">Email</label>
+            <input 
+              onChange={ handleEmail } 
+              value={ email } 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="regLabel" htmlFor="name">Password</label>
+            <input 
+              onChange={ handlePassword } 
+              value={ password } 
+              type="password" 
+              id="password" 
+              name="password" 
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="regLabel" htmlFor="confirm-password">Confirm Password</label>
+            <input 
+              onChange={ handleConfirmPassword } 
+              value={ confirmPassword } 
+              type="password" 
+              id="confirm-password" 
+              name="confirm-password" 
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
       <div>
-        <h5>Already have an account? Click <a href='/login' style={ { textDecorationLine: 'underline'} } >here</a> to log in!</h5>
+        <h5 id="goToLogin">Already have an account? Click <a className="redirect" href='/login' style={ { textDecorationLine: 'underline'} } >here</a> to log in!</h5>
       </div>
     </div>
   )

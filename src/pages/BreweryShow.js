@@ -106,7 +106,7 @@ class BreweryShow extends Component {
             )
         })
         return (
-            <div className="Page">
+            <div className="Page BreweryShow">
                 <div className="showImgBlock">
                 </div>
                 <div className="breweryDeets">
