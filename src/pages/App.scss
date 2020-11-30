@@ -3,14 +3,17 @@
 
 .Page {
     position: absolute;
-    top: 10vh;
+    z-index: -1;
+    height: 100vh;
     left: 15vw;
     width: 85vw;
+    font-family: 'Poppins', sans-serif;
     background: #E2B23A;
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    color: white;
 }
 
 h4 {
@@ -34,8 +37,26 @@ img {
 
 // ============= SearchForm.js ==================
 
+.imgBlock {
+    background: url(https://i.imgur.com/KdZGXGJ.jpg?1);
+    height: 75vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
 .formBlock {
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, .6);
+    height: 25vh;
+    width: 100vw;
+}
+
+.formTitle {
+    color: black;
+    font-size: 20px;
 }
 
 #searchbar {

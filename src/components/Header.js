@@ -36,10 +36,8 @@ class Header extends Component {
         </Link>
         
         <div className="menu">
-          <button id="dropdownBtn" onClick={ this.showMenu }>
-            Navigation <i className="far fa-caret-square-down" />
-          </button>
-          <div>
+          <i onClick={ this.showMenu } id="bars" className="fas fa-bars" />
+        <div>
           {
             this.state.showMenu
               ? (
