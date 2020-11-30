@@ -37,7 +37,6 @@ class BeerReviewForm extends Component {
                 <div className="reviewInputs">
                 <form onSubmit={this.handleSubmit}>
                     <label>Beer Name: </label>
-                    <br />
                     <input
                         name="name"
                         placeholder="Beer Name"
@@ -49,7 +48,6 @@ class BeerReviewForm extends Component {
                     />
                     <br />
                     <label>Category: </label>
-                    <br />
                     <select
                         name="category"
                         placeholder="category"
@@ -71,7 +69,6 @@ class BeerReviewForm extends Component {
                     </select>
                     <br />
                     <label>Style: </label>
-                    <br />
                     <input
                         name="style"
                         placeholder="style"
