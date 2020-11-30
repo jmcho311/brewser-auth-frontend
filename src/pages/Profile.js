@@ -7,7 +7,6 @@ import UserModel from '../models/user';
 import BeerPost from '../components/BeerPost';
 import ProfileBreweryCard from '../components/ProfileBreweryCard';
 import './App.scss';
-// import { Link } from 'react-router-dom';
 
 class Profile extends Component {
   state = {
@@ -25,30 +24,23 @@ class Profile extends Component {
 
   fetchCommentData = () => {
     Brewery.showPost(this.state.currentUser).then(data => {
-        // console.log(data)
         this.setState({ breweryComments: data.user })
     })
   }
 
   fetchBeerData = () => {
     BeerModel.showPost(this.state.currentUser).then(data => {
-      // console.log(data)
-      // debugger
-      // console.log(data.user)
       this.setState({ beerComments: data.beer })
     })
   }
 
   deleteBreweryPost = (breweryId) => {
-    // console.log('this is working')
-    // console.log(breweryId)
     Brewery.delete(breweryId).then((res) => {
       this.fetchCommentData()
     })
   }
 
   deleteBeerPost = (beerId) => {
-    // console.log (beerId)
     BeerModel.delete(beerId).then((res) => {
       this.fetchBeerData()
     })
@@ -56,8 +48,6 @@ class Profile extends Component {
 
   fetchUserData = () => {
     UserModel.index().then(data => {
-      // console.log(data)
-      // console.log('====='+data.users[0].name)
       this.setState({ user: data.users[0].name })
     })
   }
@@ -100,17 +90,16 @@ class Profile extends Component {
     console.log(this.state.breweryComments)
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
-        <div key={index}>
-            <ProfileBreweryCard deleteBreweryPost={this.deleteBreweryPost} editBreweryPost={this.editBreweryPost} {...comment} />
+        <div key={ index }>
+            <ProfileBreweryCard deleteBreweryPost={ this.deleteBreweryPost } editBreweryPost={ this.editBreweryPost } { ...comment } />
         </div>
       )
     })
     
     let beerCommentList = this.state.beerComments && this.state.beerComments.map((comment, index) => {
-      // console.log(comment)
       return (
-        <div key={index}>
-          <BeerPost deleteBeerPost={this.deleteBeerPost} {...comment}/>
+        <div key={ index }>
+          <BeerPost deleteBeerPost={ this.deleteBeerPost } { ...comment }/>
         </div>
       )
     })
@@ -119,8 +108,8 @@ class Profile extends Component {
       <div className="Page Profile">
         <h1 className="profileHead">Welcome to your profile page, { this.state.user }!
         </h1>
-        <h2>Total Brewery Reviews: {this.state.breweryComments.length}</h2>
-        <h2>Total Beer Reviews: {this.state.beerComments.length}</h2>
+        <h2>Total Brewery Reviews: { this.state.breweryComments.length }</h2>
+        <h2>Total Beer Reviews: { this.state.beerComments.length }</h2>
         <div className="yourPosts">
           <div className="breweryContainer">
             <h3 id="breweryPosts">Your Brewery Check-ins</h3>
