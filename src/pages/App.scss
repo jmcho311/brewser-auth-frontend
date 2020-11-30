@@ -21,7 +21,7 @@ h5 {
 }
 
 img {
-    width: 650px;
+    width: 50vw;
     border: 5px solid goldenrod;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
@@ -89,7 +89,6 @@ a:hover {
     color: darken(#fff, 50%)
 }
 
-
 // ============= BeerList.js ==============
 
 .BeerCard {
@@ -137,13 +136,6 @@ a:hover {
 
 // ============= About.js ==================
 
-// .About {
-//     position: absolute;
-//     top: 10vh;
-//     left: 15vw;
-//     width: 85vw;
-// }
-
 .aboutBlurb {
     padding-top: 45px;
     width: 70vw;
@@ -163,7 +155,13 @@ a:hover {
 .yourPosts {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+}
+
+.containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .breweryContainer {
