@@ -4,7 +4,6 @@
 .Page {
     position: absolute;
     z-index: -1;
-    height: 100vh;
     left: 15vw;
     width: 85vw;
     font-family: 'Poppins', sans-serif;
@@ -35,6 +34,11 @@ img {
 
 
 // ============= SearchForm.js ==================
+
+.Home {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .imgBlock {
     background: url(https://i.imgur.com/KdZGXGJ.jpg?1);
@@ -78,6 +82,11 @@ img {
 }
 
 // ============= BreweryList.js ==================
+
+.BreweryList {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .breweryCardContainer {
     bottom: 0px;
@@ -124,9 +133,14 @@ a:hover {
 
 // ============= BeerList.js ==============
 
-.beerCardContainer {
-    bottom: 0px;
-    width: 70vw;
+.BeerList {
+    background: #E2B23A;
+    height: 100%;
+}
+
+.BeerCard {
+    border: 1px solid black;
+    width: 29vw;
     margin: 0 auto;
     border: none;
     border-radius: 5px;
@@ -151,6 +165,11 @@ a:hover {
 
 // ============= BreweryShow.js ==============
 
+.BreweryShow {
+    background: #E2B23A;
+    height: 100%;
+}
+
 .show {
     margin: 150px 0px 0px 0px;
 }
@@ -164,7 +183,6 @@ a:hover {
     color: #292929;
     padding: 10px;
 }
-
 
 .brewReviews {
     width: 33%;
@@ -200,9 +218,24 @@ a:hover {
     height: 50vh;
 }
 
+.postSection {
+    margin-top: -2px;
+    background: #E2B23A;
+}
+
 // ============= BeerShow.js =================
 
+.BeerShow {
+    background: #E2B23A;
+    height: 100%;
+}
+
 // ============= About.js ==================
+
+.About {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .aboutBlurb {
     padding-top: 45px;
@@ -215,6 +248,11 @@ a:hover {
 }
 
 // ============= Profile.js ==================
+
+.Profile {
+    background: #E2B23A;
+    height: 100%;
+}
 
 .profileSubhead {
     margin: 20px 0px 50px 0px;
@@ -259,6 +297,11 @@ a:hover {
 }
 
 // ============= Login.js ==================
+
+.Login {
+    background: #E2B23A;
+    height: 100%;
+}
 
 #login {
     color: white;
@@ -312,6 +355,11 @@ a:hover {
 
 // ============= Register.js ==================
 
+.Register {
+    background: #E2B23A;
+    height: 100%;
+}
+
 #regTag {
     color: white;
 }
@@ -351,6 +399,11 @@ a:hover {
 }
 
 // ============= Logout.js ==================
+
+.Logout {
+    background: #E2B23A;
+    height: 100%;
+}
 
 #logout {
     color: #292929;

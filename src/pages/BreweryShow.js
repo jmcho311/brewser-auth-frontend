@@ -106,7 +106,7 @@ class BreweryShow extends Component {
             )
         })
         return (
-            <div className="Page">
+            <div className="Page BreweryShow">
                 <div className="showImgBlock">
                 </div>
                 <div className="breweryDeets">
@@ -138,15 +138,16 @@ class BreweryShow extends Component {
                     }
                 </div>
                     
+                <div className="postSection">
+                    <h3>Posts left by others:</h3>
+                    
+                    <div className="brewReviews">
+                        { this.state.breweryComments ? breweryCommentList : 'Loading..' }
+                    </div>
 
-                <h3>Posts left by others:</h3>
-                
-                <div className="brewReviews">
-                    { this.state.breweryComments ? breweryCommentList : 'Loading..' }
-                </div>
-
-                <div className="beerReviews">
-                    { this.state.beerPosts ? beerCommentList : 'Loading...' }
+                    <div className="beerReviews">
+                        { this.state.beerPosts ? beerCommentList : 'Loading...' }
+                    </div>
                 </div>
             </div>
         )
