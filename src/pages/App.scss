@@ -1,19 +1,28 @@
 // ============= Universal Styling ==================
 
+
 .Page {
     position: absolute;
-    top: 10vh;
+    z-index: -1;
+    height: 100vh;
     left: 15vw;
     width: 85vw;
+    font-family: 'Poppins', sans-serif;
+    background: #E2B23A;
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    color: white;
 }
 
 h4 {
     margin: 50px 0px 30px 0px;
     
+}
+
+h5 {
+    margin: 10px;
 }
 
 img {
@@ -28,8 +37,26 @@ img {
 
 // ============= SearchForm.js ==================
 
+.imgBlock {
+    background: url(https://i.imgur.com/KdZGXGJ.jpg?1);
+    height: 75vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
 .formBlock {
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, .6);
+    height: 25vh;
+    width: 100vw;
+}
+
+.formTitle {
+    color: black;
+    font-size: 20px;
 }
 
 #searchbar {
@@ -54,22 +81,23 @@ img {
 // ============= BreweryList.js ==================
 
 .breweryCardContainer {
-    height: 78vh;
-    overflow-y: scroll;
     bottom: 0px;
-    width: 35vw;
+    width: 70vw;
     margin: 0 auto;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    background: #eccc7d;
 }
 
 .BreweryCard {
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 29vw;
+    border: none;
+    background: #eccc7d;
     margin: 0 auto;
-    margin-top: 7px;
+    width: auto;
+    padding: 10px;
+    border-bottom: black solid 1px;
+    color: 	#292929;
 }
 
 #info {
@@ -85,6 +113,16 @@ a:hover {
     color: darken(#fff, 50%)
 }
 
+.seeMoreButton {
+    font-size: 12px;
+    text-align: right;
+    color: #292929
+}
+
+.address h5{
+    margin: 0 auto;
+}
+
 // ============= BeerList.js ==============
 
 .BeerCard {
@@ -92,6 +130,8 @@ a:hover {
     width: 29vw;
     margin: 0 auto;
 }
+
+
 
 // ============= BreweryShow.js ==============
 

@@ -28,10 +28,10 @@ class BreweryList extends Component {
         console.log(this.props.location.state.city)
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
-                <div key={index}>
+                    <div key={index} className="BreweryCard">
                     <BreweryCard { ...brewery } />
-                    <Link to={ `/brewery/${brewery.id}` }>Read More</Link>
-                </div>
+                    <Link to={ `/brewery/${brewery.id}` } className="seeMoreButton"> Read More </Link>
+                    </div>
             )
         })
         return (
