@@ -110,7 +110,7 @@ class BeerReviewForm extends Component {
                             value={ this.state.comment }
                         />
                         <br />
-                        <button>Submit</button>
+                        <button className="submitBtn">Submit</button>
                     </form>
                 </div>
             </div>

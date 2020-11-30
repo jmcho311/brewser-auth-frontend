@@ -5,6 +5,8 @@ import BeerModel from '../models/beer'
 import BeerListCard from '../components/BeerListCard'
 import './App.scss'
 
+import './App.scss'
+
 class BeerList extends Component {
     state = {
         beers: []

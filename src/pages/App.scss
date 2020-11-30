@@ -1,6 +1,5 @@
 // ============= Universal Styling ==================
 
-
 .Page {
     position: absolute;
     z-index: -1;
@@ -85,7 +84,7 @@ img {
 
 .BreweryList {
     background: #E2B23A;
-    height: 100%;
+    // height: 100%;
 }
 
 .breweryCardContainer {
@@ -135,7 +134,7 @@ a:hover {
 
 .BeerList {
     background: #E2B23A;
-    height: 100%;
+    // height: 100%;
 }
 
 .BeerCard {
@@ -209,10 +208,17 @@ a:hover {
 .reviewButtons {
     padding: 12px;
     font-size: 1rem;
-    border-radius: 2px;
+    border-radius: 5px;
     min-width: 100px;
     cursor: pointer;
     margin: 5px;
+    background: #292929;
+    color: white;
+
+    &:hover {
+        opacity: 90%;
+        transform: scale(1.05);
+    }
 }
 
 .buttonContainer {
@@ -253,7 +259,7 @@ a:hover {
 
 .BeerShow {
     background: #E2B23A;
-    height: 100%;
+    // height: 100%;
 }
 
 .beerShowImgBlock {
@@ -306,7 +312,7 @@ a:hover {
 
 .Profile {
     background: #E2B23A;
-    height: 100%;
+    // height: 100%;
 }
 
 .profileSubhead {
