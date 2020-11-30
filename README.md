@@ -20,18 +20,18 @@ ___
 
 ### Screenshots
 
-![HomeModal] (https://i.imgur.com/JNEedKQ.png?1)
-![SearchPage] (https://i.imgur.com/wIEQGiJ.png?1)
-![BreweryList] (https://i.imgur.com/myaGWIF.png?2)
-![BreweryShow] (https://i.imgur.com/5mV0iRO.png?1)
-![BreweryReview] (https://i.imgur.com/36u3Ros.png?1)
-![BeerList] (https://i.imgur.com/M6aEv2q.png?1)
-![AboutPage] (https://i.imgur.com/2sELYfr.png?1)
-![BeerShow] (https://i.imgur.com/qxZtNED.png?1)
-![ProfilePage] (https://i.imgur.com/3jpqbRa.png?1)
-![LoginScreen] (https://i.imgur.com/znIscq1.png?1)
-![SignupPage] (https://i.imgur.com/1bXXYx4.png?1)
-![LogoutScreen] (https://i.imgur.com/XFnfMoJ.png?1)
+![HomeModal] (./public/screenshots/Modal.png)
+![SearchPage] (./public/screenshots/Search.png)
+![BreweryList] (./public/screenshots/BrewList.png)
+![BreweryShow] (./public/screenshots/BrewShow.png)
+![BreweryReview] (./public/screenshots/ReviewSection.png)
+![BeerList] (./public/screenshots/BeerList.png)
+![BeerShow] (./public/screenshots/BeerShow.png)
+![AboutPage] (./public/screenshots/About.png)
+![ProfilePage] (./public/screenshots/Profile.png)
+![LoginScreen] (./public/screenshots/Login.png)
+![SignupPage] (./public/screenshots/SignUp.png)
+![LogoutScreen] (./public/screenshots/Logout.png)
 
 
 
@@ -56,11 +56,11 @@ ___
 
 
 ### Wireframes
-![Wireframe] (https://i.imgur.com/vKXWI9E.png?1)
-![Wireframe] (https://i.imgur.com/vppohGA.png?1)
-![Wireframe] (https://i.imgur.com/WVOU6VO.png?1)
-![Wireframe] (https://i.imgur.com/s5SlMQ5.png?1)
-![Wireframe] (https://i.imgur.com/BUbyVht.png?1)
+![Wireframe] (./public/screenshots/HomeWireframe.png)
+![Wireframe] (./public/screenshots/SearchWireframe.png)
+![Wireframe] (./public/screenshots/ProfileWireframe.png)
+![Wireframe] (./public/screenshots/BreweryModalWireframe.png)
+![Wireframe] (./public/screenshots/LogoutWireframe.png)
 
 
 
