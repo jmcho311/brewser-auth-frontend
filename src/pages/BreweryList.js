@@ -37,6 +37,7 @@ class BreweryList extends Component {
         return (
             <div className="Page BreweryList">
                 <h1>Search Results for '{this.props.location.state.city}'</h1>
+                
                 <div className="breweryCardContainer">
                     <div className="breweryCard">
                         <div id="info">

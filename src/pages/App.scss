@@ -139,13 +139,20 @@ a:hover {
 }
 
 .BeerCard {
-    width: 29vw;
+    border: none;
+    background: #eccc7d;
     margin: 0 auto;
+    width: auto;
     padding: 10px;
     margin: 8px;
-    background: #eccc7d;
     border-radius: 2px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+    color: 	#292929;
+}
+
+#beerinfo {
+    width: 65vw;
+    margin: 0 auto;
 }
 
 .BeerCard h3 {
@@ -156,19 +163,16 @@ a:hover {
     margin: 0 auto;
 }
 
-.BeerCard {
-    border: none;
-    background: #eccc7d;
-    margin: 0 auto;
-    width: auto;
-    padding: 10px;
-    border-bottom: black solid 1px;
-    color: 	#292929;
+#beerName {
+    margin: 0;
 }
 
-#beerinfo {
-    width: 29vw;
-    margin: 0 auto;
+#breweryName {
+    margin: 20px auto 0 auto;
+}
+
+#breweryWebsite {
+    margin: 0;
 }
 
 // ============= BreweryShow.js ==============

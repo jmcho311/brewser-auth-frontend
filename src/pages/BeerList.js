@@ -51,8 +51,8 @@ class BeerList extends Component {
 
         return (
             <div className="Page BeerList">
-                <h3>Search Results for:</h3>
-                <h2>{ this.props.location.state.category }</h2>
+                <h1>Search Results for { this.props.location.state.category }</h1>
+
                 <div className="BeerCardContainer">
                     <div id="beerinfo">
                         { this.state.beers ? beerList : 'Loading..' }

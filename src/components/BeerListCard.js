@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BrewerySearchModel from '../models/brewerysearch'
 
+
 class BeerListCard extends Component {
     state = {
         breweries: []
@@ -23,18 +24,18 @@ class BeerListCard extends Component {
     render() {
         return (
             <div>
-                <h2>{ this.props.name }</h2>
-                <Link to={`/beer/${this.props.name}`}>Read Beer Reviews</Link>
+                <h2 id="beerName">{ this.props.name }</h2>
+                <Link to={`/beer/${this.props.name}`} className="seeMoreButton">Read Beer Reviews</Link>
 
-                <h4>Locations to Find Me?</h4>
-                <h3>{ this.state.breweries.name }</h3>
-                <Link to={`/brewery/${this.props.breweryId}`}>(See Brewery Details)</Link>
-                <h3>
+
+                <h5 id="breweryName">{ this.state.breweries.name }</h5>                
+                <h6 id="breweryWebsite">
                     <a className="site"
                         target="new"
                         href={ `${this.state.breweries.website_url}`}>{this.state.breweries.website_url}
                     </a>
-                </h3>
+                </h6>
+                <Link to={`/brewery/${this.props.breweryId}`} className="seeMoreButton">See Brewery Details</Link>
             </div>
         );
     }
