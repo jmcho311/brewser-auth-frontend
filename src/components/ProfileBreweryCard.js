@@ -43,9 +43,8 @@ class ProfileBreweryCard extends Component {
     render() {
         return (
             <div className="ProfileCard">
-                <h3> { this.props.state } </h3>
+                {/* <h3> { this.props.state } </h3> */}
                 <h3 className="breweryName"> { this.props.name } </h3>
-                <Link to={`/brewery/${this.props.breweryId}`}>(See Brewery Details)</Link>
                 <h5> { this.props.city } </h5>
                 <h5>
                     <a className="site"
@@ -73,11 +72,13 @@ class ProfileBreweryCard extends Component {
                     />
                     <button>EDIT</button>
                 </form> */}
-
-                <span className="remove" 
-                onClick={ this.removePost }>
-                    Remove
-                </span>
+                <div className="breweryLinks">
+                    <Link to={`/brewery/${this.props.breweryId}`}>See Details</Link>
+                    <span className="link" 
+                    onClick={ this.removePost }>
+                        Remove
+                    </span>
+                </div>
             </div>
         )
     }

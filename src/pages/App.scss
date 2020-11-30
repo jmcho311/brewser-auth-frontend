@@ -284,32 +284,29 @@ a:hover {
     margin: 20px 0px 50px 0px;
 }
 
+.profileStats {
+    background: #eccc7d;
+    display: flex;
+    justify-content: space-around;
+}
+
 .yourPosts {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-.containers{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    margin: 10px;
 }
 
 .breweryContainer {
-    border: 1px solid black;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
-    width: 20vw;
-    height: 50vh;
-    overflow-y: scroll;
+    width: 35vw;
+    background: #eccc7d;
+    border-radius: 3px;
 }
 
 .beerContainer {
-    border: 1px solid black;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
-    width: 20vw;
-    height: 50vh;
-    overflow-y: scroll;
+    width: 35vw;
+    background: #eccc7d;
+    border-radius: 3px;
 }
 
 #postsTitle {
@@ -320,6 +317,55 @@ a:hover {
     border: 1px solid black;
     margin: 5px;
     padding: 3px;
+}
+
+.BeerPost h4 {
+    margin: 0 auto;
+    margin-right: 3px;
+    margin-left: 10px;
+}
+
+.beerLinks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.beerRating {
+    display: flex;
+    justify-content: center;
+}
+
+.breweryLinks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.beerDetails {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.ProfileCard {
+    padding: 5px;
+    background-color: #f6e6c0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+    margin: 10px;
+}
+
+.BeerPost {
+    padding: 5px;
+    background-color: #f6e6c0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+    margin: 10px;
 }
 
 // ============= Login.js ==================

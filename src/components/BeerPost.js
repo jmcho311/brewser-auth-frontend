@@ -10,17 +10,21 @@ class BeerPost extends Component {
     render () {
     return (
         <div className="BeerPost">
-            <h2>Beer Name: { this.props.name }</h2>
-            <Link to={`/beer/${this.props.name}`}>(See More Details)</Link>
-            <h4>Beer Category: { this.props.category }</h4>
-            <h4>Beer Rating: { this.props.rating }/5</h4>
-            <h4>Beer Style: { this.props.style }</h4>
-            <p>Comment: { this.props.comment }</p>
-            <span className="remove" 
-                onClick={ this.removePost }
-                >
-                    Remove
-                </span>
+            <h3>{ this.props.name }</h3>
+            <span className="beerRating"><h4>Rating: </h4> { this.props.rating }/5</span>
+            <div className="beerDetails">
+                <h4>Category:</h4>{ this.props.category }
+                <h4>Style: </h4>{ this.props.style }
+            </div>
+            <p> { this.props.comment }</p>
+            <div className="beerLinks">
+                <Link to={ `/beer/${this.props.name}` } className="link">See Details</Link>
+                <span className="link" 
+                    onClick={ this.removePost }
+                    >
+                        Remove
+                    </span>
+                </div>
         </div>
     )}
 }
