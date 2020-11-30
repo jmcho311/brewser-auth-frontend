@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
-import UserModel from '../models/user'
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import UserModel from '../models/user';
+import './App.scss';
 
 const Login = props => {
   let [email, setEmail] = useState('')
@@ -36,36 +37,41 @@ const Login = props => {
 
   return (
     <div className="Page">
-      <h4>Login</h4>
-      <form onSubmit={ handleSubmit }>
-        <div className="form-group">
-          <label htmlFor="name">Email</label>
-          <input 
-            onChange={ handleEmail } 
-            value={ email } 
-            type="email" 
-            id="email" 
-            name="email" 
-            required  
-          />
-        </div>
+      <h1>Welcome Back!</h1>
+      <h2 id="login">Login</h2>
+      <div className="loginImgBlock">
+        <div className="loginFormBlock">
+          <form onSubmit={ handleSubmit }>
+            <div className="form-group">
+              <label id="email" htmlFor="name">Email</label>
+              <input 
+                onChange={ handleEmail } 
+                value={ email } 
+                type="email" 
+                id="email" 
+                name="email" 
+                required  
+              />
+            </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input 
-            onChange={ handlePassword } 
-            value={ password } 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-          />
-        
+            <div className="form-group">
+              <label id="password" htmlFor="password">Password</label>
+              <input 
+                onChange={ handlePassword } 
+                value={ password } 
+                type="password" 
+                id="password" 
+                name="password" 
+                required
+              />
+            
+            </div>
+            <button type="submit">Login</button>
+          </form>
         </div>
-        <button type="submit">Login</button>
-      </form>
+      </div>
       <div>
-        <h5> Don't have an account? Click <a href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!
+        <h5 id="goToRegister"> Don't have an account? Click <a className="redirect" href='/register' style={ { textDecorationLine: 'underline'} }>here</a> to sign up!
         </h5>
       </div>
     </div>
