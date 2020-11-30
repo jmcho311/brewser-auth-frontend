@@ -68,8 +68,18 @@ ___
 
 
 
+### Technologies Used
+
+Postgres, Express.js, React.js, Nodemon, HTML, CSS, Sass
+
+
+
+___
+
+
+
 ### Special Thanks
-We would like our instructors at GA for helping overcome hurdles along the way, including but not limited to: Brock Whitbread-Cole, James Sinkler, Seanny Phoenix, Jacob Kleiman, Uyen Lam, among others. OpenBreweryDB.com allowed us to pull data and use it for our search function. Without it, Brewser would be boring, so huge thanks to them. Shoutout to the internet in general for doing what it does, espcially StackOverflow.com, W3Schools.com, MDN.com, etc. Also special thanks to Abinav Seelan on blog.campvanilla.com for this example on dropdown menus in React.js. Additionally, thanks to Untappd for the inspiration behind Brewser. And lastly, thank you to all the breweries out there that make beer enjoyable enough to deserve apps like this.
+We would like our instructors at GA for helping overcome hurdles along the way, including but not limited to: Brock Whitbread-Cole, James Sinkler, Seanny Phoenix, Jacob Kleiman, Uyen Lam, Michael Petty, among others. OpenBreweryDB.com allowed us to pull data and use it for our search function. Without it, Brewser would be boring, so huge thanks to them. Shoutout to the internet in general for doing what it does, espcially StackOverflow.com, W3Schools.com, MDN.com, etc. Also special thanks to Abinav Seelan on blog.campvanilla.com for this example on dropdown menus in React.js. Additionally, thanks to Untappd for the inspiration behind Brewser. And lastly, thank you to all the breweries out there that make beer enjoyable enough to deserve apps like this.
 
 
 
