@@ -10,11 +10,11 @@ class BreweryReviewForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log('⭐️', this.state)
         this.props.createPost(
             this.state.rating, 
             this.state.comment,
             )
+        this.props.onClose()
     }
 
     render () {
@@ -29,9 +29,11 @@ class BreweryReviewForm extends Component {
                     Close
                 </button>
             </div>
+            <div className="reviewInputs">
             <form onSubmit={ this.handleSubmit }>
+                <div className= "rating">
                 <label>Rating: </label>
-                <select
+                <select                 
                 // rating - user input
                     name = "rating"
                     placeholder="rating"
@@ -41,28 +43,34 @@ class BreweryReviewForm extends Component {
                     }}
                     value= {this.state.rating}
                 >
-                    <option value="1">1/5</option>
-                    <option value="2">2/5</option>
-                    <option value="3">3/5</option>
-                    <option value="4">4/5</option>
-                    <option value="5">5/5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-                <input
+                <span>/5</span>
+                </div>
+                <br></br>
+                <label>Comment:</label>
+                <br></br>
+                <textarea className="commentInput"
                 // comment - user input
                     name = "comment"
-                    placeholder="comment"
+                    placeholder="leave a comment"
                     type="text"
                     onChange={ (e) => {
                         this.setState({ comment: e.target.value })
                     }}
                     value= {this.state.comment}
                 />
-                <button 
-                    onClick={this.props.onClose}
+                <br/>
+                <button
                 > 
                 Submit 
                 </button>
             </form>
+            </div>
         </div>
     );
 }

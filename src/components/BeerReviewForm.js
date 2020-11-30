@@ -19,6 +19,7 @@ class BeerReviewForm extends Component {
             this.state.rating,
             this.state.comment
         )
+        this.props.onClose()
     }
 
     render() {
@@ -27,13 +28,16 @@ class BeerReviewForm extends Component {
         }
 
         return (
-            <div className="reviewModal">
+            <div className="beerModal">
                 <div>
                     <button className="closeButton" onClick={this.props.onClose}>
                         Close
                     </button>
                 </div>
+                <div className="reviewInputs">
                 <form onSubmit={this.handleSubmit}>
+                    <label>Beer Name: </label>
+                    <br />
                     <input
                         name="name"
                         placeholder="Beer Name"
@@ -43,7 +47,9 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.name}
                     />
-                    <label>Category:</label>
+                    <br />
+                    <label>Category: </label>
+                    <br />
                     <select
                         name="category"
                         placeholder="category"
@@ -63,6 +69,9 @@ class BeerReviewForm extends Component {
                         <option value="Stout">Stout</option>
                         <option value="Wheat">Wheat</option>
                     </select>
+                    <br />
+                    <label>Style: </label>
+                    <br />
                     <input
                         name="style"
                         placeholder="style"
@@ -72,8 +81,9 @@ class BeerReviewForm extends Component {
                         }}
                         value={this.state.style}
                     />
-                    <label>Rating</label>
-                    <select
+                    <br />
+                    <label>Rating: </label>
+                    <select                         
                         name="rating"
                         placeholder="Beer Rating"
                         type="integer"
@@ -88,18 +98,23 @@ class BeerReviewForm extends Component {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-
-                    <input
+                    <span>/5</span>
+                    <br />
+                    <label>Comment: </label>
+                    <br />
+                    <textarea className="commentInput"
                         name="comment"
-                        placeholder="Comment"
+                        placeholder="leave a comment"
                         type="text"
                         onChange={ (e) => {
                             this.setState({ comment: e.target.value})
                         }}
                         value={this.state.comment}
                     />
-                    <button onClick={this.props.onClose}>Submit</button>
+                    <br />
+                    <button>Submit</button>
                 </form>
+                </div>
             </div>
         );
     }

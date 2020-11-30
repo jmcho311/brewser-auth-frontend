@@ -18,7 +18,8 @@ class BreweryShow extends Component {
         beerPosts: [],
         beerReview: {},
         show: false,
-        beerShow: false
+        beerShow: false,
+        currentUser: localStorage.getItem('id')
     }
 
     componentDidMount() {
@@ -96,6 +97,8 @@ class BreweryShow extends Component {
             )
         })
 
+        console.log(this.props.currentUser)
+
         let beerCommentList = this.state.beerPosts && this.state.beerPosts.map((comment, index) => {
             return (
                 <div key={ index }>
@@ -111,33 +114,31 @@ class BreweryShow extends Component {
                     <BreweryCard { ...this.state.breweryInfo } />
                 </div>
 
+                <div>
+                    { this.state.currentUser ?
+                    <>
                 <div className="buttonContainer">
-                    <div>
-                        <BreweryReviewForm 
-                            onClose={ this.showModal } 
-                            show={ this.state.show } 
-                            createPost={ this.createPost }
-                        />
-                        <button 
-                            className="reviewButtons" 
-                            onClick={ e => { this.showModal() } }
-                        > Write a Review
-                        </button>
-                    </div>
-
-                    <div>
-                        <BeerReviewForm 
-                            onClose={ this.showBeerModal } 
-                            beerShow={ this.state.beerShow } 
-                            createBeerPost={ this.createBeerPost }
-                        />
-                        <button 
-                            className= "reviewButtons" 
-                            onClick={ (e) => {this.showBeerModal() } }
-                        >Write a Beer Review
-                        </button>
-                    </div>
+                <div>
+                    <h5> Have you visited this brewery? </h5>
+                    <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
+                    <button className="reviewButtons" onClick={e => {this.showModal()}}>Write a Review
+                    </button>
                 </div>
+                <div>
+                    <h5> Did you have a beer at this brewery? </h5>
+                    <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
+                    <button className= "reviewButtons" onClick= {(e) => {this.showBeerModal()}}>Write a Beer Review
+                    </button>
+                </div>
+                </div>
+                </>
+                :
+                <>
+                <p>Log in to write a review!</p>
+                </>
+                    }
+                </div>
+                    
 
                 <h3>Posts left by others:</h3>
                 
