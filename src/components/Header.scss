@@ -1,8 +1,6 @@
 header {
-  background: gray;
-  border: 3px solid goldenrod;
-  border-radius: 5px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.701);
+  border-right: 1px solid black;
   width: 15vw;
   height: 100vh;
   position: fixed;
@@ -14,12 +12,9 @@ header {
     font-size: 17px;
     letter-spacing: 1px;
     font-weight: bold;
-    // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
     transition: color 0.3s ease;
-    // margin: 15px;
 
     &:hover {
-      // color: darken(#fff, 30%);
       color: black;
       transform: scale(1.05);
     }
@@ -48,21 +43,23 @@ header {
   height: 75vh;
 }
 
-#dropdownBtn {
-  display: flex;
-  justify-content: space-between;
-  padding-top: .9vh;
-  align-self: center;
-  width: 13vw;
-  height: 4vh;
-  background: white;
+
+#bars {
+  color: white;
+  font-size: 35px;
+  margin-top: 25px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: black;
+    transform: scale(1.05);
+  }
 }
 
 #menu {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5px;
-  // border: 1px solid black;
+  margin-top: 15px;
   width: 8.2vw;
   padding-bottom: 3px;
   margin-left: 1.085vw;
@@ -70,12 +67,12 @@ header {
 
 .menuItem {
   display: flex;
+  justify-content: center;
   list-style: none;
-  margin-top: 5px;
+  margin-top: 15px;
   width: 9vw;
-  margin-left: -30px;
-  padding: 5px;
-  // border: 1px solid black;
+  margin-left: -28px;
+  padding: 10px;
 }
 
 .logout {
