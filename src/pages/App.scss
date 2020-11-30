@@ -27,7 +27,6 @@ h5 {
 
 img {
     width: 50vw;
-    border: 5px solid goldenrod;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
 }
@@ -228,6 +227,107 @@ a:hover {
 
 // ============= Login.js ==================
 
+#login {
+    color: white;
+}
+
+.loginImgBlock {
+    background: url(https://i.imgur.com/6T0u5OP.jpg?1);
+    height: 65vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginFormBlock {
+    color: black;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 5px;
+    width: 30vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    padding: 5px 10px;
+}
+
+#email {
+    padding-right: 10px;
+}
+
+#password {
+    padding-right: 10px;
+}
+
+#goToRegister {
+    color: #292929;
+    margin-top: 15px;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
+
 // ============= Register.js ==================
 
+#regTag {
+    color: white;
+}
+
+.regImgBlock {
+    background: url(https://i.imgur.com/a6nnt7C.jpg?1);
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regFormBlock {
+    background: rgba(255, 255, 255, .6);
+    width: 35vw;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+}
+
+.regLabel {
+    padding-right: 10px;
+}
+
+#goToLogin {
+    color: #292929;
+    padding-top: 15px;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
+
 // ============= Logout.js ==================
+
+#logout {
+    color: #292929;
+}
+
+.redirect {
+    color: #292929;
+    transition: all .2s ease;
+
+    &:hover {
+        color: white;
+    }
+}
