@@ -124,13 +124,30 @@ a:hover {
 
 // ============= BeerList.js ==============
 
+.beerCardContainer {
+    bottom: 0px;
+    width: 70vw;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    background: #eccc7d;
+}
+
 .BeerCard {
-    border: 1px solid black;
+    border: none;
+    background: #eccc7d;
+    margin: 0 auto;
+    width: auto;
+    padding: 10px;
+    border-bottom: black solid 1px;
+    color: 	#292929;
+}
+
+#beerinfo {
     width: 29vw;
     margin: 0 auto;
 }
-
-
 
 // ============= BreweryShow.js ==============
 

@@ -25,7 +25,7 @@ class BreweryList extends Component {
 
     render() {
         // console.log(this.props)
-        console.log(this.props.location.state.city)
+        // console.log(this.props.location.state.city)
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
                     <div key={index} className="BreweryCard">
