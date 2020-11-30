@@ -21,19 +21,17 @@ class BeerShowCard extends Component {
     render() {
         return (
             <div>
-                <h4>Beer Rating: { this.props.rating }/5</h4>
-                <h4>Beer Style: { this.props.style }</h4>
-                <h4>Comment: { this.props.comment }</h4>
+                <div className="beerComments">
+                    {/* <h4>Beer Style: { this.props.style }</h4> */}
+                    <h4>{ this.props.rating }/5</h4>
+                    <p>{ this.props.comment }</p>
+                </div>
+
+
                 
-                <h4>Locations to Find Me?</h4>
+                <h5>Located at:</h5>
                 <h3>{ this.state.brew.name }</h3>
-                <Link to={`/brewery/${this.state.brew.id}`}>(See Brewery Details)</Link>
-                <h4>
-                    <a className="site"
-                        target="new"
-                        href={ `${this.state.brew.website_url}`}>{this.state.brew.website_url}
-                    </a>
-                </h4>
+                <Link to={`/brewery/${this.state.brew.id}`}>See Details</Link>
             </div>
         );
     }
