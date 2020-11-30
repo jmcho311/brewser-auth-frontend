@@ -1,12 +1,7 @@
 header {
   background: gray;
-  font-family: garamond;
-  text-align: left;
   border: 3px solid goldenrod;
   border-radius: 5px;
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
   width: 15vw;
   height: 100vh;
@@ -21,51 +16,99 @@ header {
     font-weight: bold;
     // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
     transition: color 0.3s ease;
-    margin: 15px;
+    // margin: 15px;
 
     &:hover {
-      color: darken(#fff, 20%)
+      // color: darken(#fff, 30%);
+      color: black;
+      transform: scale(1.05);
     }
   }
 }
 
-#headerTitle {
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  color: white;
+  color: goldenrod;
+  font-family: 'Berkshire Swash', cursive;
+  width: 13vw;
+  height: 10vh;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 3vw;
+  text-shadow: 1px 0 white, 0 2px white, 2px 0 white, 0 1px white;
 }
 
-  .nav {
-    width: 200px;
-    padding: 1px 0px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-  }
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 75vh;
+}
 
-  // .brewserLogo {
-  //   color: white;
-  //   font-family: garamond;
-  //   font-weight: bold;
-  //   text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
-  // }
+#dropdownBtn {
+  display: flex;
+  justify-content: space-between;
+  padding-top: .9vh;
+  align-self: center;
+  width: 13vw;
+  height: 4vh;
+  background: white;
+}
 
-  ul {
-    display: flex;
-    margin: 0;
-    padding: 0px 15px 0px 0px;
+#menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5px;
+  // border: 1px solid black;
+  width: 8.2vw;
+  padding-bottom: 3px;
+  margin-left: 1.085vw;
+}
 
-    li {
-      list-style-type: none;
-      padding: 0px 7px;
-    }
-  }
+.menuItem {
+  display: flex;
+  list-style: none;
+  margin-top: 5px;
+  width: 9vw;
+  margin-left: -30px;
+  padding: 5px;
+  // border: 1px solid black;
+}
 
-.logoutNav {
+.logout {
   color: white;
   font-size: 17px;
-  letter-spacing: 1px;
   font-weight: bold;
-  // text-shadow: 1px 0 black, 0 2px black, 2px 0 black, 0 1px black;
+  list-style: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: darken(#fff, 20%)
+  }
+}
+
+#register {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  list-style: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: darken(#fff, 20%)
+  }
+}
+
+#login {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  list-style: none;
   transition: color 0.3s ease;
   cursor: pointer;
 
