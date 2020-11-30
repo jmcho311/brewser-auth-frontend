@@ -67,6 +67,25 @@ top: 25vh;
     width: 24px;
     height: 24px;
     padding: 0;
-    color: black
+    color: black;
+
+    &:hover {
+        opacity: 85%;
+        transform: scale(1.25);
+    }
 }
 
+.submitBtn {
+    background: #292929;
+    border-radius: 5px;
+    color: white;
+    margin-top: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        opacity: 85%;
+        transform: scale(1.05);
+    }
+}
