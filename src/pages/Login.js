@@ -36,7 +36,7 @@ const Login = props => {
   if (props.currentUser) return <Redirect to='/profile' />
 
   return (
-    <div className="Page">
+    <div className="Page Login">
       <h1>Welcome Back!</h1>
       <h2 id="login">Login</h2>
       <div className="loginImgBlock">

@@ -58,7 +58,7 @@ class BeerList extends Component {
         })
 
         return (
-            <div className="Page">
+            <div className="Page BeerList">
                 <h3>Search Results for:</h3>
                 <h2>{ this.props.location.state.category }</h2>
                 <div className="BeerCard">

@@ -64,7 +64,7 @@ class SearchForm extends Component {
                     onClose={ this.showModal }
                 />
 
-                <div className="Page">
+                <div className="Page Home">
                     <h1>Happy Brewsing!</h1>
                     <div className="imgBlock">
                         <div className="formBlock">

@@ -13,14 +13,17 @@
     background: url(https://i.imgur.com/5y6Jp8c.png?2);
     background-position: center;
     background-size: cover;
-    width: 65vw;
+    width: 90vw;
     margin: 0 auto;
     padding: 30px 45px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 35px;
-    left: 16%;
-    min-height: 80vh;
+    left: .5vw;
+    right: .5vw;
+    height: 90vh;
+    bottom: 2vh;
+    top: 2vh;
     display: grid;
     z-index: 2;
 }

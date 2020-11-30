@@ -116,7 +116,7 @@ class Profile extends Component {
     })
 
     return (
-      <div className="Page">
+      <div className="Page Profile">
         <h1 className="profileHead">Welcome to your profile page, { this.state.user }!
         </h1>
         <h2>Total Brewery Reviews: {this.state.breweryComments.length}</h2>
