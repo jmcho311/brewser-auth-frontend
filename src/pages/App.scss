@@ -17,7 +17,7 @@ h4 {
 }
 
 img {
-    width: 650px;
+    width: 50vw;
     border: 5px solid goldenrod;
     border-radius: 5px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
@@ -151,7 +151,13 @@ a:hover {
 .yourPosts {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+}
+
+.containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .breweryContainer {
