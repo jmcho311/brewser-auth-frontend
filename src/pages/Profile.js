@@ -117,10 +117,10 @@ class Profile extends Component {
 
     return (
       <div className="Page">
-        <h1 
-          className="profileHead"
-        >Welcome to your profile page, { this.state.user }!
+        <h1 className="profileHead">Welcome to your profile page, { this.state.user }!
         </h1>
+        <h2>Total Brewery Reviews: {this.state.breweryComments.length}</h2>
+        <h2>Total Beer Reviews: {this.state.beerComments.length}</h2>
         <div className="yourPosts">
           <div className="breweryContainer">
             <h3 id="breweryPosts">Your Brewery Check-ins</h3>
