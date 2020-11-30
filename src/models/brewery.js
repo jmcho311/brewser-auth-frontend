@@ -2,19 +2,19 @@ const url = `http://localhost:4000/api/v1/brewery`
 
 class BreweryModel {
     static all = () => {
-        return fetch(`${url}/`).then(res => res.json())
+        return fetch(`${ url }/`).then(res => res.json())
     }
 
     static show = (breweryId) => {
-        return fetch(`${url}/${breweryId}`).then(res => res.json())
+        return fetch(`${ url }/${ breweryId }`).then(res => res.json())
     }
 
     static showPost = (userId) => {
-        return fetch(`${url}/userPost/${userId}`).then(res => res.json())
+        return fetch(`${ url }/userPost/${ userId }`).then(res => res.json())
     }
 
     static create = (breweryData) => {
-        return fetch(`${url}/`, {
+        return fetch(`${ url }/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -23,15 +23,15 @@ class BreweryModel {
         }).then(res => res.json())
     }
 
-    static edit = (brewPost) => {
-        return fetch(`${url}/${brewPost._id}`, {
-            method: "PUT",
-            body: JSON.stringify(brewPost)
-        }).then(res => res.json())
-    }
+    // static edit = (brewPost) => {
+    //     return fetch(`${  url  }/${ brewPost._id }`, {
+    //         method: "PUT",
+    //         body: JSON.stringify(brewPost)
+    //     }).then(res => res.json())
+    // }
 
     static delete = (id) => {
-        return fetch(`${url}/posts/${id}`, {
+        return fetch(`${ url }/posts/${ id }`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -39,7 +39,6 @@ class BreweryModel {
         })
     }
 }
-
 
 
 export default BreweryModel

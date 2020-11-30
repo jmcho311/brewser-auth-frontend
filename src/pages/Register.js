@@ -1,29 +1,31 @@
-import React, { useState } from 'react';
-import UserModel from '../models/user';
-import './App.scss';
+import React, { useState } from 'react'
+import UserModel from '../models/user'
+import './App.scss'
 
 const Register = props => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const handleName = e => {
     setName(e.target.value)
   }  
+
   const handleEmail = e => {
     setEmail(e.target.value)
   }
+
   const handlePassword = e => {
     setPassword(e.target.value)
   }
+
   const handleConfirmPassword = e => {
     setConfirmPassword(e.target.value)
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-
     if (password === confirmPassword) {
       UserModel.create({ name, email, password })
         .then(data => {
@@ -94,4 +96,4 @@ const Register = props => {
   )
 }
 
-export default Register;
+export default Register

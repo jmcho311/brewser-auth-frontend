@@ -1,10 +1,10 @@
 //This is search results from API on backend
 
-import React, { Component } from 'react';
-import BreweryCard from '../components/BreweryCard';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import BrewerySearchModel from '../models/brewerysearch'
 
-import { Link } from 'react-router-dom';
-import BrewerySearchModel from '../models/brewerysearch';
+import BreweryCard from '../components/BreweryCard'
 
 class BreweryList extends Component {
     state = {
@@ -16,27 +16,23 @@ class BreweryList extends Component {
     }
 
     fetchData = () => {
-        // console.log(this.props.location.state.city)
         BrewerySearchModel.all(this.props.location.state.city).then(data => {
-            // console.log(data)
-            this.setState({ breweries: data})
+            this.setState({ breweries: data })
         })
     }
 
     render() {
-        // console.log(this.props)
-        // console.log(this.props.location.state.city)
         let breweryList = this.state.breweries && this.state.breweries.map((brewery, index) => {
             return (
-                    <div key={index} className="BreweryCard">
-                    <BreweryCard { ...brewery } />
-                    <Link to={ `/brewery/${brewery.id}` } className="seeMoreButton"> Read More </Link>
+                    <div key={ index } className="BreweryCard">
+                        <BreweryCard { ...brewery } />
+                        <Link to={ `/brewery/${ brewery.id }` } className="seeMoreButton">Read More</Link>
                     </div>
             )
         })
         return (
             <div className="Page BreweryList">
-                <h1>Search Results for '{this.props.location.state.city}'</h1>
+                <h1>Search Results for '{ this.props.location.state.city }'</h1>
                 
                 <div className="breweryCardContainer">
                     <div className="breweryCard">
@@ -50,4 +46,4 @@ class BreweryList extends Component {
     }
 }
 
-export default BreweryList;
+export default BreweryList

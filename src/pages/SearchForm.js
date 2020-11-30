@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.scss';
-import HomeModal from '../components/HomeModal';
+import React, { Component } from 'react'
+import HomeModal from '../components/HomeModal'
+import './App.scss'
 
 class SearchForm extends Component {
     state = {
@@ -16,12 +16,12 @@ class SearchForm extends Component {
     }
 
     searchBreweries = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         this.props.history.push({ 
             pathname: '/brewerylist',
             state: this.state
-        });
-    };
+        })
+    }
     
     handleChange = (event) => {
         this.setState({
@@ -47,15 +47,14 @@ class SearchForm extends Component {
         console.log('close modal')
         this.setState({
             show: false
-        });
-    };
+        })
+    }
 
     onClose = e => {
-        this.props.show = false;
-    };
+        this.props.show = false
+    }
 
     render() {
-
         return (
             <div className="home">
 
@@ -110,4 +109,4 @@ class SearchForm extends Component {
         )
     }
 }
-export default SearchForm;
+export default SearchForm

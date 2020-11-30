@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-// const ProfileBreweryCard = (props) => {
 class ProfileBreweryCard extends Component {
     state = {
         rating: '',
@@ -43,13 +42,12 @@ class ProfileBreweryCard extends Component {
     render() {
         return (
             <div className="ProfileCard">
-                {/* <h3> { this.props.state } </h3> */}
                 <h3 className="breweryName"> { this.props.name } </h3>
                 <h5> { this.props.city } </h5>
                 <h5>
                     <a className="site"
                         target="new"
-                        href={ `${this.props.website_url}` }> {this.props.website_url} 
+                        href={ `${this.props.website_url}` }> { this.props.website_url } 
                     </a>
                 </h5>
                 <h5>{ this.props.rating }/5</h5>
@@ -72,10 +70,10 @@ class ProfileBreweryCard extends Component {
                     />
                     <button>EDIT</button>
                 </form> */}
+
                 <div className="breweryLinks">
-                    <Link to={`/brewery/${this.props.breweryId}`}>See Details</Link>
-                    <span className="link" 
-                    onClick={ this.removePost }>
+                    <Link to={ `/brewery/${ this.props.breweryId }` }>See Details</Link>
+                    <span className="link" onClick={ this.removePost }>
                         Remove
                     </span>
                 </div>
@@ -85,5 +83,5 @@ class ProfileBreweryCard extends Component {
 }
 
 
-export default ProfileBreweryCard;
+export default ProfileBreweryCard
 

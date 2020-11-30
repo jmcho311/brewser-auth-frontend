@@ -2,7 +2,7 @@ const REACT_APP_API_URL = "http://localhost:4000/api/v1"
 
 export default class UserModel {
   static create(data) {
-    return fetch(`${REACT_APP_API_URL}/auth/register`, {
+    return fetch(`${ REACT_APP_API_URL }/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -13,7 +13,7 @@ export default class UserModel {
 
   static login(credentials) {
     // remember to send authorization headers
-    return fetch(`${REACT_APP_API_URL}/auth/login`, {
+    return fetch(`${ REACT_APP_API_URL }/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,11 +25,11 @@ export default class UserModel {
   }
 
   static index() {
-      return fetch(`${REACT_APP_API_URL}/auth/user/${localStorage.getItem('id')}`).then(res => res.json()) 
+      return fetch(`${ REACT_APP_API_URL }/auth/user/${ localStorage.getItem('id') }`).then(res => res.json()) 
   }
 
   static logout() {
-    return fetch(`${REACT_APP_API_URL}/auth/logout`, {
+    return fetch(`${ REACT_APP_API_URL }/auth/logout`, {
       method: "DELETE",
       credentials: 'include'
     })
