@@ -33,7 +33,7 @@ class BeerShow extends Component {
         })
 
         return (
-            <div className="Page">
+            <div className="Page BeerShow">
                 <h1>{ this.state.currentBeer }</h1>
                 <h3>Beer Category: { this.state.beerComments[0] ? this.state.beerComments[0].category : null }</h3>
                 { this.state.beerComments ? beerCommentsList : 'Loading...'}

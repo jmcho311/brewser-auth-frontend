@@ -35,7 +35,7 @@ const Register = props => {
   }
 
   return (
-    <div className="Page">
+    <div className="Page Register">
       <h1>Create An Account</h1>
       <h3 id="regTag">Joining Brewser will probably be the best thing to happen to you. Like, ever.</h3>
       <div className="regImgBlock">
