@@ -140,11 +140,15 @@ a:hover {
 }
 
 .breweryDeets {
-    width: 34.5%;
+    // width: 80vw;
     margin: 0 auto;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
+    background-color: #eccc7d;
+    color: #292929;
+    padding: 10px;
 }
+
 
 .brewReviews {
     width: 33%;
@@ -163,9 +167,21 @@ a:hover {
 }
 
 .buttonContainer {
-    // display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.reviewButtonContainer {
+    padding: 10px;
+}
+.showImgBlock {
+    background: url(https://i.imgur.com/TZ4ug7i.jpg?2);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 50vh;
 }
 
 // ============= BeerShow.js =================

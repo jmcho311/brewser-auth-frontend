@@ -110,6 +110,8 @@ class BreweryShow extends Component {
         })
         return (
             <div className="Page">
+                <div className="showImgBlock">
+                </div>
                 <div className="breweryDeets">
                     <BreweryCard { ...this.state.breweryInfo } />
                 </div>
@@ -118,16 +120,16 @@ class BreweryShow extends Component {
                     { this.state.currentUser ?
                     <>
                 <div className="buttonContainer">
-                <div>
+                <div className="reviewButtonContainer">
                     <h5> Have you visited this brewery? </h5>
                     <BreweryReviewForm onClose={this.showModal} show={this.state.show} createPost={this.createPost}/>
                     <button className="reviewButtons" onClick={e => {this.showModal()}}>Write a Review
                     </button>
                 </div>
-                <div>
+                <div className="reviewButtonContainer">
                     <h5> Did you have a beer at this brewery? </h5>
                     <BeerReviewForm onClose={this.showBeerModal} beerShow={this.state.beerShow} createBeerPost={this.createBeerPost}/>
-                    <button className= "reviewButtons" onClick= {(e) => {this.showBeerModal()}}>Write a Beer Review
+                    <button className= "reviewButtons" onClick= {(e) => {this.showBeerModal()}}>Log a Beer
                     </button>
                 </div>
                 </div>

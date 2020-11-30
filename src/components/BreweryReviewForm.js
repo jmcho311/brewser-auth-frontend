@@ -30,7 +30,7 @@ class BreweryReviewForm extends Component {
                 </button>
             </div>
             <div className="reviewInputs">
-            <form onSubmit={ this.handleSubmit }>
+            <form className="breweryReviewForm" onSubmit={ this.handleSubmit }>
                 <div className= "rating">
                 <label>Rating: </label>
                 <select                 
