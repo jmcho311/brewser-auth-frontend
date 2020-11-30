@@ -139,13 +139,21 @@ a:hover {
 }
 
 .BeerCard {
-    border: 1px solid black;
     width: 29vw;
     margin: 0 auto;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    margin: 8px;
     background: #eccc7d;
+    border-radius: 2px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.BeerCard h3 {
+    margin: 0 auto;
+}
+
+.BeerCard h4 {
+    margin: 0 auto;
 }
 
 .BeerCard {
@@ -185,9 +193,12 @@ a:hover {
 }
 
 .brewReviews {
-    width: 33%;
-    border: 2px solid black;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.75);
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.beerReviews {
+    width: 30vw;
     margin: 0 auto;
 }
 
@@ -221,6 +232,17 @@ a:hover {
 .postSection {
     margin-top: -2px;
     background: #E2B23A;
+}
+
+.userPosts {
+    display: flex;
+}
+
+.breweryPost {
+    margin: 5px;
+    background: #eccc7d;
+    border-radius: 2px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.75);
 }
 
 // ============= BeerShow.js =================

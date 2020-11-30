@@ -34,6 +34,7 @@ class BeerReviewForm extends Component {
                         Close
                     </button>
                 </div>
+                <h3>Log a Beer</h3>
                 <div className="reviewInputs">
                 <form onSubmit={this.handleSubmit}>
                     <label>Beer Name: </label>
