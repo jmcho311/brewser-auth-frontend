@@ -6,6 +6,8 @@ import BrewerySearchModel from '../models/brewerysearch'
 
 import BreweryCard from '../components/BreweryCard'
 
+import './App.scss'
+
 class BreweryList extends Component {
     state = {
         breweries: []
