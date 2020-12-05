@@ -23,12 +23,21 @@ class BreweryModel {
         }).then(res => res.json())
     }
 
-    // static edit = (brewPost) => {
-    //     return fetch(`${  url  }/${ brewPost._id }`, {
-    //         method: "PUT",
-    //         body: JSON.stringify(brewPost)
-    //     }).then(res => res.json())
-    // }
+    static edit = (brewPost) => {
+        console.log(brewPost)
+        let updateInfo = {
+            rating: brewPost.rating,
+            comment: brewPost.comment
+        }
+        // could have also tried axios without res.json
+        return fetch(`${ url }/${ brewPost.id }`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updateInfo)
+        }).then(res => res.json())
+    }
 
     static delete = (id) => {
         return fetch(`${ url }/posts/${ id }`, {

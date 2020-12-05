@@ -54,7 +54,7 @@ class Profile extends Component {
 
   // editBreweryPost = (brewPost) => {
   //   const isUpdatedBreweryPost = b => {
-  //     return b._id === brewPost._id
+  //     return b.id === brewPost.id
   //   }
 
   //   Brewery.edit(brewPost).then((res) => {
@@ -68,7 +68,7 @@ class Profile extends Component {
     let breweryCommentList = this.state.breweryComments && this.state.breweryComments.map((comment,index) => {
       return (
         <div key={ index }>
-            <ProfileBreweryCard deleteBreweryPost={ this.deleteBreweryPost } { ...comment } />
+            <ProfileBreweryCard deleteBreweryPost={ this.deleteBreweryPost } fetchData={this.fetchCommentData} { ...comment } />
         </div>
       )
     })
